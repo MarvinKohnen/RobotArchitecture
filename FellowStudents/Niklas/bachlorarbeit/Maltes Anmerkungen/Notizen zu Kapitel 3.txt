@@ -1,0 +1,11 @@
+
+Zu Kapitel 3:
+Ich finde es gut geschrieben. Aber allgemein etwas knapp. Gib es vielleicht einmal jemand zu lesen, der noch nicht drin ist im Thema, wieviel der daraus mitnehmen kann. Es würden einfach ein paar verbindende Texte helfen.
+
+Konkret:
+Direkt nach 3 - hier würde ich ganz kurz einen Übersichtsabschnitt einfliessen lassen: Im folgenden wird zuerst das allgemeine experimentelle Setup erklärt, dann die verschiedenen Modelle eingeführt …
+In 3.1 - hier beschreibst du ja eigentlich das allgemeine Experimental Setting - solltest dann einmal erklären, dass dies in vers. Varianten durchgeführt wird (theoretische Simulationen, gazebo - und dann abzielt auf echter Roboter).
+3.2: Auch hier - ich würde am Anfang einmal (auch wenn es sich wiederholt) das verbindende erläutern: Es werden vers. PF Ansätze vorgestellt. Diese enthalten jeweils immer Attractive - und Repulsive Anteile.
+Und dann in den Unterabschnitten: 3.2.1 - ich würde da nicht auf 2.1.3 als erstes verweisen. Sondern dies einmal noch kurz erläutern. For the calculations of the motion in the classical APF approach there is an attractive field (See equ. …). Obstacles are represented as an repulsive field (equ….). 
+Und dann ist einmal wichtig (das ist gerade noch nicht so klar): wie funktioniert das updaten - sprich, für den nicht ganz so tief eingestiegenen Leser ist dies doch sehr unklar (und sollte einmal vielleicht am Anfang von 3.2. erklärt werden?): Es werden in einer Schleife immer diese APF geupdatet. Und in 3.2.1 wird dann in jeder Iteration nur die aktuelle Position angepasst. In 3.2.2 dann zusätzlich vorausgesagte ...
+Hoffe, dass hilft ...

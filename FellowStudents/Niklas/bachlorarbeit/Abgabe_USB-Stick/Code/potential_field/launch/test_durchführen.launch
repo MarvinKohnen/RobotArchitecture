@@ -1,0 +1,18 @@
+<launch>
+  <arg name="obstacle_vel" default="0"/>
+  <arg name="goal_X" default="10"/>
+  <arg name="goal_Y" default="0"/>
+
+  <param name="/map_obstacles/obstacle_velocity" value="$(arg obstacle_vel)"/>
+  <param name="/potential_field/goal_x" value="$(arg goal_X)"/>
+  <param name="/potential_field/goal_y" value="$(arg goal_Y)"/>
+
+  <node pkg = "map_obstacles" type = "moving_obstacles.py" name = "moving_obstacles"> </node>
+
+  <!-- <node pkg = "potential_field" type = "versuch_auswerten.py" name = "versuch_auswerten"> </node> -->
+
+  <!-- verschiedene Ausweich Modell: -->
+  <!-- <node pkg = "potential_field" type = "simple_potential_field.py" name = "simple_potential_field"> </node> -->
+  <!-- <node pkg = "potential_field" type = "forward_potential_field.py" name = "forward_potential_field"> </node> -->
+
+</launch>

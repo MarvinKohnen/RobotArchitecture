@@ -1,0 +1,3 @@
+<launch>
+  <node pkg = "potential_field" type = "mehrere_test_seeds.py" name = "mehrere_test_seeds"> </node>
+</launch>

@@ -1,0 +1,7 @@
+<launch>
+
+<include file="$(find realsense2_camera)/launch/rs_aligned_depth.launch"> </include>
+
+<node pkg = "target_observer" type = "red_ball.py" name = "red_ball"> </node>
+
+</launch>

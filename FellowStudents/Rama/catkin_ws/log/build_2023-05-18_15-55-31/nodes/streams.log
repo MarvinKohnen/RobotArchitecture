@@ -1,0 +1,24 @@
+[0.822s] Invoking command in '/home/rama/catkin_ws/src/nodes': PYTHONPATH=/home/rama/catkin_ws/build/nodes/prefix_override:/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes build --build-base /home/rama/catkin_ws/build/nodes/build install --record /home/rama/catkin_ws/build/nodes/install.log --install-scripts $base/lib/nodes --single-version-externally-managed
+[0.991s] running egg_info
+[0.991s] writing ../../build/nodes/nodes.egg-info/PKG-INFO
+[0.992s] writing dependency_links to ../../build/nodes/nodes.egg-info/dependency_links.txt
+[0.992s] writing entry points to ../../build/nodes/nodes.egg-info/entry_points.txt
+[0.992s] writing requirements to ../../build/nodes/nodes.egg-info/requires.txt
+[0.992s] writing top-level names to ../../build/nodes/nodes.egg-info/top_level.txt
+[1.023s] reading manifest file '../../build/nodes/nodes.egg-info/SOURCES.txt'
+[1.024s] writing manifest file '../../build/nodes/nodes.egg-info/SOURCES.txt'
+[1.024s] running build
+[1.024s] running build_py
+[1.024s] copying nodes/kf_depthCamera.py -> /home/rama/catkin_ws/build/nodes/build/lib/nodes
+[1.024s] running install
+[1.025s] running install_lib
+[1.026s] copying /home/rama/catkin_ws/build/nodes/build/lib/nodes/kf_depthCamera.py -> /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes
+[1.027s] byte-compiling /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes/kf_depthCamera.py to kf_depthCamera.cpython-38.pyc
+[1.029s] running install_data
+[1.029s] running install_egg_info
+[1.031s] removing '/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes-0.0.0-py3.8.egg-info' (and everything under it)
+[1.031s] Copying ../../build/nodes/nodes.egg-info to /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes-0.0.0-py3.8.egg-info
+[1.032s] running install_scripts
+[1.053s] Installing kf_depthCamera script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[1.053s] writing list of installed files to '/home/rama/catkin_ws/build/nodes/install.log'
+[1.072s] Invoked command in '/home/rama/catkin_ws/src/nodes' returned '0': PYTHONPATH=/home/rama/catkin_ws/build/nodes/prefix_override:/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes build --build-base /home/rama/catkin_ws/build/nodes/build install --record /home/rama/catkin_ws/build/nodes/install.log --install-scripts $base/lib/nodes --single-version-externally-managed

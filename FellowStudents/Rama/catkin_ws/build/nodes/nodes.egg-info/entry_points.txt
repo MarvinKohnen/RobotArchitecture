@@ -1,0 +1,6 @@
+[console_scripts]
+Handgesture_node = nodes.hand_gesture_recognition:main
+kf_depthCamera = nodes.kf_depthCamera
+obstacle_avoidance_node = nodes.obstacle_avoidance:main
+test_node = nodes.test_node:main
+

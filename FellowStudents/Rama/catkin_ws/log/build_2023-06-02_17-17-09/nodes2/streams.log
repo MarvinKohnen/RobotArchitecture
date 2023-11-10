@@ -1,0 +1,20 @@
+[2.529s] Invoking command in '/home/rama/catkin_ws/src/nodes2': PYTHONPATH=/home/rama/catkin_ws/build/nodes2/prefix_override:/home/rama/catkin_ws/install/nodes2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes2 build --build-base /home/rama/catkin_ws/build/nodes2/build install --record /home/rama/catkin_ws/build/nodes2/install.log --install-scripts $base/lib/nodes2 --single-version-externally-managed
+[3.159s] running egg_info
+[3.163s] writing ../../build/nodes2/nodes2.egg-info/PKG-INFO
+[3.164s] writing dependency_links to ../../build/nodes2/nodes2.egg-info/dependency_links.txt
+[3.164s] writing entry points to ../../build/nodes2/nodes2.egg-info/entry_points.txt
+[3.164s] writing requirements to ../../build/nodes2/nodes2.egg-info/requires.txt
+[3.164s] writing top-level names to ../../build/nodes2/nodes2.egg-info/top_level.txt
+[3.253s] reading manifest file '../../build/nodes2/nodes2.egg-info/SOURCES.txt'
+[3.259s] writing manifest file '../../build/nodes2/nodes2.egg-info/SOURCES.txt'
+[3.260s] running build
+[3.261s] running build_py
+[3.261s] running install
+[3.263s] running install_lib
+[3.265s] running install_data
+[3.266s] running install_egg_info
+[3.270s] removing '/home/rama/catkin_ws/install/nodes2/lib/python3.8/site-packages/nodes2-0.0.0-py3.8.egg-info' (and everything under it)
+[3.277s] Copying ../../build/nodes2/nodes2.egg-info to /home/rama/catkin_ws/install/nodes2/lib/python3.8/site-packages/nodes2-0.0.0-py3.8.egg-info
+[3.279s] running install_scripts
+[3.329s] writing list of installed files to '/home/rama/catkin_ws/build/nodes2/install.log'
+[3.394s] Invoked command in '/home/rama/catkin_ws/src/nodes2' returned '0': PYTHONPATH=/home/rama/catkin_ws/build/nodes2/prefix_override:/home/rama/catkin_ws/install/nodes2/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes2 build --build-base /home/rama/catkin_ws/build/nodes2/build install --record /home/rama/catkin_ws/build/nodes2/install.log --install-scripts $base/lib/nodes2 --single-version-externally-managed

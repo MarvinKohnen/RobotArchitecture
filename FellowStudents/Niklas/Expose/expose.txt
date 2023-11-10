@@ -1,0 +1,33 @@
+Immer mehr Maschinen agieren heutzutage autonom, so zum Beispiel selbstfahrende Autos. All diese Roboter sind darauf angewiesen ihre Umgebung wahrzunehmen und dementsprechend zu handeln.
+So auch autonomen Autos, welche nicht nur verhindern sollen gegen Wände zufahren, sondern auch bewegende Hindernisse wie Fußgänger oder andere Autos auszuweichen. 
+Genau um diese Thematik soll sich meine Bachlorarbeit handeln: die Bewegungen dynamischer Objekte zu verfolgen und diese Informationen zu nutzen, um einen sicheren Pfad an diesen vorbei zu finden.
+Dies erfordert nicht nur potentielle Gefahren zu erkennen und vorherzusagen, ob diese mit einem Fahrzeug kollidieren, sondern auch entsprechende Maßnahmen einzuleiten.
+
+Zunächst sollte man aber zwischen 2 Arten der Kollisionsvermeidung unterscheiden. Zum einen die globale und zum anderen die lokale. 
+Die globale kennt bereits die komplette Umgebung und kann so offline den besten Weg berechnen.
+Diese Bedingungen sind allerdings meistens in der Anwendung nicht gegeben, weshalb man lokal ständig auf neue unbekannte Hindernisse achten muss.
+
+Das Problem der Bewegungsplanung wurde bereits von mehreren Autoren aufgegriffen, so kann die Suche nach einem günstigen Pfad durch ein bekanntes Gebiet ohne dynamische Bewegungen mittels verschiedener Pfadalgorithmen wie dem rrt oder a* -Algorithmus oder durch potential fields, bei dem künstliche abstoßende Kräfte von Objekten ausgehen, bewerkstelligt werden.
+Wenn nun bewegende Hindernisse hinzukommen muss wie bereits erwähnt zwischen dem Erkennen und dem Handeln unterschieden werden. Das Erkennen kann grob in zwei Arten aufgeteilt werden: algebraisch und geometrisch. 
+Beim algebraischen Ansatz wird durch das Lösen von Gleichungssystem von Funktionen, welche Objekte in verlaufe der Zeit beschreiben, auf Kollisionen geschlossen. 
+Bei der geometrischen wird die Zeit als eine weitere Dimension betrachtet. Man untersucht nun diesen Raum auf Überschneidungen von verschiedenen geometrischen Figuren und schließt so auf mögliche Kollisionen.
+(Zum Thema des Ausweichens fehlt mir noch Literatur)
+
+(Forschungsfrage kann ich noch nicht explizit formulieren, weil mir die Kernfrage noch fehlt)
+
+[4. Mögliche Methodik:]
+Um nun diese Thematik anzugehen könnte man einen für den Roboter bekannten Raum nehmen und dort sich bewegenede Hindernisse ergänzen. Diese Hindernisse kennt der Roboter a priori nicht und muss sie daher erst durch Sensoren 'entdecken'.
+So könnte man sich auf die lokalen Hindernisse fokussieren ohne das Pfadproblem komplett zu betrachten, da dies vorab geschehen kann.
+Untersucht könnten die verschiedene Methoden der Vorherssagen bezüglich der durchschnittlichen Zeit welche sie brauchen oder den zurück gelegten Weg und natürlich wie erfolgreich sie waren ihr Ziel zu erreichen.
+
+Schritte welche vermutlich zwingend notwendig sein werden:
+- Lidar Daten auswerten und dynamische Objekte erkennen
+- Bewegungen der Objekte vorherzusagen zum Beispiel mittels Kalman-Filter
+
+
+[6. Zeitplan Skizze basierend auf bisherigen Überlegungen des Themas]:
+- Literatursuche
+- Versuchsaufbau realiseren
+- Kollisionserkennungen
+- Ausweichen/ Zielführende Pfadoptimierung
+- Techniken mit naiven/ anderen Methoden vergleichen

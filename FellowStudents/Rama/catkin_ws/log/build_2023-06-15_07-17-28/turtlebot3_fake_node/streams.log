@@ -1,0 +1,36 @@
+[0.198s] Invoking command in '/home/rama/catkin_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rama/catkin_ws/install/nodes2:/home/rama/catkin_ws/install/nodes:/opt/ros/foxy /usr/bin/cmake --build /home/rama/catkin_ws/build/turtlebot3_fake_node -- -j8 -l8
+[2.047s] [100%] Built target turtlebot3_fake_node
+[2.059s] Invoked command in '/home/rama/catkin_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rama/catkin_ws/install/nodes2:/home/rama/catkin_ws/install/nodes:/opt/ros/foxy /usr/bin/cmake --build /home/rama/catkin_ws/build/turtlebot3_fake_node -- -j8 -l8
+[2.254s] Invoking command in '/home/rama/catkin_ws/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rama/catkin_ws/install/nodes2:/home/rama/catkin_ws/install/nodes:/opt/ros/foxy /usr/bin/cmake --install /home/rama/catkin_ws/build/turtlebot3_fake_node
+[2.304s] -- Install configuration: ""
+[2.304s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/lib/turtlebot3_fake_node/turtlebot3_fake_node
+[2.305s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch
+[2.305s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/rviz2.launch.py
+[2.305s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/launch/turtlebot3_fake_node.launch.py
+[2.305s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param
+[2.306s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/burger.yaml
+[2.306s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle_pi.yaml
+[2.306s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/param/waffle.yaml
+[2.307s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/rviz
+[2.307s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/rviz/model.rviz
+[2.307s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/include/
+[2.308s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/include//turtlebot3_fake_node
+[2.314s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/include//turtlebot3_fake_node/turtlebot3_fake_node.hpp
+[2.319s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/package_run_dependencies/turtlebot3_fake_node
+[2.320s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/parent_prefix_path/turtlebot3_fake_node
+[2.320s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.sh
+[2.321s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/ament_prefix_path.dsv
+[2.321s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.sh
+[2.321s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/environment/path.dsv
+[2.321s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.bash
+[2.322s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.sh
+[2.322s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.zsh
+[2.322s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/local_setup.dsv
+[2.323s] -- Installing: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.dsv
+[2.323s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/ament_index/resource_index/packages/turtlebot3_fake_node
+[2.376s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.376s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.377s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig.cmake
+[2.377s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/cmake/turtlebot3_fake_nodeConfig-version.cmake
+[2.378s] -- Up-to-date: /home/rama/catkin_ws/install/turtlebot3_fake_node/share/turtlebot3_fake_node/package.xml
+[2.443s] Invoked command in '/home/rama/catkin_ws/build/turtlebot3_fake_node' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/rama/catkin_ws/install/nodes2:/home/rama/catkin_ws/install/nodes:/opt/ros/foxy /usr/bin/cmake --install /home/rama/catkin_ws/build/turtlebot3_fake_node

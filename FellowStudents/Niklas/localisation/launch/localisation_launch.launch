@@ -1,0 +1,11 @@
+<launch>
+
+  <arg name="map_file" default="$(find localisation)/map.yaml"/>
+
+<!-- Run the map server -->
+  <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+<!-- Run test node -->
+  <node name="localisation_test" pkg="localisation" type="test.py"/>
+
+</launch>

@@ -1,0 +1,14 @@
+<launch>
+  <node pkg = "map_obstacles" type = "move_one_object_specifically.py" name = "move_one_object_specifically"> </node>
+
+  <!-- Auskommentieren wenn die Route aufgezeichnet werden soll -->
+  <!-- <node pkg = "potential_field" type = "versuch_auswerten.py" name = "versuch_auswerten"> </node> -->
+
+  <!-- verschiedene Ausweich Modell: -->
+  <!-- <node pkg = "potential_field" type = "c_apf.py" name = "potential_field_mover"> </node> -->
+  <!-- <node pkg = "potential_field" type = "f_apf.py" name = "potential_field_mover"> </node> -->
+  <!-- <node pkg = "potential_field" type = "rf_apf.py" name = "potential_field_mover"> </node> -->
+  <!-- <node pkg = "potential_field" type = "i_apf.py" name = "potential_field_mover"> </node> -->
+  
+
+</launch>

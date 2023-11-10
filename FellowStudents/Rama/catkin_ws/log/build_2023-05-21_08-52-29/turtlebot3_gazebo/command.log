@@ -1,0 +1,3 @@
+Invoking command in '/home/rama/catkin_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/rama/catkin_ws/build/turtlebot3_gazebo -- -j8 -l8
+Invoked command in '/home/rama/catkin_ws/build/turtlebot3_gazebo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/rama/catkin_ws/build/turtlebot3_gazebo -- -j8 -l8
+Invoking command in '/home/rama/catkin_ws/build/turtlebot3_gazebo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --install /home/rama/catkin_ws/build/turtlebot3_gazebo

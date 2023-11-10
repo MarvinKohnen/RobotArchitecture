@@ -1,0 +1,1 @@
+Versuch_1697273168636168538 - Obstacle_Velocity: None - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 18.55158390291674 - Time in Sek.: 37.15319466590881

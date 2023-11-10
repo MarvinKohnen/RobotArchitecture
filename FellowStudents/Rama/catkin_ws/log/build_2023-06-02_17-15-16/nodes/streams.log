@@ -1,0 +1,27 @@
+[1.236s] Invoking command in '/home/rama/catkin_ws/src/nodes': PYTHONPATH=/home/rama/catkin_ws/build/nodes/prefix_override:/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes build --build-base /home/rama/catkin_ws/build/nodes/build install --record /home/rama/catkin_ws/build/nodes/install.log --install-scripts $base/lib/nodes --single-version-externally-managed
+[1.578s] running egg_info
+[1.580s] writing ../../build/nodes/nodes.egg-info/PKG-INFO
+[1.580s] writing dependency_links to ../../build/nodes/nodes.egg-info/dependency_links.txt
+[1.580s] writing entry points to ../../build/nodes/nodes.egg-info/entry_points.txt
+[1.580s] writing requirements to ../../build/nodes/nodes.egg-info/requires.txt
+[1.581s] writing top-level names to ../../build/nodes/nodes.egg-info/top_level.txt
+[1.633s] reading manifest file '../../build/nodes/nodes.egg-info/SOURCES.txt'
+[1.635s] writing manifest file '../../build/nodes/nodes.egg-info/SOURCES.txt'
+[1.635s] running build
+[1.635s] running build_py
+[1.635s] copying nodes/realsense_camera.py -> /home/rama/catkin_ws/build/nodes/build/lib/nodes
+[1.636s] running install
+[1.637s] running install_lib
+[1.638s] copying /home/rama/catkin_ws/build/nodes/build/lib/nodes/realsense_camera.py -> /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes
+[1.639s] byte-compiling /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes/realsense_camera.py to realsense_camera.cpython-38.pyc
+[1.641s] running install_data
+[1.642s] running install_egg_info
+[1.645s] removing '/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes-0.0.0-py3.8.egg-info' (and everything under it)
+[1.646s] Copying ../../build/nodes/nodes.egg-info to /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes-0.0.0-py3.8.egg-info
+[1.646s] running install_scripts
+[1.670s] Installing Camera_node script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[1.670s] Installing Handgesture_node script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[1.670s] Installing kf_depthCamera script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[1.670s] Installing test_node script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[1.670s] writing list of installed files to '/home/rama/catkin_ws/build/nodes/install.log'
+[1.702s] Invoked command in '/home/rama/catkin_ws/src/nodes' returned '0': PYTHONPATH=/home/rama/catkin_ws/build/nodes/prefix_override:/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes build --build-base /home/rama/catkin_ws/build/nodes/build install --record /home/rama/catkin_ws/build/nodes/install.log --install-scripts $base/lib/nodes --single-version-externally-managed

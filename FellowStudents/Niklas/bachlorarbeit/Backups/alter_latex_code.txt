@@ -1,0 +1,238 @@
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/capf/diff_min_dist/average_collisions.png}
+		\caption{Average collisions}
+	\end{subfigure} %\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/capf/diff_min_dist/average_path.png}
+		\caption{Average path length}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/capf/diff_min_dist/average_calc_steps.png}
+		\caption{Average calculation steps}
+	\end{subfigure}
+	\caption{Average results for the entire test run for different repulsive force distances}
+    \label{fig:diff_min_dist_results1}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/capf/diff_min_dist/average_collisions_per_vel.png}
+		\caption{Average collisions}
+	\end{subfigure} %\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/capf/diff_min_dist/average_path_per_vel.png}
+		\caption{Average path length}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/capf/diff_min_dist/average_calc_steps_per_vel.png}
+		\caption{Average calculation steps}
+	\end{subfigure}
+	\caption{Average results for the entire test run for different repulsive force distances and separated in the different obstacle speeds. Different colors represent the different speeds (i.e. blue=0.5, orange=1, green=1.5, red=2).}
+    \label{fig:diff_min_dist_results2}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/fapf/avg_collisions.png}
+		\caption{Average collisions}
+        \label{fig:fapf:avg_collisions}
+	\end{subfigure} %\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/fapf/avg_path.png}
+		\caption{Average path length}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/fapf/avg_time_step.png}
+		\caption{Average calculation steps}
+	\end{subfigure}
+	\caption{Average results for the entire test run for different future counts.}
+    \label{fig:diff_future_counts}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/fapf/avg_collisions_per_velocity.png}
+		\caption{Average collisions}
+    \label{fig:fapf:avg_collisions_per_velocity}
+	\end{subfigure} %\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/fapf/avg_path_per_velocity.png}
+		\caption{Average path length}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/fapf/avg_time_step_per_velocity.png}
+		\caption{Average calculation steps}
+	\end{subfigure}
+	\caption{Average results for the entire test run for different future counts and separated in the different obstacle speeds. Different colors represent the different speeds (i.e. blue=0.5, orange=1, green=1.5, red=2).}
+    \label{fig:diff_future_counts_per_velocity}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/rfapf/avg_collisions.png}
+		\caption{Average collisions}
+        \label{fig:rfapf:avg_collisions}
+	\end{subfigure} %\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/rfapf/avg_path.png}
+		\caption{Average path length}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/rfapf/avg_steps.png}
+		\caption{Average calculation steps}
+	\end{subfigure}
+	\caption{Average results for the entire test run for different rotation angles.}
+    \label{fig:diff_rot_angles}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/rfapf/avg_collisions_per_velocity.png}
+		\caption{Average collisions}
+    \label{fig:rfapf:avg_collisions_per_velocity}
+	\end{subfigure} %\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/rfapf/avg_path_per_velocity.png}
+		\caption{Average path length}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/rfapf/avg_steps_per_velocity.png}
+		\caption{Average calculation steps}
+	\end{subfigure}
+	\caption{Average results for the entire test run for different rotation angles and separated in the different obstacle speeds. Different colors represent the different speeds (i.e. blue=0.5, orange=1, green=1.5, red=2).}
+    \label{fig:diff_rot_angles_per_velocity}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/iapf/avg_collisions.png}
+		\caption{Average collisions}
+    \label{fig:iapf:avg_collisionsy}
+	\end{subfigure} %\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/iapf/avg_path.png}
+		\caption{Average path length}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/iapf/avg_time_step.png}
+		\caption{Average calculation steps}
+	\end{subfigure}
+	\caption{Average results for the entire test run with different values for $k_v$.}
+    \label{fig:iapf:diff_vel_forces}
+\end{figure}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/iapf/avg_collisions_per_velocity.png}
+		\caption{Average collisions}
+    \label{fig:iapf:avg_collisions_per_velocity}
+	\end{subfigure} %\hfill
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/iapf/avg_path_per_velocity.png}
+		\caption{Average path length}
+	\end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{pictures/theoretical_results/iapf/avg_time_step_per_velocity.png}
+		\caption{Average calculation steps}
+	\end{subfigure}
+	\caption{Average results for the entire test run with different values for $k_v$ and separated in the different obstacle speeds. Different colors represent the different speeds (i.e. blue=0.5, orange=1, green=1.5, red=2).}
+    \label{fig:iapf:diff_vel_forces_per_velocity}
+\end{figure}

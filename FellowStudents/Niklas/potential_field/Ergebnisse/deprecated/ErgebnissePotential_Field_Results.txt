@@ -1,0 +1,130 @@
+Versuch_1690663589.111204 - Kollisionen: 1 - Ziel erreicht: True - Time in Sek.: 27.287144899368286
+Versuch_1690663635.8147855 - Kollisionen: 84 - Ziel erreicht: True - Time in Sek.: 40.60697960853577
+Versuch_1690663674.1988032 - Kollisionen: 43 - Ziel erreicht: True - Time in Sek.: 32.26734781265259
+Versuch_1690663722.011593 - Kollisionen: 234 - Ziel erreicht: True - Time in Sek.: 41.675111293792725
+Versuch_1690663792.4592466 - Kollisionen: 296 - Ziel erreicht: True - Time in Sek.: 64.33137917518616
+Versuch_1690663835.2079828 - Kollisionen: 11 - Ziel erreicht: True - Time in Sek.: 36.62282204627991
+Versuch_1690663877.8875387 - Kollisionen: 18 - Ziel erreicht: True - Time in Sek.: 36.60094332695007
+Versuch_1690663929.60425 - Kollisionen: 85 - Ziel erreicht: True - Time in Sek.: 45.558470726013184
+Versuch_1690663980.4087706 - Kollisionen: 67 - Ziel erreicht: True - Time in Sek.: 44.66557741165161
+Versuch_1690664022.2092817 - Kollisionen: 20 - Ziel erreicht: True - Time in Sek.: 35.69843578338623
+----
+Versuch_1690664980.4815457 - Kollisionen: 77 - Ziel erreicht: True - Time in Sek.: 46.91637873649597
+Versuch_1690665021.6209633 - Kollisionen: 27 - Ziel erreicht: True - Time in Sek.: 34.973780393600464
+----
+Seed_1
+Versuch_1690665392.7730622 - Kollisionen: 0 - Ziel erreicht: True - Time in Sek.: 31.39922595024109
+Versuch_1690665433.0015514 - Kollisionen: 77 - Ziel erreicht: True - Time in Sek.: 34.116700649261475
+Seed_1
+Versuch_1690665779.5722363 - Kollisionen: 11 - Ziel erreicht: True - Time in Sek.: 31.43364691734314
+Versuch_1690665854.369522 - Kollisionen: 326 - Ziel erreicht: True - Time in Sek.: 68.66227674484253
+Seed_1
+Versuch_1690665973.418321 - Kollisionen: 39 - Ziel erreicht: True - Time in Sek.: 35.2831027507782
+Seed_1
+Versuch_1690666120.7919998 - Kollisionen: 55 - Ziel erreicht: True - Time in Sek.: 46.101672649383545
+Seed_1
+Versuch_1690666335.3572319 - Kollisionen: 0 - Ziel erreicht: True - Time in Sek.: 33.62164926528931
+Seed_1
+Versuch_1690666565.7516363 - Kollisionen: 0 - Ziel erreicht: True - Time in Sek.: 32.61432480812073
+Seed_1
+Versuch_1690666853.4391074 - Kollisionen: 22 - Ziel erreicht: True - Time in Sek.: 26.944536209106445
+Seed_2
+Versuch_1690666889.9202747 - Kollisionen: 0 - Ziel erreicht: True - Time in Sek.: 29.76382803916931
+Seed_3
+Versuch_1690666934.8916018 - Kollisionen: 56 - Ziel erreicht: True - Time in Sek.: 38.30575728416443
+Seed_4
+Versuch_1690666944.9548347 - Kollisionen: 33 - Ziel erreicht: False - Time in Sek.: 3.379434108734131
+Seed_1
+Seed_1
+Seed_1
+Seed_1
+Versuch_1690711072.7865272 - Kollisionen: 978 - Ziel erreicht: True - Time in Sek.: 36.37383270263672
+Seed_2
+Versuch_1690711109.6742532 - Kollisionen: 0 - Ziel erreicht: True - Time in Sek.: 29.18196964263916
+Seed_3
+Versuch_1690711151.1868906 - Kollisionen: 116 - Ziel erreicht: True - Time in Sek.: 33.77391505241394
+Seed_4
+Versuch_1690711189.6972744 - Kollisionen: 26 - Ziel erreicht: True - Time in Sek.: 30.807511806488037
+Seed_5
+Versuch_1690711229.4224186 - Kollisionen: 7 - Ziel erreicht: True - Time in Sek.: 31.97951102256775
+Seed_6
+Versuch_1690711271.7657032 - Kollisionen: 85 - Ziel erreicht: True - Time in Sek.: 34.70920515060425
+Seed_7
+Versuch_1690711309.0538273 - Kollisionen: 21 - Ziel erreicht: True - Time in Sek.: 29.583210706710815
+Seed_8
+Versuch_1690711346.1573904 - Kollisionen: 29 - Ziel erreicht: True - Time in Sek.: 29.325096607208252
+Seed_9
+Versuch_1690711391.902757 - Kollisionen: 92 - Ziel erreicht: True - Time in Sek.: 37.9587836265564
+Seed_10
+Versuch_1690711466.8070993 - Kollisionen: 248 - Ziel erreicht: True - Time in Sek.: 67.09897541999817
+----
+Versuch_1690716409.4218118 - Kollisionen: 82 - Ziel erreicht: True - Time in Sek.: 39.566529512405396
+Versuch_1690716496.021549 - Kollisionen: 0 - Ziel erreicht: True - Time in Sek.: 33.6446897983551
+Versuch_1690718017.36271 - Kollisionen: 0 - Ziel erreicht: False - Time in Sek.: 13.036648035049438
+Versuch_1690718068.4672098 - Kollisionen: 2756 - Ziel erreicht: False - Time in Sek.: 8.927701473236084
+Versuch_1690718111.7547646 - Kollisionen: 0 - Ziel erreicht: False - Time in Sek.: 25.74785089492798
+Versuch_1690718184.0274262 - Kollisionen: 0 - Ziel erreicht: False - Time in Sek.: 61.919553995132446
+Versuch_1690718246.364149 - Kollisionen: 0 - Ziel erreicht: False - Time in Sek.: 53.11875557899475
+Versuch_1690718306.5016708 - Kollisionen: 0 - Ziel erreicht: False - Time in Sek.: 38.197110176086426
+Versuch_1690718369.3965764 - Kollisionen: 0 - Ziel erreicht: True - Time in Sek.: 54.79740381240845
+--------
+Versuch_1690722742.5985646 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 12.860936133139829 - Time in Sek.: 66.78778910636902
+Versuch_1690722842.6893477 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.380703780947549 - Time in Sek.: 34.899054765701294
+Versuch_1690723086.5410492 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.386960234756652 - Time in Sek.: 34.92427039146423
+Versuch_1690723313.7800035 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.3711399624543 - Time in Sek.: 34.973294496536255
+Versuch_1690801918.6756685 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 16.021731243548945 - Time in Sek.: 98.04207181930542
+Versuch_1690803017.6776476 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.73248484670837 - Time in Sek.: 52.52184343338013
+Versuch_1690803271.267501 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.733613124427611 - Time in Sek.: 53.304086446762085
+Versuch_1690803401.3284247 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.746182077666363 - Time in Sek.: 55.363850355148315
+Versuch_1690803480.5845318 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.878513864541778 - Time in Sek.: 57.1035053730011
+Versuch_1690803657.4235861 - Obstacle_Velocity: 2 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.538837973002686 - Time in Sek.: 57.54393005371094
+Versuch_1690803679.076757 - Obstacle_Velocity: 2 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 0.14569410136480682 - Time in Sek.: 1.8778965473175049
+Versuch_1690803862.7594805 - Obstacle_Velocity: 2 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 1.815576053036021 - Time in Sek.: 8.248873472213745
+Versuch_1690804264.9799533 - Obstacle_Velocity: 2 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 1.94077542973045 - Time in Sek.: 10.146387338638306
+Versuch_1690804305.113337 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 1.9546146819113999 - Time in Sek.: 10.831729888916016
+Versuch_1690804326.2943556 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 2.1251029414322864 - Time in Sek.: 9.884431838989258
+Versuch_1690804345.175534 - Obstacle_Velocity: 2 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 1.2770549105284559 - Time in Sek.: 9.549179315567017
+Versuch_1690804419.0642488 - Obstacle_Velocity: 2 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 2.179411057644969 - Time in Sek.: 9.885176420211792
+Versuch_1690804537.0137825 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 0.6890448305177874 - Time in Sek.: 4.572912693023682
+Versuch_1690804566.6691272 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 3.142430831517885 - Time in Sek.: 13.983381509780884
+Versuch_1690804611.273112 - Obstacle_Velocity: 2 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 0.9320602358751467 - Time in Sek.: 5.049546957015991
+Versuch_1690804745.9334767 - Obstacle_Velocity: 5 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 1.416250954212722 - Time in Sek.: 5.603632211685181
+Versuch_1690807472.9478383 - Obstacle_Velocity: 2 - Kollisionen: 10 - Ziel erreicht: True - travelled_distance: 14.806165172130592 - Time in Sek.: 43.90985155105591
+Versuch_1690809831.9162552 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 1.599297214592968 - Time in Sek.: 21.91645121574402
+Versuch_1690809871.4897535 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 7.123798101340608 - Time in Sek.: 27.26224184036255
+Versuch_1690809909.6727111 - Obstacle_Velocity: 10 - Kollisionen: 11 - Ziel erreicht: False - travelled_distance: 10.416349261589902 - Time in Sek.: 28.373851776123047
+Versuch_1690810056.1142042 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 1.6174058153227888 - Time in Sek.: 30.552039861679077
+Versuch_1690810131.9972389 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.933602896413943 - Time in Sek.: 47.421619176864624
+Versuch_1690810218.5622857 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 5.25859025366973 - Time in Sek.: 17.01073980331421
+Versuch_1690810584.1339755 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 0.2718472573935163 - Time in Sek.: 2.3510735034942627
+Versuch_1690810625.1479414 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 7.822579482446261 - Time in Sek.: 33.695151805877686
+Versuch_1690995378.9429872 - Obstacle_Velocity: 10 - Kollisionen: 29 - Ziel erreicht: True - travelled_distance: 40.73815386527713 - Time in Sek.: 54.55140542984009
+Versuch_1690995744.7296174 - Obstacle_Velocity: 10 - Kollisionen: 32 - Ziel erreicht: True - travelled_distance: 35.43068153246237 - Time in Sek.: 56.25278329849243
+Versuch_1690996023.0599027 - Obstacle_Velocity: 10 - Kollisionen: 164 - Ziel erreicht: True - travelled_distance: 39.35576792190828 - Time in Sek.: 76.88247728347778
+--------
+Versuch_1691253781.2267897 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.638885200908344 - Time in Sek.: 39.53015756607056
+Versuch_1691253812.4247704 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 0.0019708688507349558 - Time in Sek.: 5.474162817001343
+Versuch_1691254011.694816 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 3.9504831860946546e-06 - Time in Sek.: 2.0799100399017334
+Versuch_1691254050.5856879 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 2.610320657731127e-06 - Time in Sek.: 1.6776750087738037
+Versuch_1691254144.349865 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 2.9556839285461063e-06 - Time in Sek.: 2.08622407913208
+Versuch_1691254166.5859182 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 2.801763938605742e-06 - Time in Sek.: 2.0928170680999756
+Versuch_1691254326.9734623 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 3.092056153174599e-06 - Time in Sek.: 2.7841899394989014
+Versuch_1691254428.2207136 - Obstacle_Velocity: 0 - Kollisionen: 14604 - Ziel erreicht: True - travelled_distance: 13.378269225943091 - Time in Sek.: 69.17572617530823
+Versuch_1691254558.7490573 - Obstacle_Velocity: 0 - Kollisionen: 15724 - Ziel erreicht: True - travelled_distance: 17.650876917137737 - Time in Sek.: 95.5066978931427
+Versuch_1691254690.0592213 - Obstacle_Velocity: 0 - Kollisionen: 6170 - Ziel erreicht: False - travelled_distance: 1.6984273380100399 - Time in Sek.: 17.20828890800476
+Versuch_1691418294.8324838 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.047234031964534 - Time in Sek.: 38.11009359359741
+Versuch_1691418351.7238605 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.026486586195077 - Time in Sek.: 37.95606231689453
+Versuch_1691418466.9988737 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.089352736420016 - Time in Sek.: 39.06090211868286
+Versuch_1691418658.252212 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 2.7317304164097562 - Time in Sek.: 6.7088398933410645
+Versuch_1691418754.8867304 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.41849938168101 - Time in Sek.: 38.39492225646973
+Versuch_1691418853.9523656 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.706960192116185 - Time in Sek.: 35.66853976249695
+Versuch_1691418897.7913337 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.01468276221668 - Time in Sek.: 37.731860876083374
+Versuch_1691418939.336604 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.675120966160776 - Time in Sek.: 35.43161749839783
+Versuch_1691418980.7190425 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.685849097976273 - Time in Sek.: 35.25548267364502
+Versuch_1691419022.4653547 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.716929548099206 - Time in Sek.: 35.6208553314209
+Versuch_1691419099.6792674 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 11.266807253745537 - Time in Sek.: 39.77428388595581
+Versuch_1691419142.4308276 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.866633539947266 - Time in Sek.: 36.65864968299866
+Versuch_1691419185.8202655 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.933063843913171 - Time in Sek.: 37.27955389022827
+Versuch_1691419227.7882385 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.724624198105014 - Time in Sek.: 35.807236433029175
+Versuch_1691419269.5568597 - Obstacle_Velocity: 0 - Kollisionen: 0 - Ziel erreicht: True - travelled_distance: 10.676485361389846 - Time in Sek.: 35.590614318847656
+Versuch_1696434974697579485 - Obstacle_Velocity: 1 - Kollisionen: 0 - Ziel erreicht: False - travelled_distance: 13.18494333737728 - Time in Sek.: 28.047842979431152

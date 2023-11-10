@@ -1,0 +1,23 @@
+[1.559s] Invoking command in '/home/rama/catkin_ws/src/nodes': PYTHONPATH=/home/rama/catkin_ws/build/nodes/prefix_override:/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes build --build-base /home/rama/catkin_ws/build/nodes/build install --record /home/rama/catkin_ws/build/nodes/install.log --install-scripts $base/lib/nodes --single-version-externally-managed
+[1.998s] running egg_info
+[2.000s] writing ../../build/nodes/nodes.egg-info/PKG-INFO
+[2.000s] writing dependency_links to ../../build/nodes/nodes.egg-info/dependency_links.txt
+[2.001s] writing entry points to ../../build/nodes/nodes.egg-info/entry_points.txt
+[2.001s] writing requirements to ../../build/nodes/nodes.egg-info/requires.txt
+[2.001s] writing top-level names to ../../build/nodes/nodes.egg-info/top_level.txt
+[2.079s] reading manifest file '../../build/nodes/nodes.egg-info/SOURCES.txt'
+[2.081s] writing manifest file '../../build/nodes/nodes.egg-info/SOURCES.txt'
+[2.081s] running build
+[2.081s] running build_py
+[2.082s] running install
+[2.084s] running install_lib
+[2.087s] running install_data
+[2.088s] running install_egg_info
+[2.093s] removing '/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes-0.0.0-py3.8.egg-info' (and everything under it)
+[2.093s] Copying ../../build/nodes/nodes.egg-info to /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes-0.0.0-py3.8.egg-info
+[2.095s] running install_scripts
+[2.123s] Installing Handgesture_node script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[2.124s] Installing kf_depthCamera script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[2.124s] Installing test_node script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[2.124s] writing list of installed files to '/home/rama/catkin_ws/build/nodes/install.log'
+[2.160s] Invoked command in '/home/rama/catkin_ws/src/nodes' returned '0': PYTHONPATH=/home/rama/catkin_ws/build/nodes/prefix_override:/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes build --build-base /home/rama/catkin_ws/build/nodes/build install --record /home/rama/catkin_ws/build/nodes/install.log --install-scripts $base/lib/nodes --single-version-externally-managed

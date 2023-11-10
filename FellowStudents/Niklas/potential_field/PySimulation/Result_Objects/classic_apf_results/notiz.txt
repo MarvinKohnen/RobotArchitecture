@@ -1,0 +1,3 @@
+different_min_dist hat immer rep_force = 5
+
+different_rep_forces hat immer min_dist = 3

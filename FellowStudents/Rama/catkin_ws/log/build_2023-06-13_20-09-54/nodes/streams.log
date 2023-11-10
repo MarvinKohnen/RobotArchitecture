@@ -1,0 +1,27 @@
+[2.465s] Invoking command in '/home/rama/catkin_ws/src/nodes': PYTHONPATH=/home/rama/catkin_ws/build/nodes/prefix_override:/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes build --build-base /home/rama/catkin_ws/build/nodes/build install --record /home/rama/catkin_ws/build/nodes/install.log --install-scripts $base/lib/nodes --single-version-externally-managed
+[3.004s] running egg_info
+[3.005s] writing ../../build/nodes/nodes.egg-info/PKG-INFO
+[3.005s] writing dependency_links to ../../build/nodes/nodes.egg-info/dependency_links.txt
+[3.006s] writing entry points to ../../build/nodes/nodes.egg-info/entry_points.txt
+[3.006s] writing requirements to ../../build/nodes/nodes.egg-info/requires.txt
+[3.007s] writing top-level names to ../../build/nodes/nodes.egg-info/top_level.txt
+[3.089s] reading manifest file '../../build/nodes/nodes.egg-info/SOURCES.txt'
+[3.090s] writing manifest file '../../build/nodes/nodes.egg-info/SOURCES.txt'
+[3.091s] running build
+[3.091s] running build_py
+[3.092s] copying nodes/obstacle_avoidance.py -> /home/rama/catkin_ws/build/nodes/build/lib/nodes
+[3.092s] running install
+[3.097s] running install_lib
+[3.101s] copying /home/rama/catkin_ws/build/nodes/build/lib/nodes/obstacle_avoidance.py -> /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes
+[3.102s] byte-compiling /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes/obstacle_avoidance.py to obstacle_avoidance.cpython-38.pyc
+[3.104s] running install_data
+[3.105s] running install_egg_info
+[3.108s] removing '/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes-0.0.0-py3.8.egg-info' (and everything under it)
+[3.114s] Copying ../../build/nodes/nodes.egg-info to /home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes-0.0.0-py3.8.egg-info
+[3.115s] running install_scripts
+[3.166s] Installing Handgesture_node script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[3.166s] Installing kf_depthCamera script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[3.168s] Installing obstacle_avoidance_node script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[3.169s] Installing test_node script to /home/rama/catkin_ws/install/nodes/lib/nodes
+[3.170s] writing list of installed files to '/home/rama/catkin_ws/build/nodes/install.log'
+[3.226s] Invoked command in '/home/rama/catkin_ws/src/nodes' returned '0': PYTHONPATH=/home/rama/catkin_ws/build/nodes/prefix_override:/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nodes build --build-base /home/rama/catkin_ws/build/nodes/build install --record /home/rama/catkin_ws/build/nodes/install.log --install-scripts $base/lib/nodes --single-version-externally-managed

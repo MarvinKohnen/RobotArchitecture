@@ -1,0 +1,44 @@
+ TEST_COUNTS = 100
+
+    obstacle_count_min = 2
+    obstacle_count_max = 6
+
+    obstacle_vel_min = 1.5
+    obstacle_vel_max = 3
+    obstacle_vel_inc = .5
+
+    robo_m_vel_min = 1  # ROBO_MAX_VELOCITY
+    robo_m_vel_max = 1
+    robo_m_vel_inc = 1
+
+    sub_proc_at_same_time = 10
+
+
+
+
+Parameter der verschiedenen Modelle:
+
+classic_apf.py
+SCALING_FACTOR_ATTRACTION_FORCE = 1/20
+SCALING_FACTOR_REPULSIVE_FORCE = 1
+MIN_DISTANCE_REPULSIVE_FORCE = 3
+
+forward_apf.py
+SCALING_FACTOR_ATTRACTION_FORCE = 1/20
+SCALING_FACTOR_REPULSIVE_FORCE = 10
+MIN_DISTANCE_REPULSIVE_FORCE = 3
+REPULSIVE_FORCE_FUTURE_COUNT = 4
+OBSTACLE_FUTURE_ADJUSTMENT = 0.8
+ROBOT_CIRCLE_SIZE = 0.1
+
+rotational_fapf.py
+SCALING_FACTOR_ATTRACTION_FORCE = 1/20
+SCALING_FACTOR_REPULSIVE_FORCE = 10
+SCALING_FACTOR_REPULSIVE_ROTATION_FORCE = SCALING_FACTOR_REPULSIVE_FORCE * 1.5
+MIN_DISTANCE_REPULSIVE_FORCE = 3
+REPULSIVE_FORCE_FUTURE_COUNT = 4
+OBSTACLE_FUTURE_ADJUSTMENT = 0.8
+# CLOCKWISE_MATRIX = np.array(((0,1),(-1,0)))
+# COUNTERCLOCKWISE_MATRIX = np.array(((0,-1),(1,0)))
+ROBOT_CIRCLE_SIZE = 0.1
+REPULSIVE_FORCE_ROTATION = np.deg2rad(40)
