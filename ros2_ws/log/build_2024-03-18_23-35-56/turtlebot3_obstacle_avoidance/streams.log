@@ -1,0 +1,25 @@
+[0.888s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build --no-deps symlink_data
+[1.162s] running develop
+[1.163s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.163s]   warnings.warn(
+[1.355s] running egg_info
+[1.355s] creating turtlebot3_obstacle_avoidance.egg-info
+[1.355s] writing turtlebot3_obstacle_avoidance.egg-info/PKG-INFO
+[1.355s] writing dependency_links to turtlebot3_obstacle_avoidance.egg-info/dependency_links.txt
+[1.355s] writing entry points to turtlebot3_obstacle_avoidance.egg-info/entry_points.txt
+[1.356s] writing requirements to turtlebot3_obstacle_avoidance.egg-info/requires.txt
+[1.356s] writing top-level names to turtlebot3_obstacle_avoidance.egg-info/top_level.txt
+[1.356s] writing manifest file 'turtlebot3_obstacle_avoidance.egg-info/SOURCES.txt'
+[1.357s] reading manifest file 'turtlebot3_obstacle_avoidance.egg-info/SOURCES.txt'
+[1.358s] writing manifest file 'turtlebot3_obstacle_avoidance.egg-info/SOURCES.txt'
+[1.359s] running build_ext
+[1.359s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3-obstacle-avoidance.egg-link (link to .)
+[1.360s] 
+[1.360s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance
+[1.360s] running symlink_data
+[1.360s] creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/share/ament_index
+[1.361s] creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/share/ament_index/resource_index
+[1.361s] creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/share/ament_index/resource_index/packages
+[1.361s] symbolically linking /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/resource/turtlebot3_obstacle_avoidance -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/share/ament_index/resource_index/packages
+[1.361s] symbolically linking /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/package.xml -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/share/turtlebot3_obstacle_avoidance
+[1.398s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build --no-deps symlink_data
