@@ -1,0 +1,192 @@
+\documentclass[]{article}
+
+\usepackage{csquotes}
+\usepackage[backend=biber, style=numeric, autocite=inline]{biblatex}
+\usepackage[colorlinks]{hyperref}
+\usepackage{enumitem}
+\usepackage[a4paper, top=2cm, left=4cm, bottom=2cm, right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{graphicx} 
+
+\hypersetup{citecolor=black}
+\addbibresource{bachelorthesisSources.bib}
+
+%opening
+\title{Architectural Layering in Autonomous Robotics: Modular Design and Implementation on the Turtlebot3 Platform using ROS. }
+\author{Marvin Kohnen}
+
+
+\begin{document}
+	\onehalfspacing
+	\maketitle
+	
+	\newpage
+	
+	\begin{abstract}
+		This is going to be my abstract.
+	\end{abstract}
+	
+	\section{Introduction}
+	This is going to be my Introduction
+	\section{Related Work and Background}
+	\subsection{Robotic Architecture}
+	\subsubsection{The need for Robotic Architecture}
+	"Robot systems differ from other software applications in many ways. Foremost are the need to achieve high-level, complex goals, the need to interact with a complex, often dynamic environment, while ensuring the system’s own dynamics, the need to handle noise and uncertainty, and the need to be reactive to unexpected changes." \autocite{coste-maniereArchitectureBackboneRobotic2000} This quote by Coste-Mani\`{e}re and Simmons perfectly introduces the various challenges robotic systems and their developers face. These needs shape their design, as all robotic systems embody \textit{some} architectural structure and style. The architectural structure of a system outlines its division into various subsystems and the interactions between them, while the architectural style refers to the underlying computational principles of a system. \autocite{coste-maniereArchitectureBackboneRobotic2000} Different requirements and applications for robotic systems result in different architectures ("To date, the number of existing architectures has reached several hundred" \autocite{kotseruba40YearsCognitive2020}), some of which I will explore in the following section.
+	
+	HIER COGNITIVE ARCHITECTURE DISKUTIEREN
+	2.1 Robotic Architecture
+	2.1.1 so lassen
+	2.1.2 Development of Cognitive Architecture und PRA
+	2.1.3 Layered Architectures
+	
+	
+	\subsubsection{Perceive - Reason - Act}
+	The "Perceive-Reason-Act" (\textbf{PRA}) model takes its inspirates from Neuroscience: \textbf{P}erception creates a model representing the current world state. The \textbf{R}eason component designs a plan using the model to find an appropriate action towards the goal. Finally, \textbf{A}ct refers to the translation of the action into actuator commands and therefore resulting in motor output. \autocite{schillingAutonomeSystemeUnd2023} The rather intuitive PRA approach contains some drawbacks in real world applications: First and foremost, not every aspect of the environment is senseable (such as the inner state of other agents). Furthermore, key elements of the world may be difficult or rather impossible to model. Lastly, sensor and actuator measurements in the real world might differ vastly from the expected values in a clean lab situation. \autocite{schillingAutonomeSystemeUnd2023}
+	
+	\begin{figure}[ht] 
+		\centering
+		\includegraphics[width=0.7\textwidth]{Graphics/PRA}
+		\caption{Perceive-Reason-Act \autocite{schillingAutonomeSystemeUnd2023}}
+		\label{fig: fig1}
+	\end{figure}
+	
+	\subsubsection{Layered Architectures}
+	\textbf{Layered architectures} take a different approach to resolve the issues that the PRA model encountered. Horizontal layers of control systems are built to let the robot operate at increasing levels of competence and complexity and are assigned with different objectives. They consist of asynchronous modules which are allowed to communicate in a bidirectional manner. \autocite{brooksRobustLayeredControl1986} 
+	Even though the higher levels can subsume the roles of lower levels by suppressing their output, the lower levels maintain their functionality as higher levels are added - resulting in a robust and flexible robot control system. \autocite{brooksRobustLayeredControl1986} An example of a layered architecture can be seen in Figure \ref{fig: fig2}, created by Brooks in 1986. \autocite{brooksRobustLayeredControl1986}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{Graphics/LayeredArchitecture}
+		\caption{Layered architecture \autocite{brooksRobustLayeredControl1986}}
+		\label{fig: fig2}
+	\end{figure}
+	
+	Historically, layered architectures are composed of three layers: Behavioral layer, Executive layer and Planning layer. \autocite{jun-youngjungThreelayeredHybridArchitecture2008,peterbonassoExperiencesArchitectureIntelligent1997}
+	
+	\textit{The Behavioral layer} (elsewhere called the Hardware Abstraction-  or Functional layer) is typically found at the bottom of the hierarchy inside a layered architecture and provides a low-level library or interface to access the robot hardware, such as sensors or actuators. \autocite{jun-youngjungThreelayeredHybridArchitecture2008,simmonsLayeredArchitectureCoordination2002} It is often composed of very fast control loops, to create operations like path tracking or reflex-like reactions. \autocite{schillingAutonomeSystemeUnd2023} 
+	
+	\textit{The Planning layer} sits at the top of most architectures, making the decisions to achieve high level goals. This more complex and slower layer then sends the plans to the \textit{Executive layer}, which further decomposes tasks into subtasks. It is responsible for translating high-level plans into low-level behaviors, invoking behaviors at the correct times, monitoring execution, and handling exceptions. \autocite{schillingAutonomeSystemeUnd2023,simmonsLayeredArchitectureCoordination2002,volpeCLARAtyArchitectureRobotic2001} 
+	As stated earlier, information and control is allowed to flow up and down through these layers, as the Behavioral layer sends back sensor data and actuator  information to the executive layer, which then informs the Planning layer on the current status of the assigned tasks. \autocite{jun-youngjungThreelayeredHybridArchitecture2008} A prototype of this structure can be seen in Figure \ref{fig: fig3}. 
+	This architectural concept can even be extended to multiple robots, creating a sort of hive or swarm control, as Simmons et al. have shown in 2002. \autocite{simmonsLayeredArchitectureCoordination2002}
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{Graphics/three-layered-Architecture}
+		\caption{Prototype three-tiered architecture \autocite{sicilianoSpringerHandbookRobotics2016}}
+		\label{fig: fig3}
+	\end{figure}
+	\newpage
+	\subsubsection{CLARATy}
+	While this three layered architecture is very popular and has been thoroghly investigated by developers, it doesnt come without its drawbacks. The developers of \textbf{CLARATy}, a two layered architecture that is used for NASA's space robots \autocite{sicilianoSpringerHandbookRobotics2016}, identified three problems when designing three layered architectures:
+	Firstly, the developers "expand the capabilities and dominance of the layer within which they are working" \autocite{volpeCLARAtyArchitectureRobotic2001}. This results in models, in which certain layers are predominantly active. Furthermore, there is still research to be done over the hierarchical superiority of the planning and executive layer of one over the other. \autocite{volpeCLARAtyArchitectureRobotic2001} Another problem the authors state is the lack of access from the Planning level to the Behavioral control. This forces the system to carry own models on the Planning layer, which are not directly derived from the functional layer, to perform planning tasks. Eventually, this can lead to inconsistencies between the layers and endanger the integrity of the system. \autocite{volpeCLARAtyArchitectureRobotic2001} Lastly, the authors claim that there is a misconception in equating greater intelligence in a system with increased granularity, suggesting that each part of a system can possess its own distinct hierarchy of granularity. They move on to explain that the Functional Layer contains many nested subsystems, the Executive layer encompasses multiple logic trees to coordinate these subsystems, and the Planning layer includes various timelines and planning horizons with different resolutions. \autocite{volpeCLARAtyArchitectureRobotic2001}
+	In order to fight these challenges, Volpe et al. proposed a two layered architecture. This offers two main benefits: \newline
+	Firstly, an explicit Representation of Granularity: CLARATy introduces a third dimension for granularity, allowing for a clearer depiction of the system's complexity and hierarchy. This means that within the Functional layer there's a detailed organization showing how subsystems are nested or grouped together. Secondly, they blended the Planning and Executive layer, resulting in a \textit{decision} layer which is more efficient and allowed the levels to share a common database (depicted in figure \ref{fig: fig4}). \autocite{volpeCLARAtyArchitectureRobotic2001} 
+	
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{Graphics/CLARATy}
+		\caption{CLARATy architecture \autocite{volpeCLARAtyArchitectureRobotic2001} }
+		\label{fig: fig4}
+	\end{figure} 
+	
+	\newpage
+	
+	\subsubsection{Cognitive Architectures}
+	{\color{red} Ich weiß nicht, ob ich hier noch kurz Cognitive Architectures ansprechen sollte, als eine Art Outlook (ca halbe Seite?)}
+	
+	
+	\subsubsection{Übergang (TITEL?)}
+	Understanding the principles of layered architecture provides a solid foundation for appreciating the architectural choices and design patterns employed in robotic systems. As we have seen, there is no one definitive way to architect these systems. Rather, this framework provides some key characterics by its division of system functionalities into distinct layers, each with a specific role, offers clarity, modularity, and scalability. As we transition our focus to the Robot Operating System (ROS), it becomes evident how ROS embodies these principles through its comprehensive framework for robot software development.
+	
+	
+	
+	\subsection{Robot Operating System}
+	\subsubsection{ROS 1}
+	The Robot Operating System (ROS) is an open-source operating system for robots. It provides the services expected from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. ROS is not an operating system in the traditional sense of process management and scheduling. Rather, it is a framework or middleware upon which robotics software is developed, offering a structured communications layer above the host operating systems of a heterogeneous compute cluster. \autocite{quigleyROSOpensourceRobot2009,ros.orgIntroductionROS2024}
+	ROS's architecture is designed around the notion of the intercommunication between numerous computing processes (often referred to as nodes) over a peer-to-peer network. This decentralized computing architecture enables the development and integration of complex robotic systems from modular and reusable components or packages. The system facilitates a distributed computing environment, allowing for the separation of tasks such as sensing, perception, decision-making, and actuation across multiple processors and machines. \autocite{quigleyROSOpensourceRobot2009}
+	Central to ROS is its communications infrastructure, which enables the exchange of messages in various forms. These fundamental concepts include messages, topics, services and above mentioned nodes. The latter communicate with one another through messages ("strictly typed data structures" \autocite{quigleyROSOpensourceRobot2009}). This communication is implemented as a \textit{publish-subscriber system:} On the one hand Nodes send messages to a topic by publishing the information, on the other hand nodes can receive the published information by subscribing to said topic. Multiple concurrent publishers and subscribers for the same topic may be active at any time. Also, a single node can publish and subscribe to many topics. \autocite{quigleyROSOpensourceRobot2009}
+	Additionally, ROS provides capabilities for package management and a vast ecosystem of community-contributed tools and libraries that address various robotics functions ranging from planning and perception to simulation and visualization.
+	\autocite{quigleyROSOpensourceRobot2009,ros.orgIntroductionROS2024}
+	\subsubsection{ROS2 and its improvements}
+	Even though ROS layed the groundwork for the modern robotic industry, the growing interest of industrial applications showed the limitations of ROS, which was built as a research platform. The urge for security, reliability in non-traditional environments and support for large scale embedded systems became the driver for the creation of ROS2, the second generation of the Robotic Operation System. \autocite{macenskiRobotOperatingSystem2022} 
+	It introduces Node Lifecycle management, replaces the custom ROS1 middleware with industry standard middleware DDS (Data Distribution Service), better Real-Time support and adds Actions as a communicational tool. Actions in ROS2 are designed for long-duration tasks that require feedback to the caller during execution, which makes them distinct from the simpler service-call model.  \autocite{macenskiRobotOperatingSystem2022} A typical node interface for ROS2 can be seen in the figure \ref{fig: fig5} below. 
+	{\color{red} eventuell ROS1 nicht erklären und alles für ROS2 zusammenfassen? }
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.7\textwidth]{Graphics/ROS2}
+		\caption{ROS2 Node interfaces: topics, services and actions. \autocite{macenskiRobotOperatingSystem2022}}
+		\label{fig: fig5}
+	\end{figure}
+	
+	\subsection{How do you architect your robots?}
+	\subsubsection{State of the Practice and Guidelines for ROS-based systems}
+	Malavolta et al. (2020) conducted a study to answer three research questions: the architecture-relevant characteristics of ROS-based systems, the quality requirements considered in their design, and how to guide roboticists in architecting such systems. The authors used a two-part approach, mining ROS repositories and surveying developers who contributed to these repositories. The study found that ROS systems are becoming large and complex, and while there are many open source packages and examples on how to use ROS, engineering robots with specific properties is still mostly an art of trial and error.The findings show that the most mentioned quality requirements related to ROS architecture were maintainability, performance, and reliability. The study also identified 39 guidelines for architecting ROS-based systems. These guidelines are useful for both roboticists aiming to develop high-quality robots and architecture researchers looking for evidence-based indications on how real-world ROS systems should be architected. I will now present 7 out of those 39 guidelines, which were evaluated as the most impactful for architectural design of robotic systems.
+	\autocite{malavoltaHowYouArchitect2020}
+	\subsubsection{Guidelines}
+	\begin{enumerate}[leftmargin=9mm, align=left]
+		\item \textbf{Use standardized ROS message formats as much as possible, possibly supporting also their legacy versions.} 
+		\item[]This first guideline emphasizes the importance of using standardized ROS message formats, particularly those from the common\_msgs and std\_msgs packages. Adopting these standards facilitates easier reuse, upgrade, and replacement of ROS nodes by allowing for straightforward topic remapping. Standardized messages enhance development efficiency by making compatible tools, such as visualizers and SLAM algorithms, easier available. They also improve node testability through isolation testing with ROS bags and simplify the integration of new sensors and hardware, as many manufacturers support ROS out of the box. However, since the definitions of standardized message formats are subject to change, it's crucial to design systems to be as decoupled as possible from specific message formats to ensure future compatibility and ease of updates. \autocite{malavoltaHowYouArchitect2020}{\color{red} irgendwie eine komische aussage finde ich}
+		
+		\item \textbf{Group nodes and interfaces into cohesive sets, each with their own responsibilities and well-defined dependencies.} 
+		\item[]Growing complexity poses a serious challenge while designinng ROS-based software architectures, as it can result in hundreds of interdependent nodes leading to technical debt, limitations to certain ROS packages and reduce adaptability and extendability of the whole system. To mitigate these issues, the guideline suggests grouping nodes and interfaces into cohesive sets with defined responsibilities and dependencies. This structured approach aids in maintaining a clear understanding of the system's architecture, allowing for easier evolution and maintenance of the system. \autocite{malavoltaHowYouArchitect2020}
+		\item \textbf{The behavior of each node should follow a well-defined lifecyle, which should be queryable and updatable at runtime.} 
+		\item[]ROS inherits a certain flexibility that allows developers to create nodes without prescribed behaviors, offering great freedom but posing challenges for testability, reliability, and maintainability of stateful nodes. This guideline states the importance of treating node lifecycles as a crucial aspect of system design, suggesting documentation of node lifecycles to improve interaction, predictability, and test case development. As stated earlier, the development of ROS 2 already addresses some of these issues by supporting managed nodes with defined lifecycles (Unconfigured, Inactive, Active, Finalized) that can be inspected and controlled, enhancing testability and system management. Additionally, some ROS packages, even outside ROS 2's managed nodes, incorporate lifecycle considerations into their APIs, enabling runtime configurability and reflection to bolster system adaptability and autonomous capabilities. \autocite{malavoltaHowYouArchitect2020}  Defining and enforcing the lifecycle of ROS nodes "can enhance the system in terms of run-time configurability and reflection, which can be exploited for providing autonomous capabilities". \autocite{malavoltaHowYouArchitect2020}
+		\item  \textbf{Assign meaningful names to components (e.g., nodes, topics, services) and group them by adopting standard prefixes/suffixes.} 
+		\item[] This pretty self explanatory problem is especially importan in ROS-based systems, as topics and services are created programmatically by the nodes at run-time and their identifiers are simple strings. \autocite{malavoltaHowYouArchitect2020}
+		\item  \textbf{Nodes directly interacting with simulators and hardware devices should provide identical ROS messaging interfaces to the rest of the system} 
+		\item[] This guideline essentially boils down to creating uniformity in messaging interfaces, which allows developers to easily swap between simulations and hardware applications, while reducing modification cost to a minimum. \autocite{malavoltaHowYouArchitect2020}
+		
+		\item \textbf{ROS nodes should be resilient with respect to the amount and frequency of the data received by sensors.} 
+		\item[] This principle highlights the challenges developers face when working with hardware sensors in robotics: Sensors often produce data in bursts, can degrade, and become less accurate over time. To handle these challenges, developers are advised to design their systems with flexibility in mind, by implementing load balancing nodes to manage sudden data surges and designing nodes to be resilient to gaps in sensor data. This resilience is crucial for the reliability of state estimation nodes, where faults can cause significant system-level failures. I expect this guideline to not be of great relevance in my project, due to the rather small(-ish) dataload. Nonetheless, a cruicial thought to keep in mind, when designind robotic systems. \autocite{malavoltaHowYouArchitect2020}
+		
+		\item \textbf{Avoid persisting raw data if only part of it will be used.}
+		\item[] This guideline refers to the obstacle of how extensive data logging or storage operations can negatively impact the system's performance during its operation. Developers are advised to selectively record only the necessary data to avoid these performance issues. \autocite{malavoltaHowYouArchitect2020}
+		
+		
+	\end{enumerate}
+	
+	Our architecture will try to adhere to these guidelines as much as possible, in order to create a robust and performant robotic system.
+	
+	
+	\subsection{Niryo One Arm Architecture}
+	The Niryo One is a collaborative and open-source 6-axis robot designed for research and higher education in the context of the industry 4.0.
+	Its architecture has been mentioned by Malavolta et al. as an example, that adheres very well to above stated guidelines. \autocite{malavoltaHowYouArchitect2020} Niryo One operates upon a layered architecture, which is composed of five layers. Each layer is further subcategorized into different packages, among them pre-built ROS packages, imported libraries or self-created packages. \newline
+	At the lowest level we can find the \textbf{Hardware layer}. This layer contains a package \textit{rpi} that handles all the external hardware (everything else than the motors) of Niryo One, and provides many utilities for the Raspberry Pi 3, such as Wi-FI, LEDs, Buttons etc. Furthermore, a \textit{driver} package is built, which provides an interface to ros\_control and handles the hardware control of motors. The other two packages found in figure \ref{fig: fig6} (\textit{dynamixel\_sdk} and \textit{mcp\_can\_rpi}) are imported libraries to stabilize functionality of the Raspberry pi and control the actuators. \autocite{roboticsNiryoOneROS2024} \newline
+	
+	Next up, a \textbf{control level} is implemented, which is entirely made up of the pre-built ros packages \textit{ros\_control} and \textit{joint trajectory controller}. The former is a set of packages that include controller interfaces, controller managers, transmissions and hardware interfaces \autocite{ros.orgROSControl2024a}, while the latter provides a controller for executing joint-space trajectories on a group of joints. \autocite{ros.orgJointTrajectoryController2024} \newline
+	
+	The actual motion control is invoked by the next higher level, the \textbf{Motion Planning layer}. Not only is there a \textit{description} package, containing the URDF file and meshes for Niryo One (which is essentially a description for the robot), but also the widely used \textit{moveit} packages, which is already part of the ROS ecosystem. The motion planning layer is responsible for finding inverse kinematics and building a path for the robot.\autocite{roboticsGetStartedNiryo2024,ros.orgMoveItConcepts2024} For each point, each axis are given a specific position, velocity, and acceleration. This path is sent to the joint trajectory controller for the actual hardware execution. \autocite{roboticsGetStartedNiryo2024}
+	
+	On top of that, the \textbf{Commander layer} provides a higher level interface between the client and the underlying robot commands. All commands, that the user inputs (e.g. "move joints"), go through this layer. The \textit{commander} package handles concurrent requests, validates parameters and calls required controllers and then returns appropriate messages and status. 
+	Furthermore, a \textit{python\_api} package allows for easier access for other developers and tries to reduce the complexity of ROS for beginners. \autocite{roboticsGetStartedNiryo2024,roboticsNiryoOneROS2024}
+	
+	On the highest level, the architecture features a \textbf{External communication layer}.  This layer allows for communication outside the ROS ecosystem. First a TCP server is established in the \textit{modbus} package. It offers a simple way for developers to create programs for robot to control them via remote communication on a computer, on a mobile or any device with network facilities. Lastly, the ROS-packages \textit{rosbridge} and \textit{joy} are imported, in order to allow communication between ROS1 and ROS2 and the use of the joystick controllers. \autocite{roboticsGetStartedNiryo2024,roboticsNiryoOneROS2024}
+	
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.9\textwidth]{Graphics/Niryo}
+		\caption{Niryo One ROS Stack overview \autocite{roboticsNiryoOneROS2024}}
+		\label{fig: fig6}
+	\end{figure}
+	
+	
+	\section{Methodology}
+	\subsection{Frameworks and Setup}
+	\begin{itemize}
+		\item Welche Version nutze ich (Orientieren an dem was ich brauche)
+		\item Turtlebot kurz erklären
+		\item Layered architecture: meine components, dependencies (Grafik wie Niryo)
+	\end{itemize}
+	
+	\subsection{Comparison to Malavolta et al}
+	\begin{itemize}
+		\item compare architecutre to guidelines
+	\end{itemize}
+	\subsection{Quantitative Analysis}
+	\section{References}
+	\printbibliography
+	
+\end{document}

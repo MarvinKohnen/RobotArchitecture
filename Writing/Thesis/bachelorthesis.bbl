@@ -1,0 +1,943 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{brooksRobustLayeredControl1986}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3d750c4d36f30d3cb25be30be5c1870b}{%
+           family={Brooks},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{3d750c4d36f30d3cb25be30be5c1870b}
+      \strng{fullhash}{3d750c4d36f30d3cb25be30be5c1870b}
+      \strng{bibnamehash}{3d750c4d36f30d3cb25be30be5c1870b}
+      \strng{authorbibnamehash}{3d750c4d36f30d3cb25be30be5c1870b}
+      \strng{authornamehash}{3d750c4d36f30d3cb25be30be5c1870b}
+      \strng{authorfullhash}{3d750c4d36f30d3cb25be30be5c1870b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0882-4967}
+      \field{journaltitle}{IEEE Journal on Robotics and Automation}
+      \field{number}{1}
+      \field{shortjournal}{IEEE J. Robot. Automat.}
+      \field{title}{A Robust Layered Control System for a Mobile Robot}
+      \field{urlday}{6}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{2}
+      \field{year}{1986}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{14\bibrangedash 23}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1109/JRA.1986.1087032
+      \endverb
+      \verb{file}
+      \verb /Users/Real/Zotero/storage/JUDFPR6W/Brooks - 1986 - A robust layered control system for a mobile robot.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/1087032/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/1087032/
+      \endverb
+    \endentry
+    \entry{coste-maniereArchitectureBackboneRobotic2000}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=06a312afb2ce8c46b620f997351edcef}{%
+           family={Coste-Maniere},
+           familyi={C\bibinithyphendelim M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=f1f9dad40b87438b9896f4b8ec79f349}{%
+           family={Simmons},
+           familyi={S\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {San Francisco, CA, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{8d67eaae28ebbb5a60bd166be6d2d8b1}
+      \strng{fullhash}{8d67eaae28ebbb5a60bd166be6d2d8b1}
+      \strng{bibnamehash}{8d67eaae28ebbb5a60bd166be6d2d8b1}
+      \strng{authorbibnamehash}{8d67eaae28ebbb5a60bd166be6d2d8b1}
+      \strng{authornamehash}{8d67eaae28ebbb5a60bd166be6d2d8b1}
+      \strng{authorfullhash}{8d67eaae28ebbb5a60bd166be6d2d8b1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings 2000 {{ICRA}}. {{Millennium Conference}}. {{IEEE International Conference}} on {{Robotics}} and {{Automation}}. {{Symposia Proceedings}} ({{Cat}}. {{No}}.{{00CH37065}})}
+      \field{eventtitle}{2000 {{ICRA}}. {{IEEE International Conference}} on {{Robotics}} and {{Automation}}}
+      \field{isbn}{978-0-7803-5886-7}
+      \field{title}{Architecture, the Backbone of Robotic Systems}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{volume}{1}
+      \field{year}{2000}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{67\bibrangedash 72}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/ROBOT.2000.844041
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/844041/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/844041/
+      \endverb
+    \endentry
+    \entry{jun-youngjungThreelayeredHybridArchitecture2008}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=57bf1f95e96b956f58e9fef27a5a6175}{%
+           family={{Jun-Young Jung}},
+           familyi={J\bibinitperiod}}}%
+        {{hash=686839d16e8c96b266800b404e43f362}{%
+           family={{Dong-Wook Lee}},
+           familyi={D\bibinitperiod}}}%
+        {{hash=b61218d101de2df0a5a41845285ef1f5}{%
+           family={{Hyun-Sub Park}},
+           familyi={H\bibinitperiod}}}%
+        {{hash=f0bc63c69a01fffcf1c4648dfccfbefe}{%
+           family={{Ho-Gil Lee}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Seoul, South Korea}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{66a303b270301c834eba05959534f4de}
+      \strng{fullhash}{40345c67ead062a7d98135feb5b7eba5}
+      \strng{bibnamehash}{66a303b270301c834eba05959534f4de}
+      \strng{authorbibnamehash}{66a303b270301c834eba05959534f4de}
+      \strng{authornamehash}{66a303b270301c834eba05959534f4de}
+      \strng{authorfullhash}{40345c67ead062a7d98135feb5b7eba5}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2008 {{International Conference}} on {{Control}}, {{Automation}} and {{Systems}}}
+      \field{eventtitle}{2008 {{International Conference}} on {{Control}}, {{Automation}} and {{Systems}} ({{ICCAS}})}
+      \field{isbn}{978-89-950038-9-3 978-89-93215-01-4}
+      \field{month}{10}
+      \field{title}{Three-Layered Hybrid Architecture for Emotional Reactive System}
+      \field{urlday}{10}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2008}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{2728\bibrangedash 2731}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1109/ICCAS.2008.4694221
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/4694221/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/4694221/
+      \endverb
+    \endentry
+    \entry{kotseruba40YearsCognitive2020}{article}{}
+      \name{author}{2}{}{%
+        {{hash=67c42e2855ecb68463a5226e8d5fd047}{%
+           family={Kotseruba},
+           familyi={K\bibinitperiod},
+           given={Iuliia},
+           giveni={I\bibinitperiod}}}%
+        {{hash=4338050813ceeb7ce9eac8dab8749985}{%
+           family={Tsotsos},
+           familyi={T\bibinitperiod},
+           given={John\bibnamedelima K.},
+           giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab2205d6df5bc2e583b1a7173a316cb8}
+      \strng{fullhash}{ab2205d6df5bc2e583b1a7173a316cb8}
+      \strng{bibnamehash}{ab2205d6df5bc2e583b1a7173a316cb8}
+      \strng{authorbibnamehash}{ab2205d6df5bc2e583b1a7173a316cb8}
+      \strng{authornamehash}{ab2205d6df5bc2e583b1a7173a316cb8}
+      \strng{authorfullhash}{ab2205d6df5bc2e583b1a7173a316cb8}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{0269-2821, 1573-7462}
+      \field{journaltitle}{Artificial Intelligence Review}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{1}
+      \field{shortjournal}{Artif Intell Rev}
+      \field{shorttitle}{40 Years of Cognitive Architectures}
+      \field{title}{40 Years of Cognitive Architectures: Core Cognitive Abilities and Practical Applications}
+      \field{urlday}{7}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{volume}{53}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{17\bibrangedash 94}
+      \range{pages}{78}
+      \verb{doi}
+      \verb 10.1007/s10462-018-9646-y
+      \endverb
+      \verb{file}
+      \verb /Users/Real/Zotero/storage/SEZFWSXN/Kotseruba und Tsotsos - 2020 - 40 years of cognitive architectures core cognitiv.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/s10462-018-9646-y
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/s10462-018-9646-y
+      \endverb
+    \endentry
+    \entry{macenskiRobotOperatingSystem2022}{article}{}
+      \name{author}{5}{}{%
+        {{hash=7b84d10a03303cd00f198fefb38a5da3}{%
+           family={Macenski},
+           familyi={M\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0d11ace6e44e4742ea1692d7ddf4819e}{%
+           family={Foote},
+           familyi={F\bibinitperiod},
+           given={Tully},
+           giveni={T\bibinitperiod}}}%
+        {{hash=a8ad4a5f43253f69552460c946e34e49}{%
+           family={Gerkey},
+           familyi={G\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=4e2c9f9d04cf548117105f50a9c8a7a1}{%
+           family={Lalancette},
+           familyi={L\bibinitperiod},
+           given={Chris},
+           giveni={C\bibinitperiod}}}%
+        {{hash=fe838d86b89f8983167a3747e11998bb}{%
+           family={Woodall},
+           familyi={W\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a195e02383364d4009f77ca22451e11}
+      \strng{fullhash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \strng{bibnamehash}{4a195e02383364d4009f77ca22451e11}
+      \strng{authorbibnamehash}{4a195e02383364d4009f77ca22451e11}
+      \strng{authornamehash}{4a195e02383364d4009f77ca22451e11}
+      \strng{authorfullhash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{The next chapter of the robotics revolution is well underway with the deployment of robots for a broad range of commercial use cases. Even in a myriad of applications and environments, there exists a common vocabulary of components that robots share—the need for a modular, scalable, and reliable architecture; sensing; planning; mobility; and autonomy. The Robot Operating System (ROS) was an integral part of the last chapter, demonstrably expediting robotics research with freely available components and a modular framework. However, ROS 1 was not designed with many necessary production-grade features and algorithms. ROS 2 and its related projects have been redesigned from the ground up to meet the challenges set forth by modern robotic systems in new and exploratory domains at all scales. In this Review, we highlight the philosophical and architectural changes of ROS 2 powering this new chapter in the robotics revolution. We also show through case studies the influence ROS 2 and its adoption has had on accelerating real robot systems to reliable deployment in an assortment of challenging environments. , This Review describes ROS 2’s design, features, and performance with four case studies on land, air, sea, and even space.}
+      \field{day}{11}
+      \field{issn}{2470-9476}
+      \field{journaltitle}{Science Robotics}
+      \field{langid}{english}
+      \field{month}{5}
+      \field{number}{66}
+      \field{shortjournal}{Sci. Robot.}
+      \field{shorttitle}{Robot {{Operating System}} 2}
+      \field{title}{Robot {{Operating System}} 2: {{Design}}, Architecture, and Uses in the Wild}
+      \field{urlday}{5}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{volume}{7}
+      \field{year}{2022}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{eabm6074}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1126/scirobotics.abm6074
+      \endverb
+      \verb{file}
+      \verb /Users/Real/Zotero/storage/335RA96I/Macenski et al. - 2022 - Robot Operating System 2 Design, architecture, an.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.science.org/doi/10.1126/scirobotics.abm6074
+      \endverb
+      \verb{url}
+      \verb https://www.science.org/doi/10.1126/scirobotics.abm6074
+      \endverb
+    \endentry
+    \entry{malavoltaHowYouArchitect2020}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{hash=3ff6e286502b85077eabb7e86849d893}{%
+           family={Malavolta},
+           familyi={M\bibinitperiod},
+           given={Ivano},
+           giveni={I\bibinitperiod}}}%
+        {{hash=05e1443845ae61ddc5d27b0835d2fbca}{%
+           family={Lewis},
+           familyi={L\bibinitperiod},
+           given={Grace},
+           giveni={G\bibinitperiod}}}%
+        {{hash=41f94f4724ea60cb50a571ff628e27e5}{%
+           family={Schmerl},
+           familyi={S\bibinitperiod},
+           given={Bradley},
+           giveni={B\bibinitperiod}}}%
+        {{hash=b7e3fc29bccdf8a7639daddb302e1545}{%
+           family={Lago},
+           familyi={L\bibinitperiod},
+           given={Patricia},
+           giveni={P\bibinitperiod}}}%
+        {{hash=5e93a0537dc9db010915acd5407760d4}{%
+           family={Garlan},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Seoul South Korea}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{1096fd05c40e62e2a93cb6931d5228de}
+      \strng{fullhash}{0f15d24eee36ba6a27e77dce9574b8d9}
+      \strng{bibnamehash}{1096fd05c40e62e2a93cb6931d5228de}
+      \strng{authorbibnamehash}{1096fd05c40e62e2a93cb6931d5228de}
+      \strng{authornamehash}{1096fd05c40e62e2a93cb6931d5228de}
+      \strng{authorfullhash}{0f15d24eee36ba6a27e77dce9574b8d9}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{booktitle}{Proceedings of the {{ACM}}/{{IEEE}} 42nd {{International Conference}} on {{Software Engineering}}: {{Software Engineering}} in {{Practice}}}
+      \field{day}{27}
+      \field{eventtitle}{{{ICSE}} '20: 42nd {{International Conference}} on {{Software Engineering}}}
+      \field{isbn}{978-1-4503-7123-0}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{shorttitle}{How Do You Architect Your Robots?}
+      \field{title}{How Do You Architect Your Robots?: State of the Practice and Guidelines for {{ROS-based}} Systems}
+      \field{urlday}{5}
+      \field{urlmonth}{11}
+      \field{urlyear}{2023}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{31\bibrangedash 40}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1145/3377813.3381358
+      \endverb
+      \verb{file}
+      \verb /Users/Real/Zotero/storage/ST3C82XJ/Malavolta et al. - 2020 - How do you architect your robots state of the pr.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://dl.acm.org/doi/10.1145/3377813.3381358
+      \endverb
+      \verb{url}
+      \verb https://dl.acm.org/doi/10.1145/3377813.3381358
+      \endverb
+    \endentry
+    \entry{peterbonassoExperiencesArchitectureIntelligent1997}{article}{}
+      \name{author}{6}{}{%
+        {{hash=c3bd027ab73e446332aa01323ed05749}{%
+           family={Peter\bibnamedelima Bonasso},
+           familyi={P\bibinitperiod\bibinitdelim B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e76edc671e90124bd10e31c26a02a6e8}{%
+           family={James\bibnamedelima Firby},
+           familyi={J\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c24c384d526ea02fbc995bca0cffde4d}{%
+           family={Gat},
+           familyi={G\bibinitperiod},
+           given={Erann},
+           giveni={E\bibinitperiod}}}%
+        {{hash=95032ae31ea162a5e867c3d95e8c22dc}{%
+           family={Kortenkamp},
+           familyi={K\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=01de1e861296a6ca8927e417cf8e6091}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=084be7b3ab8e95622952180f97ab09aa}{%
+           family={Slack},
+           familyi={S\bibinitperiod},
+           given={Mark\bibnamedelima G.},
+           giveni={M\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f546ebbd3e79340be42f1359fa6f8181}
+      \strng{fullhash}{c6b07e8797a66b8b70c1b7da67c9abc1}
+      \strng{bibnamehash}{f546ebbd3e79340be42f1359fa6f8181}
+      \strng{authorbibnamehash}{f546ebbd3e79340be42f1359fa6f8181}
+      \strng{authornamehash}{f546ebbd3e79340be42f1359fa6f8181}
+      \strng{authorfullhash}{c6b07e8797a66b8b70c1b7da67c9abc1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0952-813X, 1362-3079}
+      \field{journaltitle}{Journal of Experimental \& Theoretical Artificial Intelligence}
+      \field{langid}{english}
+      \field{month}{4}
+      \field{number}{2-3}
+      \field{shortjournal}{Journal of Experimental \& Theoretical Artificial Intelligence}
+      \field{title}{Experiences with an Architecture for Intelligent, Reactive Agents}
+      \field{urlday}{10}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{volume}{9}
+      \field{year}{1997}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{237\bibrangedash 256}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1080/095281397147103
+      \endverb
+      \verb{file}
+      \verb /Users/Real/Git/RobotArchitecture/Writing/Literature/Experiences with an architecture for intelligent reactive agents.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/095281397147103
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/095281397147103
+      \endverb
+    \endentry
+    \entry{quigleyROSOpensourceRobot2009}{article}{}
+      \name{author}{9}{}{%
+        {{hash=9404eebbe5c52f5580a6f6515ebcbb80}{%
+           family={Quigley},
+           familyi={Q\bibinitperiod},
+           given={Morgan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=a8ad4a5f43253f69552460c946e34e49}{%
+           family={Gerkey},
+           familyi={G\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a5afffe84e61e0e09bd056f93b5a8a3c}{%
+           family={Coley},
+           familyi={C\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+        {{hash=960c70f75f497debf10c247f8076241e}{%
+           family={Faust},
+           familyi={F\bibinitperiod},
+           given={Josh},
+           giveni={J\bibinitperiod}}}%
+        {{hash=0d11ace6e44e4742ea1692d7ddf4819e}{%
+           family={Foote},
+           familyi={F\bibinitperiod},
+           given={Tully},
+           giveni={T\bibinitperiod}}}%
+        {{hash=fae0a680822c97400d0807bb44b87838}{%
+           family={Leibs},
+           familyi={L\bibinitperiod},
+           given={Jeremy},
+           giveni={J\bibinitperiod}}}%
+        {{hash=05ef16e9b1890a54a9c97ac2b1be9f80}{%
+           family={Berger},
+           familyi={B\bibinitperiod},
+           given={Eric},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1afca7d350a45f78259bb8af3f168e7d}{%
+           family={Wheeler},
+           familyi={W\bibinitperiod},
+           given={Rob},
+           giveni={R\bibinitperiod}}}%
+        {{hash=bdb4d740fc9548d1c32a62103c30169d}{%
+           family={Ng},
+           familyi={N\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{b774a9d43f5be3e4c87661f157618116}
+      \strng{fullhash}{aeb62480ba7ff51579fbfdc25d791159}
+      \strng{bibnamehash}{b774a9d43f5be3e4c87661f157618116}
+      \strng{authorbibnamehash}{b774a9d43f5be3e4c87661f157618116}
+      \strng{authornamehash}{b774a9d43f5be3e4c87661f157618116}
+      \strng{authorfullhash}{aeb62480ba7ff51579fbfdc25d791159}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ICRA workshop on open source software}
+      \field{month}{5}
+      \field{number}{3.2}
+      \field{title}{{{ROS}}: An Open-Source {{Robot Operating System}}}
+      \field{volume}{3}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{pages}{5}
+      \range{pages}{1}
+    \endentry
+    \entry{roboticsGetStartedNiryo2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=de3d5f3f6e0f0815afd8ba75a9f76493}{%
+           family={Robotics},
+           familyi={R\bibinitperiod},
+           given={Niryo},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{fullhash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{bibnamehash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{authorbibnamehash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{authornamehash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{authorfullhash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{3}
+      \field{title}{Get {{Started}} with {{Niryo One ROS Stack}}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://niryo.com/docs/niryo-one/developer-tutorials/get-started-with-the-niryo-one-ros-stack/
+      \endverb
+      \verb{url}
+      \verb https://niryo.com/docs/niryo-one/developer-tutorials/get-started-with-the-niryo-one-ros-stack/
+      \endverb
+    \endentry
+    \entry{roboticsNiryoOneROS2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=de3d5f3f6e0f0815afd8ba75a9f76493}{%
+           family={Robotics},
+           familyi={R\bibinitperiod},
+           given={Niryo},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{fullhash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{bibnamehash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{authorbibnamehash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{authornamehash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \strng{authorfullhash}{de3d5f3f6e0f0815afd8ba75a9f76493}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{8}
+      \field{month}{3}
+      \field{title}{Niryo {{One ROS}}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/NiryoRobotics/niryo_one_ros
+      \endverb
+      \verb{url}
+      \verb https://github.com/NiryoRobotics/niryo_one_ros
+      \endverb
+    \endentry
+    \entry{ros.orgIntroductionROS2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=87380b1c7d915b6df49c1b18bd31a8a0}{%
+           family={ROS.org},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{fullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{bibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorbibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authornamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorfullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{3}
+      \field{title}{Introduction to {{ROS}}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://wiki.ros.org/ROS/Introduction
+      \endverb
+      \verb{url}
+      \verb https://wiki.ros.org/ROS/Introduction
+      \endverb
+    \endentry
+    \entry{ros.orgJointTrajectoryController2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=87380b1c7d915b6df49c1b18bd31a8a0}{%
+           family={ROS.org},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{fullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{bibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorbibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authornamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorfullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{3}
+      \field{title}{Joint {{Trajectory Controller}}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/joint_trajectory_controller
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/joint_trajectory_controller
+      \endverb
+    \endentry
+    \entry{ros.orgMoveItConcepts2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=87380b1c7d915b6df49c1b18bd31a8a0}{%
+           family={ROS.org},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{fullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{bibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorbibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authornamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorfullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \field{extraname}{3}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{3}
+      \field{title}{{{MoveIt Concepts}}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://moveit.ros.org/documentation/concepts/
+      \endverb
+      \verb{url}
+      \verb https://moveit.ros.org/documentation/concepts/
+      \endverb
+    \endentry
+    \entry{ros.orgROSControl2024a}{online}{}
+      \name{author}{1}{}{%
+        {{hash=87380b1c7d915b6df49c1b18bd31a8a0}{%
+           family={ROS.org},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{fullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{bibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorbibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authornamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorfullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \field{extraname}{4}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{3}
+      \field{title}{{{ROS Control}}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb http://wiki.ros.org/ros_control
+      \endverb
+      \verb{url}
+      \verb http://wiki.ros.org/ros_control
+      \endverb
+    \endentry
+    \entry{schillingAutonomeSystemeUnd2023}{unpublished}{}
+      \name{author}{1}{}{%
+        {{hash=2aa86aaf4b296aacb549ee31f9da0750}{%
+           family={Schilling},
+           familyi={S\bibinitperiod},
+           given={Malte},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{2aa86aaf4b296aacb549ee31f9da0750}
+      \strng{fullhash}{2aa86aaf4b296aacb549ee31f9da0750}
+      \strng{bibnamehash}{2aa86aaf4b296aacb549ee31f9da0750}
+      \strng{authorbibnamehash}{2aa86aaf4b296aacb549ee31f9da0750}
+      \strng{authornamehash}{2aa86aaf4b296aacb549ee31f9da0750}
+      \strng{authorfullhash}{2aa86aaf4b296aacb549ee31f9da0750}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{13}
+      \field{month}{6}
+      \field{title}{Autonome {{Systeme}} Und {{Mobile Roboter}}: {{Architectures}}}
+      \field{venue}{Universität Münster}
+      \field{year}{2023}
+      \field{dateera}{ce}
+      \verb{file}
+      \verb /Users/Real/Zotero/storage/SJL6QRMK/Schilling - Autonome Systeme und Mobile Roboter Architectures.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.uni-muenster.de/LearnWeb/learnweb2/course/view.php?id=69302
+      \endverb
+      \verb{url}
+      \verb https://www.uni-muenster.de/LearnWeb/learnweb2/course/view.php?id=69302
+      \endverb
+    \endentry
+    \entry{sicilianoSpringerHandbookRobotics2016}{book}{}
+      \name{editor}{2}{}{%
+        {{hash=38f7a70abf2d86e432d63826f560ab93}{%
+           family={Siciliano},
+           familyi={S\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a1ed48939870abd896792330bc735967}{%
+           family={Khatib},
+           familyi={K\bibinitperiod},
+           given={Oussama},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Cham}%
+      }
+      \list{publisher}{1}{%
+        {Springer International Publishing}%
+      }
+      \strng{namehash}{0bdecfa7d3574a8d04c99af970a7506e}
+      \strng{fullhash}{0bdecfa7d3574a8d04c99af970a7506e}
+      \strng{bibnamehash}{0bdecfa7d3574a8d04c99af970a7506e}
+      \strng{editorbibnamehash}{0bdecfa7d3574a8d04c99af970a7506e}
+      \strng{editornamehash}{0bdecfa7d3574a8d04c99af970a7506e}
+      \strng{editorfullhash}{0bdecfa7d3574a8d04c99af970a7506e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{editor}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-32550-7 978-3-319-32552-1}
+      \field{langid}{english}
+      \field{pagetotal}{285-291}
+      \field{series}{Springer {{Handbooks}}}
+      \field{title}{Springer {{Handbook}} of {{Robotics}}}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-319-32552-1
+      \endverb
+      \verb{file}
+      \verb /Users/Real/Git/RobotArchitecture/Writing/Literature/Handbook of robotics.pdf;/Users/Real/Zotero/storage/P7EQVYMJ/Siciliano und Khatib - 2016 - Springer Handbook of Robotics.pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://link.springer.com/10.1007/978-3-319-32552-1
+      \endverb
+      \verb{url}
+      \verb https://link.springer.com/10.1007/978-3-319-32552-1
+      \endverb
+    \endentry
+    \entry{simmonsLayeredArchitectureCoordination2002}{incollection}{}
+      \name{author}{7}{}{%
+        {{hash=3f853a8266754228a123c433dba4d246}{%
+           family={Simmons},
+           familyi={S\bibinitperiod},
+           given={Reid},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b176dc682b2e88c21a4497110cabcc9a}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Trey},
+           giveni={T\bibinitperiod}}}%
+        {{hash=209eb82a9750c2d319e18ef6bcd65bbc}{%
+           family={Dias},
+           familyi={D\bibinitperiod},
+           given={M.\bibnamedelimi Bernardine},
+           giveni={M\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=6f883a035ea24a6899d6e2bae855ca5f}{%
+           family={Goldberg},
+           familyi={G\bibinitperiod},
+           given={Dani},
+           giveni={D\bibinitperiod}}}%
+        {{hash=ad454fdc7f5c376fb6ab2380affc9ded}{%
+           family={Hershberger},
+           familyi={H\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=fae108ef6fb7a7688220f8edc7e66254}{%
+           family={Stentz},
+           familyi={S\bibinitperiod},
+           given={Anthony},
+           giveni={A\bibinitperiod}}}%
+        {{hash=74b21fd04e1e1d381d978f93f3330110}{%
+           family={Zlot},
+           familyi={Z\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=c03d696f517797504499f1ac13297327}{%
+           family={Schultz},
+           familyi={S\bibinitperiod},
+           given={Alan\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=d6ea49829f0595a1431dcb4e2e165054}{%
+           family={Parker},
+           familyi={P\bibinitperiod},
+           given={Lynne\bibnamedelima E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Dordrecht}%
+      }
+      \list{publisher}{1}{%
+        {Springer Netherlands}%
+      }
+      \strng{namehash}{0d8f894ceb093014fbd7f0e14758c6f4}
+      \strng{fullhash}{9f0554a6849517dc9dbf93e635bc2c39}
+      \strng{bibnamehash}{0d8f894ceb093014fbd7f0e14758c6f4}
+      \strng{authorbibnamehash}{0d8f894ceb093014fbd7f0e14758c6f4}
+      \strng{authornamehash}{0d8f894ceb093014fbd7f0e14758c6f4}
+      \strng{authorfullhash}{9f0554a6849517dc9dbf93e635bc2c39}
+      \strng{editorbibnamehash}{d9df7cb3394df96d832b1f60a57b2368}
+      \strng{editornamehash}{d9df7cb3394df96d832b1f60a57b2368}
+      \strng{editorfullhash}{d9df7cb3394df96d832b1f60a57b2368}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Multi-{{Robot Systems}}: {{From Swarms}} to {{Intelligent Automata}}}
+      \field{isbn}{978-90-481-6046-4 978-94-017-2376-3}
+      \field{langid}{english}
+      \field{title}{A {{Layered Architecture}} for {{Coordination}} of {{Mobile Robots}}}
+      \field{urlday}{10}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{year}{2002}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{103\bibrangedash 112}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1007/978-94-017-2376-3_11
+      \endverb
+      \verb{file}
+      \verb /Users/Real/Git/RobotArchitecture/Writing/Literature/A Layered Architecture for Coordination of Mobile Robots.pdf
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-94-017-2376-3_11
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-94-017-2376-3_11
+      \endverb
+    \endentry
+    \entry{volpeCLARAtyArchitectureRobotic2001}{inproceedings}{}
+      \name{author}{6}{}{%
+        {{hash=e6073b7d3929e90cf0904606bba493ca}{%
+           family={Volpe},
+           familyi={V\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=92236a4df4aa4adbf78619439d660492}{%
+           family={Nesnas},
+           familyi={N\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+        {{hash=9ac472ae48dc8bb4fe39a9d1232823ae}{%
+           family={Estlin},
+           familyi={E\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7582b1d3b3fadeb990bc011ed5dd59fc}{%
+           family={Mutz},
+           familyi={M\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5801fd646c612023d98882353045d2cf}{%
+           family={Petras},
+           familyi={P\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=139be6ef7c96b6c091f19acaaeecbef3}{%
+           family={Das},
+           familyi={D\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Big Sky, MT, USA}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{983a9574fe23f92d8ae05a01e59fece5}
+      \strng{fullhash}{43a5325114e62368daf7cb2f9ebd7529}
+      \strng{bibnamehash}{983a9574fe23f92d8ae05a01e59fece5}
+      \strng{authorbibnamehash}{983a9574fe23f92d8ae05a01e59fece5}
+      \strng{authornamehash}{983a9574fe23f92d8ae05a01e59fece5}
+      \strng{authorfullhash}{43a5325114e62368daf7cb2f9ebd7529}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2001 {{IEEE Aerospace Conference Proceedings}} ({{Cat}}. {{No}}.{{01TH8542}})}
+      \field{eventtitle}{2001 {{IEEE Aerospace Conference Proceedings}}}
+      \field{isbn}{978-0-7803-6599-5}
+      \field{title}{The {{CLARAty}} Architecture for Robotic Autonomy}
+      \field{urlday}{8}
+      \field{urlmonth}{3}
+      \field{urlyear}{2024}
+      \field{volume}{1}
+      \field{year}{2001}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{1/121\bibrangedash 1/132}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1109/AERO.2001.931701
+      \endverb
+      \verb{urlraw}
+      \verb http://ieeexplore.ieee.org/document/931701/
+      \endverb
+      \verb{url}
+      \verb http://ieeexplore.ieee.org/document/931701/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
