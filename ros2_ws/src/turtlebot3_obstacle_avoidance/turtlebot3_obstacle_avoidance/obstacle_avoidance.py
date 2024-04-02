@@ -19,14 +19,14 @@ class ObstacleAvoidance(Node):
             distance < self.obstacle_distance for distance in msg.ranges[:30] + msg.ranges[-30:])
         if is_obstacle_in_front and not self.is_turning:
             self.is_turning = True
-            self.pause_publisher.publish(Bool(data=True))
-            self.get_logger().info('Obstacle detected, starting to turn.')
-            self.send_command_to_hardware("turn_left", 0.5, 10)  
+            self.get_logger().info('Obstacle detected, stop movement and starting to turn.')
+            self.send_command_to_hardware("full_stop", 0.0, 10) 
+            self.get_logger().info('Hopefully stopped, now turn.')
+            self.send_command_to_hardware("turn_left", 0.5, 10) 
         elif not is_obstacle_in_front and self.is_turning:
             self.is_turning = False
-            self.get_logger().info('Path clear, stopping turn.')
-            self.send_command_to_hardware("full_stop", 0.0, 10)
-            self.pause_publisher.publish(Bool(data=False))
+            self.get_logger().info('Path clear, resetting priority.')
+            self.send_command_to_hardware("reset_priority", 0.0, 11)
 
     def send_command_to_hardware(self, command, value, priority):
         request = RobotControl.Request()
@@ -36,7 +36,10 @@ class ObstacleAvoidance(Node):
         future = self.robot_control_client.call_async(request)
         rclpy.spin_until_future_complete(self, future)
         if future.result() is not None:
-            self.get_logger().info('Command executed: %s' % future.result().message)
+            if future.result().success:
+                self.get_logger().info(f'Command executed: {future.result().message}')
+            else:
+                self.get_logger().info(f'Command failed: {future.result().message}')
         else:
             self.get_logger().error('Exception while calling service: %r' % future.exception())
 

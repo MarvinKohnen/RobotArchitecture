@@ -20,22 +20,24 @@ class HardwareControl(Node):
                 self.turn_right(request.value, request.priority)
             elif request.command == "full_stop":
                 self.full_stop(request.priority)
+            # Priority reset:
+            elif request.command == "reset_priority":
+                self.current_priority = 0
+                self.get_logger().info('Priority reset.')
+            
             response.success = True
-            response.message = "Command executed."
+            response.message = "Command executed correctly."
         else:
             response.success = False
-            response.message = "Lower priority command ignored."
+            response.message = "Command ignored due to lower priority."
         return response
 
 
     def execute_command(self, msg: Twist, priority: int):
-        """Execute a command if the priority is higher than the current priority."""
-        if priority >= self.current_priority:
-            self.publisher_.publish(msg)
-            self.current_priority = priority  # Update the current priority
-            self.get_logger().info(f'Executing command with priority {priority}')
-        else:
-            self.get_logger().info(f'Command ignored due to lower priority: {priority}')
+        """Execute a command"""
+        self.publisher_.publish(msg)
+        self.current_priority = priority  # Update the current priority
+        self.get_logger().info(f'Executing command with priority {priority}')
 
     def drive_forward(self, speed: float, priority: int):
         """Drive the robot forward at the specified speed with a given priority."""
