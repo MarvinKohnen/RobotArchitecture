@@ -19,6 +19,6 @@ setup(
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [ 'velocity_publisher = turtlebot3_hardware_control.velocity_publisher:main',],
+        'console_scripts': [ 'hardware_control = turtlebot3_hardware_control.hardware_control:main',],
     },
 )

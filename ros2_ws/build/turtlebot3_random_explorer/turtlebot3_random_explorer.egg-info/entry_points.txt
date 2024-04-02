@@ -1,0 +1,3 @@
+[console_scripts]
+random_explorer = turtlebot3_random_explorer.random_explorer:main
+

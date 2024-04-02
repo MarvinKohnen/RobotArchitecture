@@ -1,0 +1,38 @@
+[0.916s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build
+[1.155s] running develop
+[1.156s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.156s]   warnings.warn(
+[1.321s] Removing /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3-obstacle-avoidance.egg-link (link to .)
+[1.355s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build
+[1.356s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_obstacle_avoidance': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_obstacle_avoidance build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/install.log --single-version-externally-managed install_data --force
+[1.575s] running egg_info
+[1.575s] writing ../../build/turtlebot3_obstacle_avoidance/turtlebot3_obstacle_avoidance.egg-info/PKG-INFO
+[1.575s] writing dependency_links to ../../build/turtlebot3_obstacle_avoidance/turtlebot3_obstacle_avoidance.egg-info/dependency_links.txt
+[1.575s] writing entry points to ../../build/turtlebot3_obstacle_avoidance/turtlebot3_obstacle_avoidance.egg-info/entry_points.txt
+[1.576s] writing requirements to ../../build/turtlebot3_obstacle_avoidance/turtlebot3_obstacle_avoidance.egg-info/requires.txt
+[1.576s] writing top-level names to ../../build/turtlebot3_obstacle_avoidance/turtlebot3_obstacle_avoidance.egg-info/top_level.txt
+[1.577s] reading manifest file '../../build/turtlebot3_obstacle_avoidance/turtlebot3_obstacle_avoidance.egg-info/SOURCES.txt'
+[1.579s] writing manifest file '../../build/turtlebot3_obstacle_avoidance/turtlebot3_obstacle_avoidance.egg-info/SOURCES.txt'
+[1.579s] running build
+[1.579s] running build_py
+[1.580s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build
+[1.580s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build/lib
+[1.580s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build/lib/turtlebot3_obstacle_avoidance
+[1.580s] copying turtlebot3_obstacle_avoidance/__init__.py -> /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build/lib/turtlebot3_obstacle_avoidance
+[1.580s] copying turtlebot3_obstacle_avoidance/obstacle_avoidance.py -> /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build/lib/turtlebot3_obstacle_avoidance
+[1.580s] running install
+[1.581s] running install_lib
+[1.581s] creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3_obstacle_avoidance
+[1.581s] copying /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build/lib/turtlebot3_obstacle_avoidance/obstacle_avoidance.py -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3_obstacle_avoidance
+[1.582s] copying /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build/lib/turtlebot3_obstacle_avoidance/__init__.py -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3_obstacle_avoidance
+[1.582s] byte-compiling /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3_obstacle_avoidance/obstacle_avoidance.py to obstacle_avoidance.cpython-310.pyc
+[1.583s] byte-compiling /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3_obstacle_avoidance/__init__.py to __init__.cpython-310.pyc
+[1.583s] running install_data
+[1.583s] copying resource/turtlebot3_obstacle_avoidance -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/share/ament_index/resource_index/packages
+[1.583s] copying package.xml -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/share/turtlebot3_obstacle_avoidance
+[1.583s] running install_egg_info
+[1.585s] Copying ../../build/turtlebot3_obstacle_avoidance/turtlebot3_obstacle_avoidance.egg-info to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3_obstacle_avoidance-0.0.0-py3.10.egg-info
+[1.586s] running install_scripts
+[1.604s] Installing obstacle_avoidance script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/turtlebot3_obstacle_avoidance
+[1.604s] writing list of installed files to '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/install.log'
+[1.633s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_obstacle_avoidance' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_obstacle_avoidance build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/install.log --single-version-externally-managed install_data --force

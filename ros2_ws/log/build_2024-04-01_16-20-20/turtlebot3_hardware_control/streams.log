@@ -1,0 +1,38 @@
+[0.932s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build
+[1.169s] running develop
+[1.169s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.169s]   warnings.warn(
+[1.341s] Removing /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages/turtlebot3-hardware-control.egg-link (link to .)
+[1.371s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build
+[1.372s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_hardware_control': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_hardware_control build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/install.log --single-version-externally-managed install_data --force
+[1.593s] running egg_info
+[1.594s] writing ../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/PKG-INFO
+[1.594s] writing dependency_links to ../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/dependency_links.txt
+[1.594s] writing entry points to ../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/entry_points.txt
+[1.594s] writing requirements to ../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/requires.txt
+[1.595s] writing top-level names to ../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/top_level.txt
+[1.596s] reading manifest file '../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/SOURCES.txt'
+[1.597s] writing manifest file '../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/SOURCES.txt'
+[1.597s] running build
+[1.597s] running build_py
+[1.598s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build
+[1.598s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build/lib
+[1.598s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build/lib/turtlebot3_hardware_control
+[1.598s] copying turtlebot3_hardware_control/__init__.py -> /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build/lib/turtlebot3_hardware_control
+[1.598s] copying turtlebot3_hardware_control/velocity_publisher.py -> /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build/lib/turtlebot3_hardware_control
+[1.599s] running install
+[1.599s] running install_lib
+[1.600s] creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages/turtlebot3_hardware_control
+[1.600s] copying /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build/lib/turtlebot3_hardware_control/velocity_publisher.py -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages/turtlebot3_hardware_control
+[1.600s] copying /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build/lib/turtlebot3_hardware_control/__init__.py -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages/turtlebot3_hardware_control
+[1.600s] byte-compiling /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages/turtlebot3_hardware_control/velocity_publisher.py to velocity_publisher.cpython-310.pyc
+[1.601s] byte-compiling /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages/turtlebot3_hardware_control/__init__.py to __init__.cpython-310.pyc
+[1.601s] running install_data
+[1.601s] copying resource/turtlebot3_hardware_control -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/share/ament_index/resource_index/packages
+[1.602s] copying package.xml -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/share/turtlebot3_hardware_control
+[1.602s] running install_egg_info
+[1.603s] Copying ../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages/turtlebot3_hardware_control-0.0.0-py3.10.egg-info
+[1.604s] running install_scripts
+[1.622s] Installing velocity_publisher script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/turtlebot3_hardware_control
+[1.622s] writing list of installed files to '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/install.log'
+[1.656s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_hardware_control' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_hardware_control build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_hardware_control/install.log --single-version-externally-managed install_data --force

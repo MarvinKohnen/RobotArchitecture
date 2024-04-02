@@ -1,0 +1,6 @@
+{
+  "package_name": "turtlebot3_control_services",
+  "non_idl_tuples": [
+    "/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services:srv/RobotControl.srv"
+  ]
+}

@@ -1,0 +1,1 @@
+/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/ament_cmake_environment_hooks/local_setup.sh

@@ -20,7 +20,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
     'console_scripts': [
-        'obstacle_avoidance = turtlebot3_obstacle_avoidance.obstacle_avoidance:main',
-    ],
+        'obstacle_avoidance = turtlebot3_obstacle_avoidance.obstacle_avoidance:main',],
     },
 )

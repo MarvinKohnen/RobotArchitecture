@@ -1,0 +1,35 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from turtlebot3_control_services/srv/RobotControl.srv
+// generated code does not contain a copyright notice
+
+
+module turtlebot3_control_services {
+  module srv {
+    @verbatim (language="comment", text=
+      "Request")
+    struct RobotControl_Request {
+      @verbatim (language="comment", text=
+        "e.g., \"move_forward\", \"turn_left\", \"turn_right\", \"full_stop\"")
+      string command;
+
+      @verbatim (language="comment", text=
+        "speed for move and turn, not used for full_stop")
+      double value;
+
+      @verbatim (language="comment", text=
+        "Priority of the command")
+      int32 priority;
+    };
+    @verbatim (language="comment", text=
+      "Response")
+    struct RobotControl_Response {
+      @verbatim (language="comment", text=
+        "True if the command was executed")
+      boolean success;
+
+      @verbatim (language="comment", text=
+        "Additional message, e.g., \"Command executed.\"")
+      string message;
+    };
+  };
+};
