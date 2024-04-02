@@ -41,23 +41,27 @@ class HardwareControl(Node):
         """Drive the robot forward at the specified speed with a given priority."""
         msg = Twist()
         msg.linear.x = speed
+        self.get_logger().info(f'Executing drive_forward with speed {msg.linear.x} and priority {priority}')
         self.execute_command(msg, priority)
 
     def full_stop(self, priority: int):
         """Stop the robot with a given priority."""
         msg = Twist()  # Zero velocity to full stop
+        self.get_logger().info(f'Executing full_stop, priority: {priority}')
         self.execute_command(msg, priority)
 
     def turn_left(self, angular_speed: float, priority: int):
         """Turn the robot left with a given priority."""
         msg = Twist()
         msg.angular.z = angular_speed
+        self.get_logger().info(f'Executing turn_left with speed {msg.linear.z} and priority {priority}')
         self.execute_command(msg, priority)
 
     def turn_right(self, angular_speed: float, priority: int):
         """Turn the robot right with a given priority. Note: negative angular speed."""
         msg = Twist()
         msg.angular.z = -angular_speed
+        self.get_logger().info(f'Executing turn_right with speed {msg.linear.z} and priority {priority}')
         self.execute_command(msg, priority)
 
 def main(args=None):
