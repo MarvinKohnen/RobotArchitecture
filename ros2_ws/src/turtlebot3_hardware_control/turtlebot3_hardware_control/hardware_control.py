@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
-from turtlebot3_control_services.srv import RobotControl  # Update with actual package and service names
+from turtlebot3_control_services.srv import RobotControl  
 
 class HardwareControl(Node):
     def __init__(self):
@@ -11,6 +11,7 @@ class HardwareControl(Node):
         self.current_priority = 0  # Initialize with the lowest priority
 
     def robot_control_callback(self, request, response):
+        print("in robot controll callback")
         if request.priority >= self.current_priority:
             if request.command == "move_forward":
                 self.drive_forward(request.value, request.priority)
@@ -25,18 +26,22 @@ class HardwareControl(Node):
                 self.current_priority = 0
                 self.get_logger().info('Priority reset.')
             
+            print("end of robot controll callback")
             response.success = True
             response.message = "Command executed correctly."
         else:
             response.success = False
             response.message = "Command ignored due to lower priority."
+        
         return response
 
 
     def execute_command(self, msg: Twist, priority: int):
         """Execute a command"""
+        print("current priority is: " + str(self.current_priority))
         self.publisher_.publish(msg)
         self.current_priority = priority  # Update the current priority
+        print("updated priority is: " + str(self.current_priority))
         self.get_logger().info(f'Executing command with priority {priority}')
 
     def drive_forward(self, speed: float, priority: int):
@@ -69,10 +74,16 @@ class HardwareControl(Node):
 def main(args=None):
     rclpy.init(args=args)
     hardware_control = HardwareControl()
-    rclpy.spin(hardware_control)  # Keep the node alive to listen for incoming requests.
 
-    hardware_control.destroy_node()
-    rclpy.shutdown()
+    #multithreading
+    executor = rclpy.executors.MultiThreadedExecutor()
+    executor.add_node(hardware_control)
+
+    try:
+        executor.spin()
+    finally:
+        hardware_control.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
