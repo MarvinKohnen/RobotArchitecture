@@ -1,0 +1,18 @@
+[2.616s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_nav_management': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_nav_management/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_nav_management/build --no-deps symlink_data
+[3.248s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.248s]   warnings.warn(
+[3.248s] running develop
+[3.653s] running egg_info
+[3.654s] writing turtlebot3_nav_management.egg-info/PKG-INFO
+[3.655s] writing dependency_links to turtlebot3_nav_management.egg-info/dependency_links.txt
+[3.657s] writing entry points to turtlebot3_nav_management.egg-info/entry_points.txt
+[3.657s] writing requirements to turtlebot3_nav_management.egg-info/requires.txt
+[3.658s] writing top-level names to turtlebot3_nav_management.egg-info/top_level.txt
+[3.662s] reading manifest file 'turtlebot3_nav_management.egg-info/SOURCES.txt'
+[3.665s] writing manifest file 'turtlebot3_nav_management.egg-info/SOURCES.txt'
+[3.669s] running build_ext
+[3.670s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management/lib/python3.10/site-packages/turtlebot3-nav-management.egg-link (link to .)
+[3.673s] 
+[3.673s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_nav_management
+[3.673s] running symlink_data
+[3.809s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_nav_management' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_nav_management/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_nav_management/build --no-deps symlink_data

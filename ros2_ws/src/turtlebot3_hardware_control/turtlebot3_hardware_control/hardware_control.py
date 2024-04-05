@@ -11,7 +11,6 @@ class HardwareControl(Node):
         self.current_priority = 0  # Initialize with the lowest priority
 
     def robot_control_callback(self, request, response):
-        print("in robot controll callback")
         if request.priority >= self.current_priority:
             if request.command == "move_forward":
                 self.drive_forward(request.value, request.priority)
@@ -25,8 +24,7 @@ class HardwareControl(Node):
             elif request.command == "reset_priority":
                 self.current_priority = 0
                 self.get_logger().info('Priority reset.')
-            
-            print("end of robot controll callback")
+
             response.success = True
             response.message = "Command executed correctly."
         else:
@@ -38,10 +36,8 @@ class HardwareControl(Node):
 
     def execute_command(self, msg: Twist, priority: int):
         """Execute a command"""
-        print("current priority is: " + str(self.current_priority))
         self.publisher_.publish(msg)
         self.current_priority = priority  # Update the current priority
-        print("updated priority is: " + str(self.current_priority))
         self.get_logger().info(f'Executing command with priority {priority}')
 
     def drive_forward(self, speed: float, priority: int):

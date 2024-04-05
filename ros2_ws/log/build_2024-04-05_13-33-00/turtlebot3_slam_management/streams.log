@@ -1,0 +1,34 @@
+[0.639s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build
+[0.888s] running develop
+[0.888s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[0.888s]   warnings.warn(
+[1.062s] Removing /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages/turtlebot3-slam-management.egg-link (link to .)
+[1.087s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build
+[1.089s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_slam_management': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_slam_management build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/install.log --single-version-externally-managed install_data --force
+[1.318s] running egg_info
+[1.319s] writing ../../build/turtlebot3_slam_management/turtlebot3_slam_management.egg-info/PKG-INFO
+[1.319s] writing dependency_links to ../../build/turtlebot3_slam_management/turtlebot3_slam_management.egg-info/dependency_links.txt
+[1.319s] writing entry points to ../../build/turtlebot3_slam_management/turtlebot3_slam_management.egg-info/entry_points.txt
+[1.319s] writing requirements to ../../build/turtlebot3_slam_management/turtlebot3_slam_management.egg-info/requires.txt
+[1.319s] writing top-level names to ../../build/turtlebot3_slam_management/turtlebot3_slam_management.egg-info/top_level.txt
+[1.320s] reading manifest file '../../build/turtlebot3_slam_management/turtlebot3_slam_management.egg-info/SOURCES.txt'
+[1.322s] writing manifest file '../../build/turtlebot3_slam_management/turtlebot3_slam_management.egg-info/SOURCES.txt'
+[1.322s] running build
+[1.322s] running build_py
+[1.322s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build
+[1.323s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build/lib
+[1.323s] creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build/lib/turtlebot3_slam_management
+[1.323s] copying turtlebot3_slam_management/__init__.py -> /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build/lib/turtlebot3_slam_management
+[1.323s] running install
+[1.323s] running install_lib
+[1.324s] creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages/turtlebot3_slam_management
+[1.324s] copying /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build/lib/turtlebot3_slam_management/__init__.py -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages/turtlebot3_slam_management
+[1.324s] byte-compiling /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages/turtlebot3_slam_management/__init__.py to __init__.cpython-310.pyc
+[1.325s] running install_data
+[1.325s] copying resource/turtlebot3_slam_management -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/share/ament_index/resource_index/packages
+[1.325s] copying package.xml -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/share/turtlebot3_slam_management
+[1.326s] running install_egg_info
+[1.328s] Copying ../../build/turtlebot3_slam_management/turtlebot3_slam_management.egg-info to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages/turtlebot3_slam_management-0.0.0-py3.10.egg-info
+[1.329s] running install_scripts
+[1.349s] writing list of installed files to '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/install.log'
+[1.370s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_slam_management' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_slam_management build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/install.log --single-version-externally-managed install_data --force
