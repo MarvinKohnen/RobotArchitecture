@@ -1,0 +1,18 @@
+[2.968s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build --no-deps symlink_data
+[3.620s] running develop
+[3.620s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.620s]   warnings.warn(
+[4.024s] running egg_info
+[4.025s] writing turtlebot3_slam_management.egg-info/PKG-INFO
+[4.025s] writing dependency_links to turtlebot3_slam_management.egg-info/dependency_links.txt
+[4.026s] writing entry points to turtlebot3_slam_management.egg-info/entry_points.txt
+[4.028s] writing requirements to turtlebot3_slam_management.egg-info/requires.txt
+[4.029s] writing top-level names to turtlebot3_slam_management.egg-info/top_level.txt
+[4.055s] reading manifest file 'turtlebot3_slam_management.egg-info/SOURCES.txt'
+[4.060s] writing manifest file 'turtlebot3_slam_management.egg-info/SOURCES.txt'
+[4.061s] running build_ext
+[4.061s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages/turtlebot3-slam-management.egg-link (link to .)
+[4.061s] 
+[4.061s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management
+[4.062s] running symlink_data
+[4.139s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/build --no-deps symlink_data

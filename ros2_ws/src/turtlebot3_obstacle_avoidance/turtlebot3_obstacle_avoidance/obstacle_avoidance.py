@@ -16,24 +16,19 @@ class ObstacleAvoidance(Node):
         self.is_turning = False
 
     def scan_callback(self, msg):
-        start_time = time.time()
-        self.get_logger().info('Callback started.')
+    
         is_obstacle_in_front = any(
             distance < self.obstacle_distance for distance in msg.ranges[:30] + msg.ranges[-30:])
         if is_obstacle_in_front and not self.is_turning:
             self.is_turning = True
             self.get_logger().info('Obstacle detected, stop movement and starting to turn.')
             self.send_command_to_hardware("full_stop", 0.0, 10) 
-            print("here in obstacle avoidcane")
             self.get_logger().info('Hopefully stopped, now turn.')
             self.send_command_to_hardware("turn_left", 0.5, 10) 
         elif not is_obstacle_in_front and self.is_turning:
             self.is_turning = False
             self.get_logger().info('Path clear, resetting priority.')
             self.send_command_to_hardware("reset_priority", 0.0, 11)
-
-        end_time = time.time()
-        self.get_logger().info(f'Callback finished in {end_time - start_time} seconds.')
 
     def send_command_to_hardware(self, command, value, priority):
         request = RobotControl.Request()

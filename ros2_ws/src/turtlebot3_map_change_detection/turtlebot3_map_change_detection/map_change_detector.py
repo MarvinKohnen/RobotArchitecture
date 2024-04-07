@@ -1,46 +1,75 @@
 import rclpy
 from rclpy.node import Node
-from rclpy.time import Time
-from rclpy.duration import Duration
-from std_srvs.srv import Empty as EmptyService
-# Import the SaveMap service
-from slam_toolbox.srv import SaveMap
-
+import numpy as np
+import cv2
+import os
+from datetime import datetime
+import subprocess
 
 class MapChangeDetector(Node):
     def __init__(self):
         super().__init__('map_change_detector')
-        self.declare_parameter('save_interval', 30)  # Interval in seconds between map saves
-        self.save_map_service_client = self.create_client(SaveMap, '/slam_toolbox/save_map')
-        self.timer = self.create_timer(self.get_parameter('save_interval').value, self.save_map_callback)
-        self.previous_map_path = None
+        self.declare_parameter('map_save_interval', 30)  # in seconds
+        self.declare_parameter('map_directory', '~/RobotArchitecture/ros2_ws/src/Maps/')  
+        self.map_save_interval = self.get_parameter('map_save_interval').value
+        self.map_directory = os.path.expanduser(self.get_parameter('map_directory').value)
+        self.map_save_timer = self.create_timer(self.map_save_interval, self.map_save_callback)
+        self.last_map_path = ""
+        self.declare_parameter('threshold', 10)# Threshold for changes
 
-    def save_map_callback(self):
-        # periodic call to save the map and initiate comparison
-        if not self.save_map_service_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().warn('Save map service not available.')
-            return
+    def map_save_callback(self):
+        # Define map save path
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        map_path = os.path.join(self.map_directory, timestamp)
         
-        request = SaveMap.Request() 
-        future = self.save_map_service_client.call_async(request)
-        future.add_done_callback(self.on_map_saved)
+        # Save the map
+        subprocess.run(['ros2', 'run', 'nav2_map_server', 'map_saver_cli', '-f', map_path], check=True)
+        self.get_logger().info(f'Saved map at {map_path}')
+        
+        # Compare with the last map
+        if self.last_map_path:
+            self.compare_maps(self.last_map_path, map_path + '.pgm')  
+        
+        # Update the last map path
+        self.last_map_path = map_path + '.pgm'
 
-    def on_map_saved(self, future):
-        # Handle the response from the map saving service, perform comparison with previous map
-        # For demonstration, we just log that the map was saved. You'll need to implement comparison logic.
-        try:
-            response = future.result()
-            self.get_logger().info('Map saved successfully.')
-            # Implement map comparison logic here
-        except Exception as e:
-            self.get_logger().error('Failed to save map: %s' % str(e))
+    def compare_maps(self, old_map_path, new_map_path):
+        # Load maps using OpenCV
+        old_map = cv2.imread(old_map_path, cv2.IMREAD_GRAYSCALE)
+        new_map = cv2.imread(new_map_path, cv2.IMREAD_GRAYSCALE)
+        
+        if old_map is not None and new_map is not None and old_map.shape == new_map.shape:
+            # Simple comparison
+            difference = cv2.absdiff(old_map, new_map)
+            _, difference = cv2.threshold(difference, 50, 255, cv2.THRESH_BINARY)
+            change_percentage = np.sum(difference) / difference.size * 100  # Convert to percentage
+            self.get_logger().info(f'Change percentage: {change_percentage}%')
+            if change_percentage > self.get_parameter('threshold').value:
+                self.get_logger().info('Major changes detected between maps.')
+            else:
+                self.get_logger().info('Map is good enough. Navigation is taking control over Random Explore.')
+                self.start_navigation()
+                
+        else:
+            self.get_logger().error('Error loading maps or map dimensions do not match.')
+
+
+    def start_navigation(self):
+        command = "ros2 launch turtlebot3_nav_management navigation_launch.py"
+        subprocess.run(command, shell=True, check=True)
+        self.get_logger().info('Navigation started.')
 
 def main(args=None):
     rclpy.init(args=args)
     map_change_detector = MapChangeDetector()
-    rclpy.spin(map_change_detector)
-    map_change_detector.destroy_node()
-    rclpy.shutdown()
+    
+    try:
+        rclpy.spin(map_change_detector)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        map_change_detector.destroy_node()
+        rclpy.shutdown()
 
 if __name__ == '__main__':
     main()
