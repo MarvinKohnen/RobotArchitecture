@@ -15,6 +15,7 @@ def generate_launch_description():
             'use_sim_time',
             default_value='False',  # This default can be overridden at launch
             description='Use simulation time'),
+            
         Node(
             package='slam_toolbox',
             executable='sync_slam_toolbox_node',

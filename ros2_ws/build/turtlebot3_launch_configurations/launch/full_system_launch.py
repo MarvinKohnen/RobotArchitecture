@@ -1,0 +1,1 @@
+/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_launch_configurations/launch/full_system_launch.py
