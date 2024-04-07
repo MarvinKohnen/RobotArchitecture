@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'map_change_detector = map_change_detection.map_change_detector:main'
+            'map_change_detector = turtlebot3_map_change_detection.map_change_detector:main'
         ],
     },
 )
