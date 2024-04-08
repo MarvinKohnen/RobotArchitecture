@@ -1,0 +1,23 @@
+[0.049s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/home/marvin/turtlebot3_ws/install/turtlebot3_teleop:/home/marvin/turtlebot3_ws/install/turtlebot3_obstacle_avoidance:/home/marvin/turtlebot3_ws/install/turtlebot3_hardware_control:/home/marvin/turtlebot3_ws/install/turtlebot3_example:/opt/ros/humble /usr/bin/cmake --build /home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs -- -j8 -l8
+[0.918s] [  6%] Built target custom_msgs__cpp
+[0.918s] [ 12%] Built target custom_msgs__rosidl_generator_c
+[0.919s] [ 12%] Built target ament_cmake_python_symlink_custom_msgs
+[0.919s] [ 32%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp
+[0.919s] [ 32%] Built target custom_msgs__rosidl_typesupport_c
+[0.919s] [ 41%] Built target custom_msgs__rosidl_typesupport_introspection_cpp
+[0.919s] [ 51%] Built target custom_msgs__rosidl_typesupport_introspection_c
+[0.919s] [ 61%] Built target custom_msgs__rosidl_typesupport_cpp
+[0.919s] [ 70%] Built target custom_msgs__rosidl_typesupport_fastrtps_c
+[0.919s] [ 70%] Built target custom_msgs
+[0.919s] [ 74%] Built target custom_msgs__py
+[0.919s] [ 80%] Built target custom_msgs__rosidl_generator_py
+[0.919s] [ 87%] Built target custom_msgs__rosidl_typesupport_c__pyext
+[0.919s] [ 93%] Built target custom_msgs__rosidl_typesupport_introspection_c__pyext
+[0.919s] [100%] Built target custom_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.920s] running egg_info
+[0.920s] writing custom_msgs.egg-info/PKG-INFO
+[0.920s] writing dependency_links to custom_msgs.egg-info/dependency_links.txt
+[0.920s] writing top-level names to custom_msgs.egg-info/top_level.txt
+[0.920s] reading manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[0.920s] writing manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[0.920s] [100%] Built target ament_cmake_python_build_custom_msgs_egg

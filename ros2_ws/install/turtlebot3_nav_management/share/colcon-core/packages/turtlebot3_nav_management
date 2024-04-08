@@ -1,1 +1,1 @@
-rclpy
+geometry_msgs:nav2_amcl:nav2_bt_navigator:nav2_common:nav2_controller:nav2_core:nav2_lifecycle_manager:nav2_map_server:nav2_msgs:nav2_planner:nav_msgs:rclpy:sensor_msgs:tf2_geometry_msgs:tf2_ros:visualization_msgs

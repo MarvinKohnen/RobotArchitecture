@@ -1,6 +1,8 @@
 package.xml
 setup.cfg
 setup.py
+config/navigation_params.yaml
+launch/navigation_launch.py
 resource/turtlebot3_nav_management
 turtlebot3_nav_management/__init__.py
 turtlebot3_nav_management.egg-info/PKG-INFO
