@@ -56,7 +56,7 @@ class MapChangeDetector(Node):
 
     def start_navigation(self):
         # Use nav2 package launch file for navigation
-        command = "ros2 launch nav2_bringup tb3_simulation_launch.py"
+        command = f"ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:={self.last_map_path}"
         self.get_logger().info('Starting navigation...')
         subprocess.run(command, shell=True, check=True)
         self.get_logger().info('Navigation started.')

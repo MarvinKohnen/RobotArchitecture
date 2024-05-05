@@ -1,0 +1,3 @@
+[console_scripts]
+auto_navigator = turtlebot3_auto_navigator.auto_navigator:main
+

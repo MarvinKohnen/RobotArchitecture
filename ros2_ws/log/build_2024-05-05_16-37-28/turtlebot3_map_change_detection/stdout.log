@@ -1,0 +1,32 @@
+running develop
+Removing /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3-map-change-detection.egg-link (link to .)
+running egg_info
+writing ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/PKG-INFO
+writing dependency_links to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/dependency_links.txt
+writing entry points to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/entry_points.txt
+writing requirements to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/requires.txt
+writing top-level names to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/top_level.txt
+reading manifest file '../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/SOURCES.txt'
+writing manifest file '../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build
+creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build/lib
+creating /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build/lib/turtlebot3_map_change_detection
+copying turtlebot3_map_change_detection/__init__.py -> /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build/lib/turtlebot3_map_change_detection
+copying turtlebot3_map_change_detection/map_change_detector.py -> /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build/lib/turtlebot3_map_change_detection
+running install
+running install_lib
+creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3_map_change_detection
+copying /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build/lib/turtlebot3_map_change_detection/map_change_detector.py -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3_map_change_detection
+copying /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build/lib/turtlebot3_map_change_detection/__init__.py -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3_map_change_detection
+byte-compiling /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3_map_change_detection/map_change_detector.py to map_change_detector.cpython-310.pyc
+byte-compiling /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3_map_change_detection/__init__.py to __init__.cpython-310.pyc
+running install_data
+copying resource/turtlebot3_map_change_detection -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/share/ament_index/resource_index/packages
+copying package.xml -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/share/turtlebot3_map_change_detection
+running install_egg_info
+Copying ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3_map_change_detection-0.0.0-py3.10.egg-info
+running install_scripts
+Installing map_change_detector script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/turtlebot3_map_change_detection
+writing list of installed files to '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/install.log'

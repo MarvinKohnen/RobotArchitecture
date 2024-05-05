@@ -1,0 +1,19 @@
+[2.204s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance': CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_simulations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_gazebo:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_fake_node:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services LD_LIBRARY_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build --no-deps symlink_data
+[2.797s] running develop
+[2.797s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.797s]   warnings.warn(
+[3.062s] running egg_info
+[3.063s] writing turtlebot3_obstacle_avoidance.egg-info/PKG-INFO
+[3.063s] writing dependency_links to turtlebot3_obstacle_avoidance.egg-info/dependency_links.txt
+[3.063s] writing entry points to turtlebot3_obstacle_avoidance.egg-info/entry_points.txt
+[3.063s] writing requirements to turtlebot3_obstacle_avoidance.egg-info/requires.txt
+[3.064s] writing top-level names to turtlebot3_obstacle_avoidance.egg-info/top_level.txt
+[3.066s] reading manifest file 'turtlebot3_obstacle_avoidance.egg-info/SOURCES.txt'
+[3.067s] writing manifest file 'turtlebot3_obstacle_avoidance.egg-info/SOURCES.txt'
+[3.068s] running build_ext
+[3.069s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages/turtlebot3-obstacle-avoidance.egg-link (link to .)
+[3.070s] Installing obstacle_avoidance script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/turtlebot3_obstacle_avoidance
+[3.071s] 
+[3.071s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance
+[3.071s] running symlink_data
+[3.111s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance' returned '0': CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_simulations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_gazebo:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_fake_node:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services LD_LIBRARY_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_obstacle_avoidance/build --no-deps symlink_data
