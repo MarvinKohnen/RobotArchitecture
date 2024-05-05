@@ -1,5 +1,0 @@
-  File "/home/rama/catkin_ws/install/nodes/lib/python3.8/site-packages/nodes/kf_depthCamera.py", line 90
-    def main:
-            ^
-SyntaxError: invalid syntax
-
