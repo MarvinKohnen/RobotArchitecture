@@ -1,0 +1,1 @@
+/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_nav_management/launch/navigation_launch_with_nav2.py

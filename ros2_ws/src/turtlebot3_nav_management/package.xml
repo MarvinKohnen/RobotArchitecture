@@ -24,9 +24,18 @@
   <depend>visualization_msgs</depend>
   <depend>tf2_ros</depend>
   <depend>tf2_geometry_msgs</depend>
+  <depend>tf_transformations</depend>
   
   <!-- If your package directly subscribes to sensor data like laser scans -->
   <depend>sensor_msgs</depend>
+
+  <!-- Custom service dependency -->
+  <depend>turtlebot3_control_services</depend>
+
+  <!-- External dependencies -->
+  <exec_depend>opencv-python</exec_depend>
+  <exec_depend>numpy</exec_depend>
+  <exec_depend>pyyaml</exec_depend>
 
   <!-- Testing dependencies -->
   <test_depend>ament_lint_auto</test_depend>

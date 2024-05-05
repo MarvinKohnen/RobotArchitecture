@@ -3,8 +3,11 @@ setup.cfg
 setup.py
 config/navigation_params.yaml
 launch/navigation_launch.py
+launch/navigation_launch_with_nav2.py
 resource/turtlebot3_nav_management
 turtlebot3_nav_management/__init__.py
+turtlebot3_nav_management/astar.py
+turtlebot3_nav_management/random_goal_navigator.py
 turtlebot3_nav_management.egg-info/PKG-INFO
 turtlebot3_nav_management.egg-info/SOURCES.txt
 turtlebot3_nav_management.egg-info/dependency_links.txt

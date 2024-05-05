@@ -2,6 +2,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from turtlebot3_control_services.srv import RobotControl  
+import time
 
 class HardwareControl(Node):
     def __init__(self):
@@ -20,11 +21,12 @@ class HardwareControl(Node):
                 self.turn_right(request.value, request.priority)
             elif request.command == "full_stop":
                 self.full_stop(request.priority)
+            elif request.command == "turn":  
+                self.turn(request.value, request.priority)
             # Priority reset:
             elif request.command == "reset_priority":
                 self.current_priority = 0
                 self.get_logger().info('Priority reset.')
-
             response.success = True
             response.message = "Command executed correctly."
         else:
@@ -32,7 +34,6 @@ class HardwareControl(Node):
             response.message = "Command ignored due to lower priority."
         
         return response
-
 
     def execute_command(self, msg: Twist, priority: int):
         """Execute a command"""
@@ -66,6 +67,24 @@ class HardwareControl(Node):
         msg.angular.z = -angular_speed
         self.get_logger().info(f'Executing turn_right with speed {msg.linear.z} and priority {priority}')
         self.execute_command(msg, priority)
+
+    def turn_by_angle(self, angle: float, priority: int):
+        """Turn the robot by a specified angle in radians."""
+        
+        omega = 0.3  # Constant angular velocity (rad/s), adjust based on your robot's capability
+        duration = abs(angle / omega)
+        msg = Twist()
+        msg.angular.z = omega if angle > 0 else -omega
+
+        start_time = self.get_clock().now()
+        while (self.get_clock().now() - start_time).seconds() < duration:
+            self.execute_command(msg, priority)  # Use execute_command to maintain priority and centralized logging
+            time.sleep(0.1)  # Sleep briefly to keep sending the command at a reasonable rate
+
+        # Stop the robot after turning
+        stop_msg = Twist()  # Zero velocity to stop
+        self.execute_command(stop_msg, priority)  # Ensures the stop command is also prioritized
+
 
 def main(args=None):
     rclpy.init(args=args)

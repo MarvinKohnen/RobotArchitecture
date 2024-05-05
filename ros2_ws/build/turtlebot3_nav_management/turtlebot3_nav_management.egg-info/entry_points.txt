@@ -1,3 +1,3 @@
 [console_scripts]
-
+random_goal_navigator = turtlebot3_nav_management.random_goal_navigator:main
 
