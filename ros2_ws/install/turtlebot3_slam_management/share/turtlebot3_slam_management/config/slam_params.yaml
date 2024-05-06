@@ -1,1 +1,9 @@
-/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_slam_management/config/slam_params.yaml
+slam_toolbox:
+  ros__parameters:
+    use_sim_time: true   # set as global variable if posssible (atm: runtime error bc of yaml parsing)
+    map_frame: "map"
+    odom_frame: "odom"
+    scan_topic: "/scan"  
+    update_rate: 1.0
+    resolution: 0.05
+    max_range: 25.0

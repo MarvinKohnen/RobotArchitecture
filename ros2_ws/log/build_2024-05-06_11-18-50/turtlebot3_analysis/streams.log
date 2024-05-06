@@ -1,0 +1,19 @@
+[2.319s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/build --no-deps symlink_data
+[2.873s] running develop
+[2.874s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.874s]   warnings.warn(
+[3.245s] running egg_info
+[3.245s] writing turtlebot3_analysis.egg-info/PKG-INFO
+[3.247s] writing dependency_links to turtlebot3_analysis.egg-info/dependency_links.txt
+[3.248s] writing entry points to turtlebot3_analysis.egg-info/entry_points.txt
+[3.250s] writing requirements to turtlebot3_analysis.egg-info/requires.txt
+[3.250s] writing top-level names to turtlebot3_analysis.egg-info/top_level.txt
+[3.255s] reading manifest file 'turtlebot3_analysis.egg-info/SOURCES.txt'
+[3.257s] writing manifest file 'turtlebot3_analysis.egg-info/SOURCES.txt'
+[3.261s] running build_ext
+[3.262s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages/turtlebot3-analysis.egg-link (link to .)
+[3.265s] Installing heatmap_generator script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/turtlebot3_analysis
+[3.266s] 
+[3.266s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis
+[3.266s] running symlink_data
+[3.405s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/build --no-deps symlink_data

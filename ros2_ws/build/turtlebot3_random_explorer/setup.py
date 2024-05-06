@@ -1,1 +1,0 @@
-/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_random_explorer/setup.py

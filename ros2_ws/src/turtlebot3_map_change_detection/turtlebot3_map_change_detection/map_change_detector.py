@@ -5,6 +5,7 @@ import cv2
 import os
 from datetime import datetime
 import subprocess
+import threading
 
 class MapChangeDetector(Node):
     def __init__(self):
@@ -16,6 +17,10 @@ class MapChangeDetector(Node):
         self.map_save_timer = self.create_timer(self.map_save_interval, self.map_save_callback)
         self.last_map_path = ""
         self.declare_parameter('threshold', 10)# Threshold for changes
+        self.nav_process = None
+        self.auto_nav_process = None
+        self.lock = threading.Lock()
+    
 
     def map_save_callback(self):
         # Define map save path
@@ -55,11 +60,30 @@ class MapChangeDetector(Node):
 
 
     def start_navigation(self):
-        # Use nav2 package launch file for navigation
-        command = f"ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:={self.last_map_path}"
-        self.get_logger().info('Starting navigation...')
-        subprocess.run(command, shell=True, check=True)
-        self.get_logger().info('Navigation started.')
+        with self.lock:
+            try:
+                print(f"nav process: {self.nav_process}")
+                print(f"auto nav process: {self.auto_nav_process}")
+                if self.nav_process is None or self.nav_process.poll() is not None:
+                    
+                    # Process is not running or has finished
+                    nav_command = [
+                        "gnome-terminal", "--", "bash", "-c", 
+                        f"ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:={self.last_map_path}; exec bash"
+                    ]
+                    self.nav_process = subprocess.Popen(nav_command)
+                    self.get_logger().info('Navigation system started.')
+
+                if self.auto_nav_process is None or self.auto_nav_process.poll() is not None:
+                    auto_nav_command = [
+                        "gnome-terminal", "--", "bash", "-c",
+                        "ros2 run turtlebot3_auto_navigator auto_navigator; exec bash"
+                    ]
+                    self.auto_nav_process = subprocess.Popen(auto_nav_command)
+                    self.get_logger().info('Auto navigator started.')
+
+            except Exception as e:
+                self.get_logger().error(f'Failed to start a process: {str(e)}')
 
 def main(args=None):
     rclpy.init(args=args)

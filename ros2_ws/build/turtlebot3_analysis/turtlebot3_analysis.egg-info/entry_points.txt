@@ -1,0 +1,3 @@
+[console_scripts]
+heatmap_generator = turtlebot3_analysis.heatmap_generator:main
+

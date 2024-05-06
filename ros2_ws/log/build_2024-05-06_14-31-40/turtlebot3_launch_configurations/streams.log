@@ -1,0 +1,20 @@
+[2.775s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_launch_configurations': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_launch_configurations/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_launch_configurations build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_launch_configurations/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_launch_configurations/install.log --single-version-externally-managed install_data
+[3.257s] running egg_info
+[3.258s] writing ../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/PKG-INFO
+[3.259s] writing dependency_links to ../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/dependency_links.txt
+[3.259s] writing entry points to ../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/entry_points.txt
+[3.259s] writing requirements to ../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/requires.txt
+[3.259s] writing top-level names to ../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/top_level.txt
+[3.262s] reading manifest file '../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/SOURCES.txt'
+[3.265s] writing manifest file '../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/SOURCES.txt'
+[3.265s] running build
+[3.265s] running build_py
+[3.266s] running install
+[3.266s] running install_lib
+[3.271s] running install_data
+[3.272s] running install_egg_info
+[3.275s] removing '/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations/lib/python3.10/site-packages/turtlebot3_launch_configurations-0.0.0-py3.10.egg-info' (and everything under it)
+[3.276s] Copying ../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations/lib/python3.10/site-packages/turtlebot3_launch_configurations-0.0.0-py3.10.egg-info
+[3.278s] running install_scripts
+[3.318s] writing list of installed files to '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_launch_configurations/install.log'
+[3.397s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_launch_configurations' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_launch_configurations/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_launch_configurations build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_launch_configurations/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_launch_configurations/install.log --single-version-externally-managed install_data

@@ -1,0 +1,21 @@
+[2.669s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_map_change_detection': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_map_change_detection build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/install.log --single-version-externally-managed install_data
+[3.181s] running egg_info
+[3.182s] writing ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/PKG-INFO
+[3.183s] writing dependency_links to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/dependency_links.txt
+[3.183s] writing entry points to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/entry_points.txt
+[3.184s] writing requirements to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/requires.txt
+[3.184s] writing top-level names to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/top_level.txt
+[3.186s] reading manifest file '../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/SOURCES.txt'
+[3.189s] writing manifest file '../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/SOURCES.txt'
+[3.189s] running build
+[3.189s] running build_py
+[3.190s] running install
+[3.190s] running install_lib
+[3.191s] running install_data
+[3.191s] running install_egg_info
+[3.194s] removing '/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3_map_change_detection-0.0.0-py3.10.egg-info' (and everything under it)
+[3.194s] Copying ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3_map_change_detection-0.0.0-py3.10.egg-info
+[3.196s] running install_scripts
+[3.226s] Installing map_change_detector script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/turtlebot3_map_change_detection
+[3.227s] writing list of installed files to '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/install.log'
+[3.301s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_map_change_detection' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_map_change_detection build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/install.log --single-version-externally-managed install_data

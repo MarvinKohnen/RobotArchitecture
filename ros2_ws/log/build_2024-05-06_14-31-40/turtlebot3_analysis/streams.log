@@ -1,0 +1,24 @@
+[2.436s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_analysis': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_analysis build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/install.log --single-version-externally-managed install_data
+[2.807s] running egg_info
+[2.807s] writing ../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/PKG-INFO
+[2.807s] writing dependency_links to ../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/dependency_links.txt
+[2.808s] writing entry points to ../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/entry_points.txt
+[2.808s] writing requirements to ../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/requires.txt
+[2.808s] writing top-level names to ../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/top_level.txt
+[2.808s] reading manifest file '../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/SOURCES.txt'
+[2.809s] writing manifest file '../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/SOURCES.txt'
+[2.809s] running build
+[2.809s] running build_py
+[2.809s] copying turtlebot3_analysis/heatmap_generator.py -> /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/build/lib/turtlebot3_analysis
+[2.809s] running install
+[2.809s] running install_lib
+[2.809s] copying /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/build/lib/turtlebot3_analysis/heatmap_generator.py -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages/turtlebot3_analysis
+[2.809s] byte-compiling /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages/turtlebot3_analysis/heatmap_generator.py to heatmap_generator.cpython-310.pyc
+[2.810s] running install_data
+[2.810s] running install_egg_info
+[2.810s] removing '/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages/turtlebot3_analysis-0.0.0-py3.10.egg-info' (and everything under it)
+[2.810s] Copying ../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages/turtlebot3_analysis-0.0.0-py3.10.egg-info
+[2.810s] running install_scripts
+[2.810s] Installing heatmap_generator script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/turtlebot3_analysis
+[2.810s] writing list of installed files to '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/install.log'
+[2.865s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_analysis' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_analysis build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/install.log --single-version-externally-managed install_data
