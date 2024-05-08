@@ -172,20 +172,74 @@
 		\label{fig: fig6}
 	\end{figure}
 	
+	After this thorough examination of existing architectures, we will now introduce our own approach to a layered robotic system. 
 	
 	\section{Methodology}
 	\subsection{Frameworks and Setup}
-	\begin{itemize}
-		\item Welche Version nutze ich (Orientieren an dem was ich brauche)
-		\item Turtlebot kurz erklären
-		\item Layered architecture: meine components, dependencies (Grafik wie Niryo)
-	\end{itemize}
+
+	The architectural system is employed on the Turtlebot3 Burger Bot platform. This robot is frequently used in education and research because of its size, affordability and wide range of adaptability and expandability. A brief overview of the robots composition is shown in Figure \ref{fig: fig7}. 
+		
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.5\textwidth]{Graphics/Turtlebot3}
+		\caption{Turtlebot3}
+		\label{fig: fig7}
+	\end{figure}
+		
+	 The Architecture is built on the Ubuntu 22.04 LTS Operating System and ROS2 Humble for both the remote PC and the raspberry pi4 on the Turtlebot3. Any simulation is done with Gazebo Fortress (as required for ROS2 Humble) and RVIZ, while the behavior of the robot is established in various Python and Bash scripts. SSH protocol is used to establish a connection between the remote Interface and the Turtlebot3 in order to remove some computational from the raspberry pi. 
+	 
+	 
+	\subsection{Architecture and Design}
+	
+	The architecture is structured into multiple distinct layers as shown in Figure \ref{fig: fig8}, which grow in complexity the higher the layer is placed in the diagram.
+	
+	At the foundational level, the \textit{Hardware Control} package serves as the primary interface with the robot's physical components. It is the only layer [apart from the nav2 package, which we will get to later on] that processes and publishes commands directly to the robot's motors and sensors. This module's design includes a prioritization mechanism that manages conflicting commands to ensure that higher priority tasks, such as emergency stops, preempt other actions. The Hardware Control acts as of library of functions for the other layers to call upon, in order to create movement, e.g. "Drive Forward", "Turn Left", "Turn Right", "Turn by Angle" etc.").
+	
+	Above that is the rather straightforward \textit{Obstacle Avoidance} layer, which continuously reads sensor output from the 'LaserScan' message \autocite{ros.orgLaserScanMessage2024a} and calls upon the hardware layer to immediately stop and rotate the robot. This command is sent with the highest possible priority. 
+	
+	For map management, the architecture integrates a SLAM Toolbox {\color{red} Das ist das erste mal, dass SLAM erwähnt wird - Muss ich das noch erklären in einem Extra abschnitt?}. This tool is critical for building and updating the map while the robot navigates through its environment. The SLAM process simultaneously localizes the robot within the map and updates the map's structure based on new information gathered from the robot's sensors.
+	
+	In order to make use of the SLAM Toolbox and create a map, the robot has to wander around in its environment. This is realised through the \textit{Random Explore} layer, which does exactly what the name suggests: Randomly explore the surrounding area by invoking movement through the Hardware layer with lowest priority commands. 
+	
+	In the same package as the SLAM Node, a \textit{Map Change Detection} Module is located, which continuously monitors the environment for changes, updating the navigation map on a set frequency (currently 30 seconds). It uses a change detection algorithm that compares the current map state with new data collected by the robot, ultimately deciding when the map is robust enough to request the navigational layer to take over the robots movements. 
+	
+	At the highest level, this \textit{Navigation Module} provides autonomous navigation capabilities by generating random goals within the environment and employing the A* algorithm for pathfinding. This module dynamically calculates the most efficient paths to the designated targets, considering the current environmental layout and obstacles as previously mapped by the system. It is important to note, that two concurrent packages are placed inside this layer: One is custom built while the other employs the nav2 system, a commonly used navigational framework which provides a wide range of algorithms and functionalities to facilitate Path planning and directed movement. \autocite{macenskiMarathonNavigationSystem2020}
+	
+	{\color{red} ACHTUNG bei Verwendung von Package/Module/Layer etc.! Unbedingt konsistent halten}
+			
+	\begin{figure}[ht]
+		\begin{flushleft}
+		\includegraphics[width=1.1\textwidth]{Graphics/ArchitectureOverview}
+		\caption{Ablation Study on layer functionality}
+		\label{fig: fig8}
+		\end{flushleft}
+	\end{figure}
+	
+	
+	
+	
+
 	
 	\subsection{Comparison to Malavolta et al}
 	\begin{itemize}
 		\item compare architecutre to guidelines
 	\end{itemize}
-	\subsection{Quantitative Analysis}
+	
+	\section{Qualitative Analysis}  Title WIP
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[width=0.9\textwidth]{Graphics/AblationStudy}
+		\caption{Ablation Study on layer functionality}
+		\label{fig: fig9}
+	\end{figure}
+	
+	\section{Quantitative Analysis} Title WIP
+	
+	
+	\section{Simulation}
+	\section{Real World Application}
+	\section{Discussion}
 	\section{References}
 	\printbibliography
 	

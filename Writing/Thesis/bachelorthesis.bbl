@@ -223,6 +223,64 @@
       \verb http://link.springer.com/10.1007/s10462-018-9646-y
       \endverb
     \endentry
+    \entry{macenskiMarathonNavigationSystem2020}{article}{}
+      \name{author}{4}{}{%
+        {{hash=32de857faf63cd1f724ac8acd558e91b}{%
+           family={Macenski},
+           familyi={M\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+        {{hash=95227903951d354452203b21c6b973f9}{%
+           family={Martín},
+           familyi={M\bibinitperiod},
+           given={Francisco},
+           giveni={F\bibinitperiod}}}%
+        {{hash=8e3530875bb75f3e6564d0fe162ed981}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Ruffin},
+           giveni={R\bibinitperiod}}}%
+        {{hash=cd9321d9c98ac5e79872084fd18bd222}{%
+           family={Clavero},
+           familyi={C\bibinitperiod},
+           given={Jonatan\bibnamedelima Ginés},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {[object Object]}%
+      }
+      \strng{namehash}{7e50f9da548a8963dec23dce06a35fa9}
+      \strng{fullhash}{1ec23675eaf29f42484031a995d5ec5b}
+      \strng{bibnamehash}{7e50f9da548a8963dec23dce06a35fa9}
+      \strng{authorbibnamehash}{7e50f9da548a8963dec23dce06a35fa9}
+      \strng{authornamehash}{7e50f9da548a8963dec23dce06a35fa9}
+      \strng{authorfullhash}{1ec23675eaf29f42484031a995d5ec5b}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Developments in mobile robot navigation have enabled robots to operate in warehouses, retail stores, and on sidewalks around pedestrians. Various navigation solutions have been proposed, though few as widely adopted as ROS Navigation. 10 years on, it is still one of the most popular navigation solutions. Yet, ROS Navigation has failed to keep up with modern trends. We propose the new navigation solution, Navigation2, which builds on the successful legacy of ROS Navigation. Navigation2 uses a behavior tree for navigator task orchestration and employs new methods designed for dynamic environments applicable to a wider variety of modern sensors. It is built on top of ROS2, a secure message passing framework suitable for safety critical applications and program lifecycle management. We present experiments in a campus setting utilizing Navigation2 to operate safely alongside students over a marathon as an extension of the experiment proposed in Eppstein et al. The Navigation2 system is freely available at https://github.com/ros-planning/navigation2 with a rich community and instructions.}
+      \field{shorttitle}{The {{Marathon}} 2}
+      \field{title}{The {{Marathon}} 2: {{A Navigation System}}}
+      \field{urlday}{8}
+      \field{urlmonth}{5}
+      \field{urlyear}{2024}
+      \field{version}{2}
+      \field{year}{2020}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/ARXIV.2003.00368
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2003.00368
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2003.00368
+      \endverb
+      \keyw{FOS: Computer and information sciences,Robotics (cs.RO)}
+    \endentry
     \entry{macenskiRobotOperatingSystem2022}{article}{}
       \name{author}{5}{}{%
         {{hash=7b84d10a03303cd00f198fefb38a5da3}{%
@@ -257,6 +315,7 @@
       \strng{authorbibnamehash}{4a195e02383364d4009f77ca22451e11}
       \strng{authornamehash}{4a195e02383364d4009f77ca22451e11}
       \strng{authorfullhash}{c321d95ccac4f92536f0f1ed99f34d05}
+      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -568,7 +627,7 @@
       \verb https://github.com/NiryoRobotics/niryo_one_ros
       \endverb
     \endentry
-    \entry{ros.orgIntroductionROS2024}{online}{}
+    \entry{ros.orgJointTrajectoryController2024}{online}{}
       \name{author}{1}{}{%
         {{hash=87380b1c7d915b6df49c1b18bd31a8a0}{%
            family={ROS.org},
@@ -587,17 +646,17 @@
       \field{labeltitlesource}{title}
       \field{day}{5}
       \field{month}{3}
-      \field{title}{Introduction to {{ROS}}}
+      \field{title}{Joint {{Trajectory Controller}}}
       \field{year}{2024}
       \field{dateera}{ce}
       \verb{urlraw}
-      \verb https://wiki.ros.org/ROS/Introduction
+      \verb http://wiki.ros.org/joint_trajectory_controller
       \endverb
       \verb{url}
-      \verb https://wiki.ros.org/ROS/Introduction
+      \verb http://wiki.ros.org/joint_trajectory_controller
       \endverb
     \endentry
-    \entry{ros.orgJointTrajectoryController2024}{online}{}
+    \entry{ros.orgLaserScanMessage2024a}{online}{}
       \name{author}{1}{}{%
         {{hash=87380b1c7d915b6df49c1b18bd31a8a0}{%
            family={ROS.org},
@@ -616,14 +675,14 @@
       \field{labeltitlesource}{title}
       \field{day}{5}
       \field{month}{3}
-      \field{title}{Joint {{Trajectory Controller}}}
+      \field{title}{{{LaserScan Message}}}
       \field{year}{2024}
       \field{dateera}{ce}
       \verb{urlraw}
-      \verb http://wiki.ros.org/joint_trajectory_controller
+      \verb http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/LaserScan.html
       \endverb
       \verb{url}
-      \verb http://wiki.ros.org/joint_trajectory_controller
+      \verb http://docs.ros.org/en/melodic/api/sensor_msgs/html/msg/LaserScan.html
       \endverb
     \endentry
     \entry{ros.orgMoveItConcepts2024}{online}{}
@@ -938,6 +997,7 @@
       \endverb
     \endentry
   \enddatalist
+  \missing{ros.orgIntroductionROS2024}
 \endrefsection
 \endinput
 
