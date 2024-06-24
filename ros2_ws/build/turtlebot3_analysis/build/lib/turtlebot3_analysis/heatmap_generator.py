@@ -43,7 +43,7 @@ class HeatmapGenerator(Node):
     
         # Map the position to heatmap coordinates
         x, y = self.position_to_heatmap_coords(self.current_position, self.heatmap.shape)
-        self.heatmap[y, x] = min(self.heatmap[y, x] + 50, 255)  # Increment heatmap value at robot's position
+        self.heatmap[y, x] = min(self.heatmap[y, x] + 2, 255)  # Increment heatmap value at robot's position
        
 
     def save_heatmap(self):
@@ -54,12 +54,12 @@ class HeatmapGenerator(Node):
 
         # Normalize the heatmap for blending
         heatmap_normalized = cv2.normalize(self.heatmap, None, alpha=0, beta=255, norm_type=cv2.NORM_MINMAX, dtype=cv2.CV_8U)
-        heatmap_colored = cv2.applyColorMap(heatmap_normalized, cv2.COLORMAP_HOT)
+        heatmap_colored = cv2.applyColorMap(heatmap_normalized, cv2.COLORMAP_JET)
         heatmap_resized = cv2.resize(heatmap_colored, (self.nav_map.shape[1], self.nav_map.shape[0]))
 
         # Blend the heatmap with the navigation map
         nav_map_color = cv2.cvtColor(self.nav_map, cv2.COLOR_GRAY2BGR)
-        blended_image = cv2.addWeighted(nav_map_color, 0.5, heatmap_resized, 0.5, 0)
+        blended_image = cv2.addWeighted(nav_map_color, 0.4, heatmap_resized, 0.6, 0)
 
         # Save the blended image
         cv2.imwrite(self.heatmap_path, blended_image)

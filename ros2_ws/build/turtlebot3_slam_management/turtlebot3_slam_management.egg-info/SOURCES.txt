@@ -11,7 +11,11 @@ setup.py
 config/slam_params.yaml
 launch/slam_launch.py
 resource/turtlebot3_slam_management
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
 turtlebot3_slam_management/__init__.py
+turtlebot3_slam_management.egg-info/PKG-INFO
+turtlebot3_slam_management.egg-info/SOURCES.txt
+turtlebot3_slam_management.egg-info/dependency_links.txt
+turtlebot3_slam_management.egg-info/entry_points.txt
+turtlebot3_slam_management.egg-info/requires.txt
+turtlebot3_slam_management.egg-info/top_level.txt
+turtlebot3_slam_management.egg-info/zip-safe

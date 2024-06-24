@@ -9,8 +9,12 @@ setup.py
 ../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/top_level.txt
 ../../build/turtlebot3_analysis/turtlebot3_analysis.egg-info/zip-safe
 resource/turtlebot3_analysis
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py
 turtlebot3_analysis/__init__.py
 turtlebot3_analysis/heatmap_generator.py
+turtlebot3_analysis.egg-info/PKG-INFO
+turtlebot3_analysis.egg-info/SOURCES.txt
+turtlebot3_analysis.egg-info/dependency_links.txt
+turtlebot3_analysis.egg-info/entry_points.txt
+turtlebot3_analysis.egg-info/requires.txt
+turtlebot3_analysis.egg-info/top_level.txt
+turtlebot3_analysis.egg-info/zip-safe

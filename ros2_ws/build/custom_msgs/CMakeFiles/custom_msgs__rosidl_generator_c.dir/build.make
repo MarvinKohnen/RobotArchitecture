@@ -142,6 +142,7 @@ rosidl_generator_c/custom_msgs/msg/priority_twist.h: /opt/ros/humble/share/geome
 rosidl_generator_c/custom_msgs/msg/priority_twist.h: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovarianceStamped.idl
 rosidl_generator_c/custom_msgs/msg/priority_twist.h: /opt/ros/humble/share/geometry_msgs/msg/Vector3.idl
 rosidl_generator_c/custom_msgs/msg/priority_twist.h: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
+rosidl_generator_c/custom_msgs/msg/priority_twist.h: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_generator_c/custom_msgs/msg/priority_twist.h: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_generator_c/custom_msgs/msg/priority_twist.h: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"

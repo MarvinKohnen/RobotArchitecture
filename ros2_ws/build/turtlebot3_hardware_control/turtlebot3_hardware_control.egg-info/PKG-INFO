@@ -1,8 +1,7 @@
 Metadata-Version: 2.1
 Name: turtlebot3-hardware-control
 Version: 0.0.0
-Summary: TODO: Package description
-Home-page: UNKNOWN
+Summary: A ROS2 package for controlling TurtleBot3 hardware
 Maintainer: marvin
 Maintainer-email: marvin@todo.todo
 License: TODO: License declaration

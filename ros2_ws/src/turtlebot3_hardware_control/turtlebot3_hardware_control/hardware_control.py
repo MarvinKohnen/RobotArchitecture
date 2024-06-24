@@ -71,7 +71,7 @@ class HardwareControl(Node):
     def turn_by_angle(self, angle: float, priority: int):
         """Turn the robot by a specified angle in radians."""
         
-        omega = 0.3  # Constant angular velocity (rad/s), adjust based on your robot's capability
+        omega = 0.3  # Constant angular velocity (rad/s), 
         duration = abs(angle / omega)
         msg = Twist()
         msg.angular.z = omega if angle > 0 else -omega
@@ -87,18 +87,22 @@ class HardwareControl(Node):
 
 
 def main(args=None):
+    print("Starting the fucking node!?")
     rclpy.init(args=args)
     hardware_control = HardwareControl()
 
-    #multithreading
     executor = rclpy.executors.MultiThreadedExecutor()
     executor.add_node(hardware_control)
 
     try:
         executor.spin()
+    except KeyboardInterrupt:
+        print("Keyboard Interrupt Received. shutting down.")
     finally:
-        hardware_control.destroy_node()
-        rclpy.shutdown()
+        if rclpy.ok():  # Only shutdown if rclpy has not already been shut down
+            hardware_control.destroy_node()
+            rclpy.shutdown()
+        print("END Node lifecycle.")
 
 if __name__ == '__main__':
     main()

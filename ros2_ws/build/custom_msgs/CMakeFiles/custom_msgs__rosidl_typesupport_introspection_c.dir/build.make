@@ -137,6 +137,7 @@ rosidl_typesupport_introspection_c/custom_msgs/msg/detail/priority_twist__rosidl
 rosidl_typesupport_introspection_c/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovarianceStamped.idl
 rosidl_typesupport_introspection_c/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Vector3.idl
 rosidl_typesupport_introspection_c/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
+rosidl_typesupport_introspection_c/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 rosidl_typesupport_introspection_c/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 rosidl_typesupport_introspection_c/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_introspection_c.h: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C introspection for ROS interfaces"

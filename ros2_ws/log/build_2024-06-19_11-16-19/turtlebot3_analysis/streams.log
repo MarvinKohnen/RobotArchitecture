@@ -1,0 +1,21 @@
+[3.197s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/build --no-deps symlink_data --force
+[5.168s] running develop
+[5.185s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[5.186s]   warnings.warn(
+[6.140s] running egg_info
+[6.141s] writing turtlebot3_analysis.egg-info/PKG-INFO
+[6.153s] writing dependency_links to turtlebot3_analysis.egg-info/dependency_links.txt
+[6.153s] writing entry points to turtlebot3_analysis.egg-info/entry_points.txt
+[6.153s] writing requirements to turtlebot3_analysis.egg-info/requires.txt
+[6.154s] writing top-level names to turtlebot3_analysis.egg-info/top_level.txt
+[6.154s] reading manifest file 'turtlebot3_analysis.egg-info/SOURCES.txt'
+[6.154s] writing manifest file 'turtlebot3_analysis.egg-info/SOURCES.txt'
+[6.154s] running build_ext
+[6.154s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages/turtlebot3-analysis.egg-link (link to .)
+[6.154s] Installing heatmap_generator script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/turtlebot3_analysis
+[6.155s] 
+[6.155s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis
+[6.155s] running symlink_data
+[6.155s] symbolically linking /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/resource/turtlebot3_analysis -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/share/ament_index/resource_index/packages
+[6.155s] symbolically linking /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/package.xml -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/share/turtlebot3_analysis
+[6.243s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_analysis/build --no-deps symlink_data --force

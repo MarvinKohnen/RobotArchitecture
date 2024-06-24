@@ -20,8 +20,6 @@ class MapChangeDetector(Node):
         self.nav_process = None
         self.auto_nav_process = None
         self.lock = threading.Lock()
-
-
     
 
     def map_save_callback(self):
@@ -69,9 +67,10 @@ class MapChangeDetector(Node):
                 if self.nav_process is None or self.nav_process.poll() is not None:
                     
                     # Process is not running or has finished
+                    #TODO: Change use_sim_time for Sim or Real world application 
                     nav_command = [
                         "gnome-terminal", "--", "bash", "-c", 
-                        f"ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True map:={self.last_map_path}; exec bash"
+                        f"ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=False map:={self.last_map_path}; exec bash"
                     ]
                     self.nav_process = subprocess.Popen(nav_command)
                     self.get_logger().info('Navigation system started.')

@@ -124,6 +124,7 @@ CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovaria
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/TwistWithCovarianceStamped.idl
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/Vector3.idl
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/Vector3Stamped.idl
+CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/VelocityStamped.idl
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/Wrench.idl
 CMakeFiles/custom_msgs: /opt/ros/humble/share/geometry_msgs/msg/WrenchStamped.idl
 

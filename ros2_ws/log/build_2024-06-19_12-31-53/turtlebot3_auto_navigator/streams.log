@@ -1,0 +1,21 @@
+[2.563s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator/build --no-deps symlink_data --force
+[3.088s] running develop
+[3.088s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[3.089s]   warnings.warn(
+[3.459s] running egg_info
+[3.459s] writing turtlebot3_auto_navigator.egg-info/PKG-INFO
+[3.460s] writing dependency_links to turtlebot3_auto_navigator.egg-info/dependency_links.txt
+[3.460s] writing entry points to turtlebot3_auto_navigator.egg-info/entry_points.txt
+[3.460s] writing requirements to turtlebot3_auto_navigator.egg-info/requires.txt
+[3.460s] writing top-level names to turtlebot3_auto_navigator.egg-info/top_level.txt
+[3.463s] reading manifest file 'turtlebot3_auto_navigator.egg-info/SOURCES.txt'
+[3.464s] writing manifest file 'turtlebot3_auto_navigator.egg-info/SOURCES.txt'
+[3.467s] running build_ext
+[3.467s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator/lib/python3.10/site-packages/turtlebot3-auto-navigator.egg-link (link to .)
+[3.468s] Installing auto_navigator script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator/lib/turtlebot3_auto_navigator
+[3.469s] 
+[3.469s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator
+[3.469s] running symlink_data
+[3.469s] symbolically linking /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator/resource/turtlebot3_auto_navigator -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator/share/ament_index/resource_index/packages
+[3.469s] symbolically linking /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator/package.xml -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator/share/turtlebot3_auto_navigator
+[4.038s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_auto_navigator/build --no-deps symlink_data --force

@@ -1,0 +1,117 @@
+[0.056s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis:/opt/ros/humble /usr/bin/cmake --build /home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs -- -j8 -l8
+[1.910s] [  3%] Built target custom_msgs__cpp
+[1.912s] [ 12%] Built target custom_msgs__rosidl_generator_c
+[1.912s] [ 12%] Built target ament_cmake_python_symlink_custom_msgs
+[1.913s] [ 22%] Built target custom_msgs__rosidl_typesupport_cpp
+[1.913s] [ 32%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp
+[1.913s] [ 41%] Built target custom_msgs__rosidl_typesupport_introspection_cpp
+[1.913s] [ 51%] Built target custom_msgs__rosidl_typesupport_fastrtps_c
+[1.913s] [ 61%] Built target custom_msgs__rosidl_typesupport_introspection_c
+[1.913s] [ 70%] Built target custom_msgs__rosidl_typesupport_c
+[1.913s] [ 70%] Built target custom_msgs
+[1.914s] [ 74%] Built target custom_msgs__py
+[1.914s] [ 80%] Built target custom_msgs__rosidl_generator_py
+[1.914s] [ 96%] Built target custom_msgs__rosidl_typesupport_fastrtps_c__pyext
+[1.914s] [100%] Built target custom_msgs__rosidl_typesupport_introspection_c__pyext
+[1.914s] [100%] Built target custom_msgs__rosidl_typesupport_c__pyext
+[1.914s] running egg_info
+[1.914s] writing custom_msgs.egg-info/PKG-INFO
+[1.914s] writing dependency_links to custom_msgs.egg-info/dependency_links.txt
+[1.914s] writing top-level names to custom_msgs.egg-info/top_level.txt
+[1.914s] reading manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[1.914s] [100%] Built target ament_cmake_python_build_custom_msgs_egg
+[2.324s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis:/opt/ros/humble /usr/bin/cmake --build /home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs -- -j8 -l8
+[2.684s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis:/opt/ros/humble /usr/bin/cmake --install /home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs
+[2.696s] -- Install configuration: ""
+[2.697s] -- Execute custom install script
+[2.698s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/ament_index/resource_index/rosidl_interfaces/custom_msgs
+[2.699s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__functions.h
+[2.699s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__struct.h
+[2.700s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__type_support.h
+[2.700s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/priority_twist.h
+[2.701s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_generator_c__visibility_control.h
+[2.701s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/environment/library_path.sh
+[2.702s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/environment/library_path.dsv
+[2.703s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_fastrtps_c.h
+[2.703s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.704s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__builder.hpp
+[2.704s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__struct.hpp
+[2.705s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__traits.hpp
+[2.705s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/priority_twist.hpp
+[2.706s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_fastrtps_cpp.hpp
+[2.707s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.708s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_introspection_c.h
+[2.708s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.709s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/include/custom_msgs/custom_msgs/msg/detail/priority_twist__rosidl_typesupport_introspection_cpp.hpp
+[2.709s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/environment/pythonpath.sh
+[2.710s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/environment/pythonpath.dsv
+[2.710s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.0-py3.10.egg-info/PKG-INFO
+[2.711s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.711s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.712s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs-0.0.0-py3.10.egg-info/top_level.txt
+[2.713s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/__init__.py
+[2.714s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_c.c
+[2.715s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.716s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/_custom_msgs_s.ep.rosidl_typesupport_introspection_c.c
+[2.716s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.717s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.717s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.718s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/libcustom_msgs__rosidl_generator_py.so
+[2.718s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/__init__.py
+[2.718s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_priority_twist.py
+[2.719s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg/_priority_twist_s.c
+[2.719s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.720s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.721s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/custom_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.721s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/msg/PriorityTwist.idl
+[2.722s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/msg/PriorityTwist.msg
+[2.722s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/ament_index/resource_index/package_run_dependencies/custom_msgs
+[2.722s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/ament_index/resource_index/parent_prefix_path/custom_msgs
+[2.723s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.sh
+[2.723s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/environment/ament_prefix_path.dsv
+[2.724s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/environment/path.sh
+[2.724s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/environment/path.dsv
+[2.725s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/local_setup.bash
+[2.725s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/local_setup.sh
+[2.726s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/local_setup.zsh
+[2.726s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/local_setup.dsv
+[2.727s] -- Symlinking: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/package.dsv
+[2.740s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/ament_index/resource_index/packages/custom_msgs
+[2.741s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake-extras.cmake
+[2.741s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.742s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.742s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[2.743s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[2.743s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.745s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.745s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig.cmake
+[2.746s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgsConfig-version.cmake
+[2.746s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/package.xml
+[2.746s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_c.so
+[2.747s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_c.so
+[2.748s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_fastrtps_cpp.so
+[2.749s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_c.so
+[2.750s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_c.so
+[2.751s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_introspection_cpp.so
+[2.752s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_typesupport_cpp.so
+[2.830s] Listing '/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs'...
+[2.830s] Listing '/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages/custom_msgs/msg'...
+[2.837s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib/libcustom_msgs__rosidl_generator_py.so
+[2.838s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport.cmake
+[2.839s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cExport-noconfig.cmake
+[2.839s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport.cmake
+[2.840s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.840s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_cppExport.cmake
+[2.841s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.841s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.841s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport.cmake
+[2.842s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.842s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport.cmake
+[2.842s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[2.843s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[2.843s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.844s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport.cmake
+[2.844s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/custom_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[2.844s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport.cmake
+[2.845s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake/export_custom_msgs__rosidl_generator_pyExport-noconfig.cmake
+[2.853s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis:/opt/ros/humble /usr/bin/cmake --install /home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs

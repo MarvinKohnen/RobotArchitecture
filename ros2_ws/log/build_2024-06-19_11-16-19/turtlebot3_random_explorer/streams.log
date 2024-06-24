@@ -1,0 +1,21 @@
+[3.441s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer': CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_simulations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_gazebo:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_fake_node:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services LD_LIBRARY_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer/build --no-deps symlink_data --force
+[4.476s] running develop
+[4.476s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[4.477s]   warnings.warn(
+[5.125s] running egg_info
+[5.125s] writing turtlebot3_random_explorer.egg-info/PKG-INFO
+[5.125s] writing dependency_links to turtlebot3_random_explorer.egg-info/dependency_links.txt
+[5.125s] writing entry points to turtlebot3_random_explorer.egg-info/entry_points.txt
+[5.125s] writing requirements to turtlebot3_random_explorer.egg-info/requires.txt
+[5.126s] writing top-level names to turtlebot3_random_explorer.egg-info/top_level.txt
+[5.126s] reading manifest file 'turtlebot3_random_explorer.egg-info/SOURCES.txt'
+[5.126s] writing manifest file 'turtlebot3_random_explorer.egg-info/SOURCES.txt'
+[5.126s] running build_ext
+[5.128s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer/lib/python3.10/site-packages/turtlebot3-random-explorer.egg-link (link to .)
+[5.129s] Installing random_explorer script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer/lib/turtlebot3_random_explorer
+[5.129s] 
+[5.129s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer
+[5.129s] running symlink_data
+[5.145s] symbolically linking /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer/resource/turtlebot3_random_explorer -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer/share/ament_index/resource_index/packages
+[5.145s] symbolically linking /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer/package.xml -> /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer/share/turtlebot3_random_explorer
+[5.227s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer' returned '0': CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_simulations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_gazebo:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_fake_node:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services LD_LIBRARY_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer/prefix_override:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_random_explorer/build --no-deps symlink_data --force
