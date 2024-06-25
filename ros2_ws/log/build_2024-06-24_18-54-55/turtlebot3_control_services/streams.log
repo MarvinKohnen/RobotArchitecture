@@ -1,0 +1,190 @@
+[0.018s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services': AMENT_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/opt/ros/humble LD_LIBRARY_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services -- -j8 -l8
+[0.308s] -- Found ament_cmake: 1.3.9 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.308s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.308s] -- Found rclcpp: 16.0.9 (/opt/ros/humble/share/rclcpp/cmake)
+[0.308s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.309s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.309s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.309s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.309s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.309s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.310s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[0.337s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[0.494s] -- Found geometry_msgs: 4.2.4 (/opt/ros/humble/share/geometry_msgs/cmake)
+[0.531s] -- Found custom_msgs: 0.0.0 (/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/share/custom_msgs/cmake)
+[0.590s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.845s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.181s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.310s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.331s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.353s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.353s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.353s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.379s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.392s] -- Added test 'lint_cmake' to check CMake code style
+[1.393s] -- Added test 'xmllint' to check XML markup files
+[1.396s] -- Configuring done
+[1.443s] -- Generating done
+[1.448s] -- Build files have been written to: /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services
+[1.473s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_generator_c[0m
+[1.486s] [  3%] Built target turtlebot3_control_services__cpp
+[1.486s] [  6%] [32mBuilding C object CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c.o[0m
+[1.497s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_cpp[0m
+[1.498s] [  6%] Built target ament_cmake_python_symlink_turtlebot3_control_services
+[1.505s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_introspection_cpp[0m
+[1.505s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_fastrtps_cpp[0m
+[1.522s] [ 12%] [32mBuilding CXX object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/turtlebot3_control_services/srv/detail/dds_fastrtps/robot_control__type_support.cpp.o[0m
+[1.522s] [ 12%] [32mBuilding CXX object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/turtlebot3_control_services/srv/robot_control__type_support.cpp.o[0m
+[1.525s] [ 16%] [32mBuilding CXX object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/turtlebot3_control_services/srv/detail/robot_control__type_support.cpp.o[0m
+[1.578s] [ 19%] [32m[1mLinking C shared library libturtlebot3_control_services__rosidl_generator_c.so[0m
+[1.622s] [ 22%] Built target turtlebot3_control_services__rosidl_generator_c
+[1.639s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_c[0m
+[1.640s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_introspection_c[0m
+[1.640s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_fastrtps_c[0m
+[1.650s] [ 25%] [32mBuilding CXX object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/turtlebot3_control_services/srv/detail/robot_control__type_support_c.cpp.o[0m
+[1.651s] [ 29%] [32mBuilding CXX object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.o[0m
+[1.651s] [ 32%] [32mBuilding C object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/turtlebot3_control_services/srv/detail/robot_control__type_support.c.o[0m
+[1.697s] [ 35%] [32m[1mLinking CXX shared library libturtlebot3_control_services__rosidl_typesupport_c.so[0m
+[1.707s] [ 38%] [32m[1mLinking C shared library libturtlebot3_control_services__rosidl_typesupport_introspection_c.so[0m
+[1.752s] [ 41%] Built target turtlebot3_control_services__rosidl_typesupport_introspection_c
+[1.756s] [ 45%] Built target turtlebot3_control_services__rosidl_typesupport_c
+[1.842s] [ 48%] [32m[1mLinking CXX shared library libturtlebot3_control_services__rosidl_typesupport_cpp.so[0m
+[1.880s] [ 51%] Built target turtlebot3_control_services__rosidl_typesupport_cpp
+[1.933s] [ 54%] [32m[1mLinking CXX shared library libturtlebot3_control_services__rosidl_typesupport_introspection_cpp.so[0m
+[1.996s] [ 58%] [32m[1mLinking CXX shared library libturtlebot3_control_services__rosidl_typesupport_fastrtps_c.so[0m
+[1.997s] [ 61%] Built target turtlebot3_control_services__rosidl_typesupport_introspection_cpp
+[2.003s] running egg_info
+[2.004s] writing turtlebot3_control_services.egg-info/PKG-INFO
+[2.004s] writing dependency_links to turtlebot3_control_services.egg-info/dependency_links.txt
+[2.004s] writing top-level names to turtlebot3_control_services.egg-info/top_level.txt
+[2.008s] reading manifest file 'turtlebot3_control_services.egg-info/SOURCES.txt'
+[2.058s] [ 61%] Built target ament_cmake_python_build_turtlebot3_control_services_egg
+[2.072s] [ 64%] [32m[1mLinking CXX shared library libturtlebot3_control_services__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.078s] [ 67%] Built target turtlebot3_control_services__rosidl_typesupport_fastrtps_c
+[2.135s] [ 70%] Built target turtlebot3_control_services__rosidl_typesupport_fastrtps_cpp
+[2.151s] [ 70%] Built target turtlebot3_control_services
+[2.167s] [ 74%] Built target turtlebot3_control_services__py
+[2.175s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_generator_py[0m
+[2.188s] [ 77%] [32mBuilding C object CMakeFiles/turtlebot3_control_services__rosidl_generator_py.dir/rosidl_generator_py/turtlebot3_control_services/srv/_robot_control_s.c.o[0m
+[2.277s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/turtlebot3_control_services/libturtlebot3_control_services__rosidl_generator_py.so[0m
+[2.311s] [ 80%] Built target turtlebot3_control_services__rosidl_generator_py
+[2.320s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_c__pyext[0m
+[2.320s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_fastrtps_c__pyext[0m
+[2.321s] [35m[1mConsolidate compiler generated dependencies of target turtlebot3_control_services__rosidl_typesupport_introspection_c__pyext[0m
+[2.334s] [ 90%] [32mBuilding C object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/turtlebot3_control_services/_turtlebot3_control_services_s.ep.rosidl_typesupport_c.c.o[0m
+[2.334s] [ 90%] [32mBuilding C object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/turtlebot3_control_services/_turtlebot3_control_services_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[2.335s] [ 90%] [32mBuilding C object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/turtlebot3_control_services/_turtlebot3_control_services_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[2.422s] [ 93%] [32m[1mLinking C shared library rosidl_generator_py/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.423s] [ 96%] [32m[1mLinking C shared library rosidl_generator_py/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.425s] [100%] [32m[1mLinking C shared library rosidl_generator_py/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[2.458s] [100%] Built target turtlebot3_control_services__rosidl_typesupport_c__pyext
+[2.459s] [100%] Built target turtlebot3_control_services__rosidl_typesupport_fastrtps_c__pyext
+[2.459s] [100%] Built target turtlebot3_control_services__rosidl_typesupport_introspection_c__pyext
+[2.469s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services' returned '0': AMENT_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/opt/ros/humble LD_LIBRARY_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services -- -j8 -l8
+[2.517s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services': AMENT_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/opt/ros/humble LD_LIBRARY_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services
+[2.524s] -- Install configuration: ""
+[2.525s] -- Execute custom install script
+[2.525s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/ament_index/resource_index/rosidl_interfaces/turtlebot3_control_services
+[2.525s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/msg/rosidl_generator_c__visibility_control.h
+[2.526s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__functions.h
+[2.526s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__struct.h
+[2.526s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__type_support.h
+[2.526s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/robot_control.h
+[2.526s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/environment/library_path.sh
+[2.527s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/environment/library_path.dsv
+[2.527s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.527s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__rosidl_typesupport_fastrtps_c.h
+[2.528s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__builder.hpp
+[2.528s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__struct.hpp
+[2.528s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__traits.hpp
+[2.528s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/robot_control.hpp
+[2.529s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.529s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__rosidl_typesupport_fastrtps_cpp.hpp
+[2.530s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.530s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__rosidl_typesupport_introspection_c.h
+[2.530s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/include/turtlebot3_control_services/turtlebot3_control_services/srv/detail/robot_control__rosidl_typesupport_introspection_cpp.hpp
+[2.530s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/environment/pythonpath.sh
+[2.531s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/environment/pythonpath.dsv
+[2.531s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services-0.0.0-py3.10.egg-info/PKG-INFO
+[2.531s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.531s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.532s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services-0.0.0-py3.10.egg-info/top_level.txt
+[2.532s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/__init__.py
+[2.532s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/_turtlebot3_control_services_s.ep.rosidl_typesupport_c.c
+[2.533s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/_turtlebot3_control_services_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.533s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/_turtlebot3_control_services_s.ep.rosidl_typesupport_introspection_c.c
+[2.533s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/libturtlebot3_control_services__rosidl_generator_py.so
+[2.533s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/srv/__init__.py
+[2.533s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/srv/_robot_control.py
+[2.534s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/srv/_robot_control_s.c
+[2.534s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.534s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.534s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.535s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.535s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.535s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/turtlebot3_control_services_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.536s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/srv/RobotControl.idl
+[2.536s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/srv/RobotControl.srv
+[2.536s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/srv/RobotControl_Request.msg
+[2.536s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/srv/RobotControl_Response.msg
+[2.537s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/ament_index/resource_index/package_run_dependencies/turtlebot3_control_services
+[2.537s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/ament_index/resource_index/parent_prefix_path/turtlebot3_control_services
+[2.537s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/environment/ament_prefix_path.sh
+[2.537s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/environment/ament_prefix_path.dsv
+[2.538s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/environment/path.sh
+[2.538s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/environment/path.dsv
+[2.538s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/local_setup.bash
+[2.538s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/local_setup.sh
+[2.539s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/local_setup.zsh
+[2.539s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/local_setup.dsv
+[2.539s] -- Symlinking: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/package.dsv
+[2.547s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/ament_index/resource_index/packages/turtlebot3_control_services
+[2.547s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/rosidl_cmake-extras.cmake
+[2.547s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.547s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.548s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/ament_cmake_export_libraries-extras.cmake
+[2.548s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/ament_cmake_export_targets-extras.cmake
+[2.548s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.548s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.548s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_servicesConfig.cmake
+[2.549s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_servicesConfig-version.cmake
+[2.549s] -- Up-to-date symlink: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/package.xml
+[2.549s] -- Installing: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_generator_c.so
+[2.550s] -- Set runtime path of "/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_generator_c.so" to ""
+[2.550s] -- Installing: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_fastrtps_c.so
+[2.551s] -- Set runtime path of "/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_fastrtps_c.so" to ""
+[2.551s] -- Installing: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_fastrtps_cpp.so
+[2.552s] -- Set runtime path of "/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.552s] -- Installing: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_introspection_c.so
+[2.553s] -- Set runtime path of "/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_introspection_c.so" to ""
+[2.553s] -- Installing: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_c.so
+[2.554s] -- Set runtime path of "/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_c.so" to ""
+[2.554s] -- Installing: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_introspection_cpp.so
+[2.555s] -- Set runtime path of "/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_introspection_cpp.so" to ""
+[2.555s] -- Installing: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_cpp.so
+[2.556s] -- Set runtime path of "/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_typesupport_cpp.so" to ""
+[2.586s] Listing '/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services'...
+[2.586s] Compiling '/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/__init__.py'...
+[2.586s] Listing '/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/srv'...
+[2.586s] Compiling '/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/srv/__init__.py'...
+[2.586s] Compiling '/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/local/lib/python3.10/dist-packages/turtlebot3_control_services/srv/_robot_control.py'...
+[2.590s] -- Installing: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_generator_py.so
+[2.591s] -- Set runtime path of "/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/lib/libturtlebot3_control_services__rosidl_generator_py.so" to ""
+[2.591s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_generator_cExport.cmake
+[2.591s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_generator_cExport-noconfig.cmake
+[2.591s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_typesupport_fastrtps_cExport.cmake
+[2.592s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.592s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_generator_cppExport.cmake
+[2.592s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.592s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.592s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_services__rosidl_typesupport_introspection_cExport.cmake
+[2.593s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_services__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.593s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_services__rosidl_typesupport_cExport.cmake
+[2.593s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_services__rosidl_typesupport_cExport-noconfig.cmake
+[2.593s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_services__rosidl_typesupport_introspection_cppExport.cmake
+[2.593s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_services__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.594s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_services__rosidl_typesupport_cppExport.cmake
+[2.594s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/turtlebot3_control_services__rosidl_typesupport_cppExport-noconfig.cmake
+[2.594s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_generator_pyExport.cmake
+[2.594s] -- Up-to-date: /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services/share/turtlebot3_control_services/cmake/export_turtlebot3_control_services__rosidl_generator_pyExport-noconfig.cmake
+[2.596s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services' returned '0': AMENT_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs:/home/marvin/install/turtlebot3_hardware_control:/home/marvin/install/turtlebot3_explorer:/opt/ros/humble LD_LIBRARY_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services

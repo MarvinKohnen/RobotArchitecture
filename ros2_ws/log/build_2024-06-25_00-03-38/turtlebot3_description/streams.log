@@ -1,0 +1,21 @@
+[0.061s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_description': /usr/bin/cmake /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3/turtlebot3_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_description
+[0.944s] -- Configuring incomplete, errors occurred!
+[0.944s] See also "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_description/CMakeFiles/CMakeOutput.log".
+[0.946s] [31mCMake Error at CMakeLists.txt:10 (find_package):
+[0.947s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[0.947s]   asked CMake to find a package configuration file provided by "catkin", but
+[0.947s]   CMake did not find one.
+[0.947s] 
+[0.947s]   Could not find a package configuration file provided by "catkin" with any
+[0.948s]   of the following names:
+[0.948s] 
+[0.948s]     catkinConfig.cmake
+[0.948s]     catkin-config.cmake
+[0.948s] 
+[0.948s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[0.948s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[0.949s]   provides a separate development package or SDK, be sure it has been
+[0.949s]   installed.
+[0.949s] 
+[0.949s] [0m
+[1.370s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_description' returned '1': /usr/bin/cmake /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3/turtlebot3_description -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_description

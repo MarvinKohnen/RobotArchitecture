@@ -1,0 +1,33 @@
+[0.054s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs': CMAKE_PREFIX_PATH=/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_simulations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_bringup:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_node:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_navigation2:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_gazebo:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_fake_node:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_teleop:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_slam_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_random_explorer:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_obstacle_avoidance:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_nav_management:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_launch_configurations:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_hardware_control:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_example:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_auto_navigator:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_analysis:/opt/ros/humble:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_description:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_control_services:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_cartographer:/home/marvin/RobotArchitecture/ros2_ws/install/custom_msgs /usr/bin/cmake --build /home/marvin/RobotArchitecture/ros2_ws/build/custom_msgs -- -j8 -l8
+[0.442s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_generator_c[0m
+[0.443s] [ 12%] Built target custom_msgs__cpp
+[0.443s] [ 12%] Built target custom_msgs__rosidl_generator_c
+[0.444s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_c[0m
+[0.444s] [ 12%] Built target ament_cmake_python_symlink_custom_msgs
+[0.444s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_introspection_c[0m
+[0.444s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_introspection_cpp[0m
+[0.444s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_fastrtps_c[0m
+[0.445s] [ 22%] Built target custom_msgs__rosidl_typesupport_c
+[0.446s] [ 32%] Built target custom_msgs__rosidl_typesupport_introspection_c
+[0.446s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_cpp[0m
+[0.447s] [ 41%] Built target custom_msgs__rosidl_typesupport_fastrtps_c
+[0.448s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[0.448s] [ 51%] Built target custom_msgs__rosidl_typesupport_introspection_cpp
+[0.449s] [ 61%] Built target custom_msgs__rosidl_typesupport_cpp
+[0.449s] [ 70%] Built target custom_msgs__rosidl_typesupport_fastrtps_cpp
+[0.449s] [ 70%] Built target custom_msgs
+[0.450s] [ 74%] Built target custom_msgs__py
+[0.450s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_generator_py[0m
+[0.450s] [ 80%] Built target custom_msgs__rosidl_generator_py
+[0.450s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_c__pyext[0m
+[0.450s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[0.450s] [35m[1mConsolidate compiler generated dependencies of target custom_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[0.450s] [ 87%] Built target custom_msgs__rosidl_typesupport_c__pyext
+[0.451s] [100%] Built target custom_msgs__rosidl_typesupport_introspection_c__pyext
+[0.451s] [100%] Built target custom_msgs__rosidl_typesupport_fastrtps_c__pyext
+[0.474s] running egg_info
+[0.474s] writing custom_msgs.egg-info/PKG-INFO
+[0.475s] writing dependency_links to custom_msgs.egg-info/dependency_links.txt
+[0.475s] writing top-level names to custom_msgs.egg-info/top_level.txt
+[0.481s] reading manifest file 'custom_msgs.egg-info/SOURCES.txt'
+[0.541s] [100%] Built target ament_cmake_python_build_custom_msgs_egg

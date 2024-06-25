@@ -19,11 +19,19 @@ class RandomExplorer(Node):
         self.get_logger().info('Callback started.')
         if random.random() > 0.1:
             self.get_logger().info('Moving forward.')
-            self.send_command_to_hardware("move_forward", 0.2, 1)
+            self.send_command_to_hardware("move_forward", 0.1, 1)
         else:
-            turn_direction = random.choice(["turn_left", "turn_right"])
+            direction = random.randint(0, 1)
+
+            # Map integer to direction
+            if direction == 0:
+                turn_direction = "turn_left"
+            else:
+                turn_direction = "turn_right"
+
             self.get_logger().info(f'Turning {turn_direction.replace("_", " ")}.')
-            self.send_command_to_hardware(turn_direction, 0.6, 1)  
+            self.send_command_to_hardware(turn_direction, 0.2, 1)
+        
         end_time = time.time()
         self.get_logger().info(f'Callback finished in {end_time - start_time} seconds.')
             

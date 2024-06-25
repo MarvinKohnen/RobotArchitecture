@@ -3,6 +3,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from turtlebot3_control_services.srv import RobotControl  
 import time
+import threading
 
 class HardwareControl(Node):
     def __init__(self):
@@ -10,6 +11,8 @@ class HardwareControl(Node):
         self.service = self.create_service(RobotControl, 'robot_control', self.robot_control_callback)
         self.publisher_ = self.create_publisher(Twist, 'cmd_vel', 10)
         self.current_priority = 0  # Initialize with the lowest priority
+
+        self.lock = threading.Lock()
 
     def robot_control_callback(self, request, response):
         if request.priority >= self.current_priority:
@@ -82,9 +85,13 @@ class HardwareControl(Node):
             time.sleep(0.1)  # Sleep briefly to keep sending the command at a reasonable rate
 
         # Stop the robot after turning
-        stop_msg = Twist()  # Zero velocity to stop
-        self.execute_command(stop_msg, priority)  # Ensures the stop command is also prioritized
-
+        self.full_stop(priority) # Ensures the stop command is also prioritized
+    
+    def stop_robot(self):
+        """Failsafe for real world testing"""
+        msg = Twist()  # Zero velocity to full stop
+        self.publisher_.publish(msg)
+        self.get_logger().info('Failsafe: Full stop executed.')
 
 def main(args=None):
     print("Starting the fucking node!?")
@@ -98,6 +105,7 @@ def main(args=None):
         executor.spin()
     except KeyboardInterrupt:
         print("Keyboard Interrupt Received. shutting down.")
+        hardware_control.stop_robot()
     finally:
         if rclpy.ok():  # Only shutdown if rclpy has not already been shut down
             hardware_control.destroy_node()
