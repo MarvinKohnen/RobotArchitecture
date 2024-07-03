@@ -1,3 +1,7 @@
+srv/GenerateHeatmap.idl
+srv/GenerateHeatmap.srv
+srv/GenerateHeatmap_Request.msg
+srv/GenerateHeatmap_Response.msg
 srv/GetLatestMap.idl
 srv/GetLatestMap.srv
 srv/GetLatestMap_Request.msg

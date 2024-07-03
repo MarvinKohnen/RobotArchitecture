@@ -1,0 +1,5 @@
+# GenerateHeatmap.srv
+
+int32 coordinate_set  # The index of the coordinate set
+---
+bool success  # True if the heatmap was generated successfully

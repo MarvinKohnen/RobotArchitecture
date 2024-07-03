@@ -3,6 +3,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/turtlebot3_control_services/_turtlebot3_control_services_s.ep.rosidl_typesupport_fastrtps_c.c"
   "../rosidl_generator_py/turtlebot3_control_services/_turtlebot3_control_services_s.ep.rosidl_typesupport_introspection_c.c"
   "../rosidl_generator_py/turtlebot3_control_services/srv/__init__.py"
+  "../rosidl_generator_py/turtlebot3_control_services/srv/_generate_heatmap.py"
+  "../rosidl_generator_py/turtlebot3_control_services/srv/_generate_heatmap_s.c"
   "../rosidl_generator_py/turtlebot3_control_services/srv/_get_latest_map.py"
   "../rosidl_generator_py/turtlebot3_control_services/srv/_get_latest_map_s.c"
   "../rosidl_generator_py/turtlebot3_control_services/srv/_robot_control.py"

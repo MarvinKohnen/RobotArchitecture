@@ -1,0 +1,21 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from turtlebot3_control_services/srv/GenerateHeatmap.srv
+// generated code does not contain a copyright notice
+
+
+module turtlebot3_control_services {
+  module srv {
+    @verbatim (language="comment", text=
+      "GenerateHeatmap.srv")
+    struct GenerateHeatmap_Request {
+      @verbatim (language="comment", text=
+        "The index of the coordinate set")
+      int32 coordinate_set;
+    };
+    struct GenerateHeatmap_Response {
+      @verbatim (language="comment", text=
+        "True if the heatmap was generated successfully")
+      boolean success;
+    };
+  };
+};

@@ -72,6 +72,9 @@ CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/RobotControl_Response.m
 CMakeFiles/turtlebot3_control_services: /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services/srv/GetLatestMap.srv
 CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/GetLatestMap_Request.msg
 CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/GetLatestMap_Response.msg
+CMakeFiles/turtlebot3_control_services: /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services/srv/GenerateHeatmap.srv
+CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/GenerateHeatmap_Request.msg
+CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/GenerateHeatmap_Response.msg
 CMakeFiles/turtlebot3_control_services: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/turtlebot3_control_services: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 CMakeFiles/turtlebot3_control_services: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl

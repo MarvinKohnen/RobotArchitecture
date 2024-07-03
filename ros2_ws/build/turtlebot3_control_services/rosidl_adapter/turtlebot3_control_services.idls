@@ -1,2 +1,3 @@
 /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services:srv/RobotControl.idl
 /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services:srv/GetLatestMap.idl
+/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services:srv/GenerateHeatmap.idl

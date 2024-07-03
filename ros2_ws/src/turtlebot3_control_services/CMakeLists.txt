@@ -18,6 +18,7 @@ find_package(rosidl_default_generators REQUIRED)
 set(srv_files
   "srv/RobotControl.srv"
   "srv/GetLatestMap.srv"
+  "srv/GenerateHeatmap.srv"
 )
 
 # Generate ROS interfaces

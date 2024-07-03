@@ -250,8 +250,15 @@ CMakeFiles/turtlebot3_control_services__rosidl_typesupport_fastrtps_c__pyext.dir
   rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.h \
   rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__type_support.h \
   rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__struct.h \
-  rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.h
+  rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.h \
+  rosidl_generator_c/turtlebot3_control_services/srv/detail/generate_heatmap__type_support.h \
+  rosidl_generator_c/turtlebot3_control_services/srv/detail/generate_heatmap__struct.h \
+  rosidl_generator_c/turtlebot3_control_services/srv/detail/generate_heatmap__functions.h
 
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/generate_heatmap__functions.h:
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/generate_heatmap__type_support.h:
 
 rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__struct.h:
 
@@ -262,6 +269,8 @@ rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__struct.
 rosidl_generator_c/turtlebot3_control_services/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/python3.10/fileutils.h:
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/generate_heatmap__struct.h:
 
 /usr/include/python3.10/pystrcmp.h:
 

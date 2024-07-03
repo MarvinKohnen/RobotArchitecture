@@ -1,11 +1,10 @@
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
-from turtlebot3_control_services.srv import GetLatestMap
+from turtlebot3_control_services.srv import GetLatestMap, GenerateHeatmap
 import numpy as np
 import cv2
 import os
-from cv_bridge import CvBridge
 from datetime import datetime
 
 class HeatmapGenerator(Node):
@@ -14,7 +13,7 @@ class HeatmapGenerator(Node):
         self.latest_map_service = self.create_client(GetLatestMap, 'get_latest_map')
         while not self.latest_map_service.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Waiting for GetLatestMap service...')
-        
+
         self.declare_parameter('heatmap_directory', '~/RobotArchitecture/ros2_ws/src/Heatmaps/')
         self.heatmap_directory = os.path.expanduser(self.get_parameter('heatmap_directory').value)
         os.makedirs(self.heatmap_directory, exist_ok=True)
@@ -30,8 +29,7 @@ class HeatmapGenerator(Node):
         self.map_origin = [-2.95, -2.57]  # Origin from map.yaml
         self.map_resolution = 0.05        # Resolution from map.yaml
 
-        self.bridge = CvBridge()
-        self.timer = self.create_timer(10.0, self.timer_callback)
+        self.heatmap_service = self.create_service(GenerateHeatmap, 'generate_heatmap', self.generate_heatmap_callback)
 
     def odom_callback(self, msg):
         position = (msg.pose.pose.position.x, msg.pose.pose.position.y)
@@ -46,9 +44,12 @@ class HeatmapGenerator(Node):
             self.get_logger().info(f'Received map path: {self.map_path}')
         else:
             self.get_logger().error('Failed to call GetLatestMap service')
-    
-    def timer_callback(self):
+
+    def generate_heatmap_callback(self, request, response):
+        self.get_logger().info(f'Generating heatmap for coordinate set {request.coordinate_set}...')
         self.generate_heatmap()
+        response.success = True
+        return response
 
     def generate_heatmap(self):
         if not self.map_path:
@@ -100,7 +101,7 @@ class HeatmapGenerator(Node):
 
         # Save the combined heatmap image with a timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        heatmap_path = os.path.join(self.heatmap_directory, f'heatmap_{timestamp}.png')
+        heatmap_path = os.path.join(self.heatmap_directory, f'heatmap_set_{self.current_coord_set}_{timestamp}.png')
         cv2.imwrite(heatmap_path, combined)
         self.get_logger().info(f'Saved heatmap at {heatmap_path}')
 
@@ -113,7 +114,6 @@ def main(args=None):
     except KeyboardInterrupt:
         pass
     finally:
-        heatmap_generator.generate_heatmap()
         heatmap_generator.destroy_node()
         rclpy.shutdown()
 
