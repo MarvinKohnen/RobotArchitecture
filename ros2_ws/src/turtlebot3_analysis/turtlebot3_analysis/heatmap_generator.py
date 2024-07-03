@@ -1,16 +1,19 @@
 import rclpy
 from rclpy.node import Node
 from nav_msgs.msg import Odometry
-from turtlebot3_control_services.srv import GetLatestMap, GenerateHeatmap
+from turtlebot3_control_services.srv import GetLatestMap
+from std_msgs.msg import Bool
 import numpy as np
 import cv2
 import os
 from datetime import datetime
-from std_msgs.msg import Bool
 
 class HeatmapGenerator(Node):
     def __init__(self):
         super().__init__('heatmap_generator')
+        self.declare_parameter('coordinate_set', 0)
+        self.current_coord_set = self.get_parameter('coordinate_set').value
+
         self.latest_map_service = self.create_client(GetLatestMap, 'get_latest_map')
         while not self.latest_map_service.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Waiting for GetLatestMap service...')
@@ -25,15 +28,6 @@ class HeatmapGenerator(Node):
             self.odom_callback,
             10)
         
-        self.robot_positions = []
-        self.map_path = ""
-        self.map_origin = [-2.95, -2.57]  # Origin from map.yaml
-        self.map_resolution = 0.05        # Resolution from map.yaml
-
-        self.heatmap_service = self.create_service(GenerateHeatmap, 'generate_heatmap', self.generate_heatmap_callback)
-
-        self.current_coord_set = None 
-
         self.recording_subscriber = self.create_subscription(
             Bool,
             'record_movement',
@@ -41,16 +35,37 @@ class HeatmapGenerator(Node):
             10
         )
 
+        self.stop_subscriber = self.create_subscription(
+            Bool,
+            'stop_heatmap',
+            self.stop_callback,
+            10
+        )
+
         self.record_movement = False  # Flag to control recording
+
+        self.robot_positions = []
+        self.map_path = ""
+        self.map_origin = [-2.95, -2.57]  # Origin from map.yaml
+        self.map_resolution = 0.05        # Resolution from map.yaml
+
+        self.get_logger().info(f'Generating heatmap for coordinate set {self.current_coord_set}...')
+        self.get_latest_map()
 
     def recording_callback(self, msg):
         self.record_movement = msg.data
+
+    def stop_callback(self, msg):
+        if msg.data:
+            self.get_logger().info('Stop signal received. Generating and saving heatmap...')
+            self.generate_heatmap()
+            rclpy.shutdown()
 
     def odom_callback(self, msg):
         if self.record_movement:
             position = (msg.pose.pose.position.x, msg.pose.pose.position.y)
             self.robot_positions.append(position)
-
+    
     def get_latest_map(self):
         request = GetLatestMap.Request()
         future = self.latest_map_service.call_async(request)
@@ -60,15 +75,6 @@ class HeatmapGenerator(Node):
             self.get_logger().info(f'Received map path: {self.map_path}')
         else:
             self.get_logger().error('Failed to call GetLatestMap service')
-
-    def generate_heatmap_callback(self, request, response):
-        self.get_logger().info(f'Generating heatmap for coordinate set {request.coordinate_set}...')
-        
-        self.current_coord_set = request.coordinate_set
-
-        self.generate_heatmap()
-        response.success = True
-        return response
 
     def generate_heatmap(self):
         if not self.map_path:
@@ -102,33 +108,37 @@ class HeatmapGenerator(Node):
         heatmap = heatmap.astype(np.uint8)
 
         # Apply a color map to the heatmap
-        heatmap_colored = cv2.applyColorMap(heatmap, cv2.COLORMAP_HOT)
+        heatmap_colored = cv2.applyColorMap(heatmap, cv2.COLORMAP_PARULA)
 
         self.get_logger().info(f'Heatmap colored dimensions: {heatmap_colored.shape}, type: {heatmap_colored.dtype}, channels: {heatmap_colored.ndim}')
 
         # Ensure the map image is converted to three channels if necessary
         if map_image.ndim == 2:
             map_image = cv2.cvtColor(map_image, cv2.COLOR_GRAY2BGR)
-        
+
         # Ensure the map image and heatmap have the same dimensions
         if map_image.shape != heatmap_colored.shape:
             self.get_logger().error('Map image and heatmap dimensions do not match')
             return
 
         # Combine the heatmap with the original map
-        combined = cv2.addWeighted(map_image, 0.6, heatmap_colored, 0.4, 0)
+        combined = cv2.addWeighted(map_image, 0.4, heatmap_colored, 0.6, 0)
 
-        # Save the combined heatmap image with a timestamp
+        # Save the combined heatmap image with a unique timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         heatmap_path = os.path.join(self.heatmap_directory, f'heatmap_set_{self.current_coord_set}_{timestamp}.png')
         self.get_logger().info(f'Saving heatmap at {heatmap_path}')
         cv2.imwrite(heatmap_path, combined)
-        self.get_logger().info(f'Saved heatmap at {heatmap_path}')
+
+        # Verify if the file was saved correctly
+        if not os.path.isfile(heatmap_path):
+            self.get_logger().error(f'Failed to save heatmap at {heatmap_path}')
+        else:
+            self.get_logger().info(f'Successfully saved heatmap at {heatmap_path}')
 
 def main(args=None):
     rclpy.init(args=args)
     heatmap_generator = HeatmapGenerator()
-    heatmap_generator.get_latest_map()
     try:
         rclpy.spin(heatmap_generator)
     except KeyboardInterrupt:

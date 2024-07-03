@@ -1,3 +1,4 @@
+import subprocess
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
@@ -6,7 +7,7 @@ from rclpy.action import ActionClient
 from tf_transformations import quaternion_from_euler, euler_from_quaternion
 from nav_msgs.msg import Odometry
 from std_msgs.msg import Bool
-from turtlebot3_control_services.srv import RobotControl, GenerateHeatmap
+from turtlebot3_control_services.srv import RobotControl
 import math
 
 class AutonomousNavigation(Node):
@@ -16,10 +17,6 @@ class AutonomousNavigation(Node):
         while not self.robot_control_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Robot control service not available, waiting again...')
 
-        self.heatmap_client = self.create_client(GenerateHeatmap, 'generate_heatmap')
-        while not self.heatmap_client.wait_for_service(timeout_sec=1.0):
-            self.get_logger().info('Heatmap generation service not available, waiting again...')
-
         self.pose_subscriber = self.create_subscription(Odometry, '/odom', self.odom_callback, 10)
         
         self.get_logger().info('Stopping Robot')
@@ -27,18 +24,15 @@ class AutonomousNavigation(Node):
 
         self.coordinates = [
             {'start': {'x': -1.429, 'y': -0.59}, 'goal': {'x': 1.5, 'y': 1.45}},
-            {'start': {'x': -1.434, 'y': 1.64}, 'goal': {'x': 1.75, 'y': 0.06}},
+            {'start': {'x': 1.7, 'y': 0.06}, 'goal': {'x': -1.851, 'y': 0.06}},
             {'start': {'x': 1.1, 'y': -0.466}, 'goal': {'x': -0.42, 'y': 1.85}},
-            {'start': {'x': -2.25, 'y': 0.12}, 'goal': {'x': 0.73, 'y': -1.908}}
+            {'start': {'x': -1.70, 'y': -1.16}, 'goal': {'x': 0.63, 'y': 0.49}}
         ]
-
-        # publisher to control recording
-        self.recording_publisher = self.create_publisher(Bool, 'record_movement', 10)
 
         self.current_pose = None
         self.goal_tolerance = 0.1  # Tolerance to consider the robot has reached the goal
 
-        self.run_count = 3
+        self.run_count = 25
         self.current_run = 0
         self.current_coord_set = 0
         self.nav_state = 'init'
@@ -46,6 +40,8 @@ class AutonomousNavigation(Node):
 
         self.initial_pose_publisher = self.create_publisher(PoseStamped, 'initialpose', 10)
         self.shutdown_publisher = self.create_publisher(Bool, 'shutdown_random_explorer', 10)
+        self.recording_publisher = self.create_publisher(Bool, 'record_movement', 10)
+        self.stop_heatmap_publisher = self.create_publisher(Bool, 'stop_heatmap', 10)  # Initialize stop heatmap publisher
         self.timer = self.create_timer(2.0, self.timer_callback)
 
         self.pose_update_count = 0  # Counter for pose updates
@@ -53,6 +49,7 @@ class AutonomousNavigation(Node):
     def timer_callback(self):
         self.get_logger().info(f'Timer callback with state: {self.nav_state}')
         if self.nav_state == 'init':
+            self.start_heatmap_generator()
             self.move_to_initial_position()
         elif self.nav_state == 'wait_for_initial_pose':
             self.check_initial_pose_reached()
@@ -137,7 +134,7 @@ class AutonomousNavigation(Node):
     def goal_response_callback(self, future):
         goal_handle = future.result()
         if not goal_handle.accepted:
-            self.get_logger().info('Goal rejected :(')
+            self.get_logger().info('Goal rejected.')
             return
         self._get_result_future = goal_handle.get_result_async()
         self._get_result_future.add_done_callback(self.get_result_callback)
@@ -167,54 +164,39 @@ class AutonomousNavigation(Node):
                 # Publish stop recording when reaching the goal
                 self.recording_publisher.publish(Bool(data=False))
 
-                if self.current_run >= self.run_count:
-                    self.current_run = 0
-                    self.call_heatmap_service()
-                else:
+                if self.current_run < self.run_count:
                     self.move_to_start_position()
-                    # Publish start recording when moving to start
-                    self.recording_publisher.publish(Bool(data=True))
+                else:
+                    self.current_run = 0
+                    self.current_coord_set += 1
+                    # Publish stop signal for heatmap generator
+                    self.stop_heatmap_publisher.publish(Bool(data=True))
+                    if self.current_coord_set < len(self.coordinates):
+                        self.start_heatmap_generator()
+                        self.move_to_initial_position()
+                    else:
+                        self.get_logger().info('Completed all coordinate sets.')
+                        rclpy.shutdown()
             elif self.nav_state == 'moving_to_start':
                 self.move_to_goal_position()
-                # Publish start recording when moving to goal
-                self.recording_publisher.publish(Bool(data=True))
 
     def odom_callback(self, msg):
         position = msg.pose.pose.position
         orientation = msg.pose.pose.orientation
         _, _, yaw = euler_from_quaternion([orientation.x, orientation.y, orientation.z, orientation.w])
         self.current_pose = (position.x, position.y, yaw)
-        
+        """
         self.pose_update_count += 1
         if self.pose_update_count % 50 == 0:  # Log every 50th update
             self.get_logger().info(f'Updated current pose: {self.current_pose}')
-
-    def call_heatmap_service(self):
-        self.get_logger().info(f'Calling heatmap generation service for coordinate set {self.current_coord_set}...')
-        request = GenerateHeatmap.Request()
-        request.coordinate_set = self.current_coord_set
-        future = self.heatmap_client.call_async(request)
-        future.add_done_callback(self.heatmap_service_callback)
-
-    def heatmap_service_callback(self, future):
-        try:
-            response = future.result()
-            if response.success:
-                self.get_logger().info(f'Heatmap generated successfully for coordinate set {self.current_coord_set}.')
-            else:
-                self.get_logger().error(f'Failed to generate heatmap for coordinate set {self.current_coord_set}.')
-        except Exception as e:
-            self.get_logger().error(f'Heatmap service call failed: {e}')
-
-        # Increment the coordinate set after heatmap generation
-        self.current_coord_set += 1
-        self.get_logger().info(f'current coordinates {self.current_coord_set}')
-        if self.current_coord_set < len(self.coordinates):
-            self.get_logger().info(f'Moving to next coordinate set: {self.current_coord_set}')
-            self.move_to_initial_position()
-        else:
-            self.get_logger().info('Completed all coordinate sets.')
-            rclpy.shutdown()
+            """
+    def start_heatmap_generator(self):
+        self.get_logger().info(f'Starting new terminal for heatmap generation for coordinate set {self.current_coord_set}...')
+        heatmap_command = [
+            "gnome-terminal", "--", "bash", "-c", 
+            f"ros2 run turtlebot3_analysis heatmap_generator --ros-args -p coordinate_set:={self.current_coord_set}; exec bash"
+        ]
+        self.heatmap_process = subprocess.Popen(heatmap_command)
 
 def main(args=None):
     rclpy.init(args=args)
