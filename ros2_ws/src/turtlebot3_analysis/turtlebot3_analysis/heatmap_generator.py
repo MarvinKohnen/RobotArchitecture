@@ -6,6 +6,7 @@ import numpy as np
 import cv2
 import os
 from datetime import datetime
+from std_msgs.msg import Bool
 
 class HeatmapGenerator(Node):
     def __init__(self):
@@ -31,10 +32,25 @@ class HeatmapGenerator(Node):
 
         self.heatmap_service = self.create_service(GenerateHeatmap, 'generate_heatmap', self.generate_heatmap_callback)
 
+        self.current_coord_set = None 
+
+        self.recording_subscriber = self.create_subscription(
+            Bool,
+            'record_movement',
+            self.recording_callback,
+            10
+        )
+
+        self.record_movement = False  # Flag to control recording
+
+    def recording_callback(self, msg):
+        self.record_movement = msg.data
+
     def odom_callback(self, msg):
-        position = (msg.pose.pose.position.x, msg.pose.pose.position.y)
-        self.robot_positions.append(position)
-    
+        if self.record_movement:
+            position = (msg.pose.pose.position.x, msg.pose.pose.position.y)
+            self.robot_positions.append(position)
+
     def get_latest_map(self):
         request = GetLatestMap.Request()
         future = self.latest_map_service.call_async(request)
@@ -47,6 +63,9 @@ class HeatmapGenerator(Node):
 
     def generate_heatmap_callback(self, request, response):
         self.get_logger().info(f'Generating heatmap for coordinate set {request.coordinate_set}...')
+        
+        self.current_coord_set = request.coordinate_set
+
         self.generate_heatmap()
         response.success = True
         return response
@@ -83,7 +102,7 @@ class HeatmapGenerator(Node):
         heatmap = heatmap.astype(np.uint8)
 
         # Apply a color map to the heatmap
-        heatmap_colored = cv2.applyColorMap(heatmap, cv2.COLORMAP_JET)
+        heatmap_colored = cv2.applyColorMap(heatmap, cv2.COLORMAP_HOT)
 
         self.get_logger().info(f'Heatmap colored dimensions: {heatmap_colored.shape}, type: {heatmap_colored.dtype}, channels: {heatmap_colored.ndim}')
 
@@ -102,6 +121,7 @@ class HeatmapGenerator(Node):
         # Save the combined heatmap image with a timestamp
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         heatmap_path = os.path.join(self.heatmap_directory, f'heatmap_set_{self.current_coord_set}_{timestamp}.png')
+        self.get_logger().info(f'Saving heatmap at {heatmap_path}')
         cv2.imwrite(heatmap_path, combined)
         self.get_logger().info(f'Saved heatmap at {heatmap_path}')
 

@@ -32,10 +32,13 @@ class AutonomousNavigation(Node):
             {'start': {'x': -2.25, 'y': 0.12}, 'goal': {'x': 0.73, 'y': -1.908}}
         ]
 
+        # publisher to control recording
+        self.recording_publisher = self.create_publisher(Bool, 'record_movement', 10)
+
         self.current_pose = None
         self.goal_tolerance = 0.1  # Tolerance to consider the robot has reached the goal
 
-        self.run_count = 25
+        self.run_count = 3
         self.current_run = 0
         self.current_coord_set = 0
         self.nav_state = 'init'
@@ -48,6 +51,7 @@ class AutonomousNavigation(Node):
         self.pose_update_count = 0  # Counter for pose updates
 
     def timer_callback(self):
+        self.get_logger().info(f'Timer callback with state: {self.nav_state}')
         if self.nav_state == 'init':
             self.move_to_initial_position()
         elif self.nav_state == 'wait_for_initial_pose':
@@ -107,12 +111,14 @@ class AutonomousNavigation(Node):
         coord = self.coordinates[self.current_coord_set]['goal']
         self.get_logger().info(f'Moving to goal position: ({coord["x"]}, {coord["y"]})')
         self.nav_state = 'moving_to_goal'
+        self.recording_publisher.publish(Bool(data=True))  # Start recording
         self.navigate_to_pose(coord['x'], coord['y'])
 
     def move_to_start_position(self):
         coord = self.coordinates[self.current_coord_set]['start']
         self.get_logger().info(f'Moving to start position: ({coord["x"]}, {coord["y"]})')
         self.nav_state = 'moving_to_start'
+        self.recording_publisher.publish(Bool(data=True))  # Start recording
         self.navigate_to_pose(coord['x'], coord['y'])
 
     def navigate_to_pose(self, x, y):
@@ -157,13 +163,21 @@ class AutonomousNavigation(Node):
             if self.nav_state == 'moving_to_goal':
                 self.current_run += 1
                 self.get_logger().info(f'Current run: {self.current_run}')
+                
+                # Publish stop recording when reaching the goal
+                self.recording_publisher.publish(Bool(data=False))
+
                 if self.current_run >= self.run_count:
                     self.current_run = 0
                     self.call_heatmap_service()
                 else:
                     self.move_to_start_position()
+                    # Publish start recording when moving to start
+                    self.recording_publisher.publish(Bool(data=True))
             elif self.nav_state == 'moving_to_start':
                 self.move_to_goal_position()
+                # Publish start recording when moving to goal
+                self.recording_publisher.publish(Bool(data=True))
 
     def odom_callback(self, msg):
         position = msg.pose.pose.position
@@ -176,7 +190,7 @@ class AutonomousNavigation(Node):
             self.get_logger().info(f'Updated current pose: {self.current_pose}')
 
     def call_heatmap_service(self):
-        self.get_logger().info('Calling heatmap generation service...')
+        self.get_logger().info(f'Calling heatmap generation service for coordinate set {self.current_coord_set}...')
         request = GenerateHeatmap.Request()
         request.coordinate_set = self.current_coord_set
         future = self.heatmap_client.call_async(request)
@@ -186,14 +200,17 @@ class AutonomousNavigation(Node):
         try:
             response = future.result()
             if response.success:
-                self.get_logger().info('Heatmap generated successfully.')
+                self.get_logger().info(f'Heatmap generated successfully for coordinate set {self.current_coord_set}.')
             else:
-                self.get_logger().error('Failed to generate heatmap.')
+                self.get_logger().error(f'Failed to generate heatmap for coordinate set {self.current_coord_set}.')
         except Exception as e:
             self.get_logger().error(f'Heatmap service call failed: {e}')
 
+        # Increment the coordinate set after heatmap generation
         self.current_coord_set += 1
+        self.get_logger().info(f'current coordinates {self.current_coord_set}')
         if self.current_coord_set < len(self.coordinates):
+            self.get_logger().info(f'Moving to next coordinate set: {self.current_coord_set}')
             self.move_to_initial_position()
         else:
             self.get_logger().info('Completed all coordinate sets.')

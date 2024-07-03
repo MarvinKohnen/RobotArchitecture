@@ -4,7 +4,3 @@ turtlebot3_control_services.egg-info/PKG-INFO
 turtlebot3_control_services.egg-info/SOURCES.txt
 turtlebot3_control_services.egg-info/dependency_links.txt
 turtlebot3_control_services.egg-info/top_level.txt
-turtlebot3_control_services/srv/__init__.py
-turtlebot3_control_services/srv/_generate_heatmap.py
-turtlebot3_control_services/srv/_get_latest_map.py
-turtlebot3_control_services/srv/_robot_control.py
