@@ -25,7 +25,9 @@ setup(
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': ['random_goal_navigator = turtlebot3_nav_management.random_goal_navigator:main',
+        'console_scripts': [
+            'autonomous_navigation_using_nav2 = turtlebot3_nav_management.autonomous_navigation_using_nav2:main',
+            'random_goal_navigator = turtlebot3_nav_management.random_goal_navigator:main',
         ],
     },
 )

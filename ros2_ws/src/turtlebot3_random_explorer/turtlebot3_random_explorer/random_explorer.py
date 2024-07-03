@@ -11,10 +11,15 @@ class RandomExplorer(Node):
         self.robot_control_client = self.create_client(RobotControl, 'robot_control')
         while not self.robot_control_client.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('Robot control service not available, waiting again...')
+        
         self.timer_ = self.create_timer(0.5, self.timer_callback)
-
+        self.shutdown_subscriber = self.create_subscription(Bool, 'shutdown_random_explorer', self.shutdown_callback, 10)
+        self.should_shutdown = False
 
     def timer_callback(self):
+        if self.should_shutdown:
+            return
+
         start_time = time.time()
         self.get_logger().info('Callback started.')
         if random.random() > 0.1:
@@ -34,7 +39,11 @@ class RandomExplorer(Node):
         
         end_time = time.time()
         self.get_logger().info(f'Callback finished in {end_time - start_time} seconds.')
-            
+
+    def shutdown_callback(self, msg):
+        if msg.data:
+            self.get_logger().info('Shutdown signal received.')
+            self.should_shutdown = True
 
     def send_command_to_hardware(self, command, value, priority):
         request = RobotControl.Request()
@@ -44,7 +53,7 @@ class RandomExplorer(Node):
         future = self.robot_control_client.call_async(request)
         future.add_done_callback(self.handle_service_response)
     
-    #needed to be placed in separate function in order to handly multiple asynchronous operations
+    #needed to be placed in separate function in order to handle multiple asynchronous operations
     def handle_service_response(self, future):
         try:
             response = future.result()

@@ -16,7 +16,7 @@ class MapChangeDetector(Node):
         self.map_directory = os.path.expanduser(self.get_parameter('map_directory').value)
         self.map_save_timer = self.create_timer(self.map_save_interval, self.map_save_callback)
         self.last_map_path = ""
-        self.declare_parameter('threshold', 5)  # Threshold for changes
+        self.declare_parameter('threshold', 10)  # Threshold for changes
         self.lock = threading.Lock()
         self.navigation_started = False  # Flag to track if navigation has been started
 
@@ -40,7 +40,7 @@ class MapChangeDetector(Node):
             if change_percentage > self.get_parameter('threshold').value:
                 self.get_logger().info('Major changes detected between maps.')
             #bug handling (weiß nicht wo das herkommt)
-            elif change_percentage == "0.00":
+            elif change_percentage == "0.0":
                 pass
             else:
                 self.get_logger().info('Map is good enough. Navigation is taking control over Random Explore.')
@@ -61,13 +61,15 @@ class MapChangeDetector(Node):
                 ]
                 self.nav_process = subprocess.Popen(nav_command)
                 self.get_logger().info('Navigation system started.')
-
+                
+                """
                 auto_nav_command = [
                     "gnome-terminal", "--", "bash", "-c",
                     "ros2 run turtlebot3_auto_navigator auto_navigator; exec bash"
                 ]
                 self.auto_nav_process = subprocess.Popen(auto_nav_command)
                 self.get_logger().info('Auto navigator started.')
+                """
 
                 self.navigation_started = True  # Set the flag to indicate navigation has been started
 

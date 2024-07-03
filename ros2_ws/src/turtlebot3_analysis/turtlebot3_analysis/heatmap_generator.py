@@ -9,7 +9,7 @@ from geometry_msgs.msg import Point
 class HeatmapGenerator(Node):
     def __init__(self):
         super().__init__('heatmap_generator')
-        self.declare_parameter('update_interval', 30)
+        self.declare_parameter('update_interval', 20)
         self.declare_parameter('nav_map_path', '~/RobotArchitecture/ros2_ws/src/Maps/20240505_165533.pgm')
         self.update_timer = self.create_timer(self.get_parameter('update_interval').value, self.save_heatmap)
         self.nav_map_path = self.get_nav_map_path()
@@ -24,11 +24,11 @@ class HeatmapGenerator(Node):
     def get_robot_architecture_path(self):
         # Get the root directory for RobotArchitecture dynamically
         home_directory = os.path.expanduser('~')  # Gets the user's home directory
-        return os.path.join(home_directory, 'RobotArchitecture')
+        return os.path.join(home_directory, 'RobotArchitecture/ros2_ws/src/')
 
     def get_heatmap_path(self):
         # Ensure the directory for storing the heatmap exists
-        heatmap_directory = os.path.join(self.get_robot_architecture_path(), 'Maps')
+        heatmap_directory = os.path.join(self.get_robot_architecture_path(), 'Heatmaps')
         if not os.path.exists(heatmap_directory):
             os.makedirs(heatmap_directory)
         return os.path.join(heatmap_directory, 'heatmap.png')

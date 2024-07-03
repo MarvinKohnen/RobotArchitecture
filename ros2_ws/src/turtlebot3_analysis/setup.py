@@ -19,7 +19,9 @@ setup(
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': ['heatmap_generator = turtlebot3_analysis.heatmap_generator:main',
+        'console_scripts': [
+            'heatmap_generator = turtlebot3_analysis.heatmap_generator:main',
+            'position_logger = turtlebot3_analysis.position_logger:main',
         ],
     },
 )

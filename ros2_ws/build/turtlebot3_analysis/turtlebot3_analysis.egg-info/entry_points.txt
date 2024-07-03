@@ -1,3 +1,4 @@
 [console_scripts]
 heatmap_generator = turtlebot3_analysis.heatmap_generator:main
+position_logger = turtlebot3_analysis.position_logger:main
 

@@ -11,7 +11,6 @@ setup.py
 resource/turtlebot3_random_explorer
 turtlebot3_random_explorer/__init__.py
 turtlebot3_random_explorer/random_explorer.py
-turtlebot3_random_explorer/turn_direction = random.py
 turtlebot3_random_explorer.egg-info/PKG-INFO
 turtlebot3_random_explorer.egg-info/SOURCES.txt
 turtlebot3_random_explorer.egg-info/dependency_links.txt

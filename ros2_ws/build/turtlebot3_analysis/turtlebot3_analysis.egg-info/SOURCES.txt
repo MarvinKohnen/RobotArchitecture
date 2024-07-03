@@ -11,6 +11,7 @@ setup.py
 resource/turtlebot3_analysis
 turtlebot3_analysis/__init__.py
 turtlebot3_analysis/heatmap_generator.py
+turtlebot3_analysis/position_logger.py
 turtlebot3_analysis.egg-info/PKG-INFO
 turtlebot3_analysis.egg-info/SOURCES.txt
 turtlebot3_analysis.egg-info/dependency_links.txt

@@ -35,7 +35,7 @@ class ObstacleAvoidance(Node):
                 turn_direction = "turn_left"
             else:
                 turn_direction = "turn_right"
-            self.send_command_to_hardware(turn_direction, 0.5, 10) 
+            self.send_command_to_hardware(turn_direction, 1.0, 10) 
         elif not is_obstacle_in_front and self.is_turning:
             self.is_turning = False
             self.get_logger().info('Path clear, resetting priority.')
