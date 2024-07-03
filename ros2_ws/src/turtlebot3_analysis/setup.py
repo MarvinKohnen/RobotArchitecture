@@ -22,6 +22,7 @@ setup(
         'console_scripts': [
             'heatmap_generator = turtlebot3_analysis.heatmap_generator:main',
             'position_logger = turtlebot3_analysis.position_logger:main',
+            'get_latest_map_client = turtlebot3_analysis.get_latest_map_client:main',
         ],
     },
 )

@@ -1,4 +1,5 @@
 [console_scripts]
+get_latest_map_client = turtlebot3_analysis.get_latest_map_client:main
 heatmap_generator = turtlebot3_analysis.heatmap_generator:main
 position_logger = turtlebot3_analysis.position_logger:main
 

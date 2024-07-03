@@ -8,14 +8,16 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(rclpy REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(custom_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
-# Define custo service files
+# Define custom service files
 set(srv_files
   "srv/RobotControl.srv"
+  "srv/GetLatestMap.srv"
 )
 
 # Generate ROS interfaces

@@ -1,3 +1,7 @@
+srv/GetLatestMap.idl
+srv/GetLatestMap.srv
+srv/GetLatestMap_Request.msg
+srv/GetLatestMap_Response.msg
 srv/RobotControl.idl
 srv/RobotControl.srv
 srv/RobotControl_Request.msg

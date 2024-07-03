@@ -70,6 +70,10 @@ CMakeFiles/turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_con
 CMakeFiles/turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__builder.hpp
 CMakeFiles/turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__struct.hpp
 CMakeFiles/turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__traits.hpp
+CMakeFiles/turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/get_latest_map.hpp
+CMakeFiles/turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__builder.hpp
+CMakeFiles/turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__struct.hpp
+CMakeFiles/turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__traits.hpp
 
 rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -87,6 +91,7 @@ rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: /opt/ros
 rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: rosidl_adapter/turtlebot3_control_services/srv/RobotControl.idl
+rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: rosidl_adapter/turtlebot3_control_services/srv/GetLatestMap.idl
 rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -131,10 +136,26 @@ rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__struc
 rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__traits.hpp: rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__traits.hpp
 
+rosidl_generator_cpp/turtlebot3_control_services/srv/get_latest_map.hpp: rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/turtlebot3_control_services/srv/get_latest_map.hpp
+
+rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__builder.hpp: rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__builder.hpp
+
+rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__struct.hpp: rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__struct.hpp
+
+rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__traits.hpp: rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__traits.hpp
+
 turtlebot3_control_services__cpp: CMakeFiles/turtlebot3_control_services__cpp
+turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__builder.hpp
+turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__struct.hpp
+turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/get_latest_map__traits.hpp
 turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__builder.hpp
 turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__struct.hpp
 turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/detail/robot_control__traits.hpp
+turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/get_latest_map.hpp
 turtlebot3_control_services__cpp: rosidl_generator_cpp/turtlebot3_control_services/srv/robot_control.hpp
 turtlebot3_control_services__cpp: CMakeFiles/turtlebot3_control_services__cpp.dir/build.make
 .PHONY : turtlebot3_control_services__cpp

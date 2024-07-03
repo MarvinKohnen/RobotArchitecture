@@ -69,6 +69,9 @@ include CMakeFiles/turtlebot3_control_services.dir/progress.make
 CMakeFiles/turtlebot3_control_services: /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services/srv/RobotControl.srv
 CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/RobotControl_Request.msg
 CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/RobotControl_Response.msg
+CMakeFiles/turtlebot3_control_services: /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services/srv/GetLatestMap.srv
+CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/GetLatestMap_Request.msg
+CMakeFiles/turtlebot3_control_services: rosidl_cmake/srv/GetLatestMap_Response.msg
 CMakeFiles/turtlebot3_control_services: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 CMakeFiles/turtlebot3_control_services: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 CMakeFiles/turtlebot3_control_services: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl

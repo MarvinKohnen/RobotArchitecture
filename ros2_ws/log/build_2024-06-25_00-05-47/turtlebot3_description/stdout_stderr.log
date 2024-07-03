@@ -1,1 +1,0 @@
-[0mCMake Error: The source "/home/marvin/RobotArchitecture/ros2_ws/turtlebot3/turtlebot3_description/CMakeLists.txt" does not match the source "/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3/turtlebot3_description/CMakeLists.txt" used to generate cache.  Re-run cmake with a different source directory.[0m

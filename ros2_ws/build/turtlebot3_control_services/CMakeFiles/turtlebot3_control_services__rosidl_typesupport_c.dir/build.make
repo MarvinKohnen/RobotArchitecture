@@ -76,6 +76,7 @@ rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support
 rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_c/resource/msg__type_support.cpp.em
 rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp: /opt/ros/humble/share/rosidl_typesupport_c/resource/srv__type_support.cpp.em
 rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp: rosidl_adapter/turtlebot3_control_services/srv/RobotControl.idl
+rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp: rosidl_adapter/turtlebot3_control_services/srv/GetLatestMap.idl
 rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -111,6 +112,9 @@ rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C type support dispatch for ROS interfaces"
 	/usr/bin/python3 /opt/ros/humble/lib/rosidl_typesupport_c/rosidl_typesupport_c --generator-arguments-file /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_typesupport_c__arguments.json --typesupports rosidl_typesupport_fastrtps_c rosidl_typesupport_introspection_c
 
+rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp: rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp
+
 CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.o: CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/flags.make
 CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.o: rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp
 CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.o: CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/compiler_depend.ts
@@ -125,14 +129,30 @@ CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp -o CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.s
 
+CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o: CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/flags.make
+CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o: rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp
+CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o: CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o -MF CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o.d -o CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o -c /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp
+
+CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp > CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.i
+
+CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp -o CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.s
+
 # Object files for target turtlebot3_control_services__rosidl_typesupport_c
 turtlebot3_control_services__rosidl_typesupport_c_OBJECTS = \
-"CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.o"
+"CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.o" \
+"CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o"
 
 # External object files for target turtlebot3_control_services__rosidl_typesupport_c
 turtlebot3_control_services__rosidl_typesupport_c_EXTERNAL_OBJECTS =
 
 libturtlebot3_control_services__rosidl_typesupport_c.so: CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp.o
+libturtlebot3_control_services__rosidl_typesupport_c.so: CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp.o
 libturtlebot3_control_services__rosidl_typesupport_c.so: CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/build.make
 libturtlebot3_control_services__rosidl_typesupport_c.so: libturtlebot3_control_services__rosidl_generator_c.so
 libturtlebot3_control_services__rosidl_typesupport_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_c.so
@@ -143,7 +163,7 @@ libturtlebot3_control_services__rosidl_typesupport_c.so: /opt/ros/humble/lib/lib
 libturtlebot3_control_services__rosidl_typesupport_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libturtlebot3_control_services__rosidl_typesupport_c.so: /opt/ros/humble/lib/librcutils.so
 libturtlebot3_control_services__rosidl_typesupport_c.so: CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libturtlebot3_control_services__rosidl_typesupport_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libturtlebot3_control_services__rosidl_typesupport_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +174,7 @@ CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/clean
 
+CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/turtlebot3_control_services/srv/get_latest_map__type_support.cpp
 CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/depend: rosidl_typesupport_c/turtlebot3_control_services/srv/robot_control__type_support.cpp
 	cd /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/turtlebot3_control_services__rosidl_typesupport_c.dir/depend

@@ -83,6 +83,7 @@ rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h: /opt/ros/hum
 rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h: rosidl_adapter/turtlebot3_control_services/srv/RobotControl.idl
+rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h: rosidl_adapter/turtlebot3_control_services/srv/GetLatestMap.idl
 rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h: /opt/ros/humble/share/std_msgs/msg/Bool.idl
 rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h: /opt/ros/humble/share/std_msgs/msg/Byte.idl
 rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h: /opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl
@@ -127,8 +128,23 @@ rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__struct.
 rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__type_support.h: rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__type_support.h
 
+rosidl_generator_c/turtlebot3_control_services/srv/get_latest_map.h: rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/turtlebot3_control_services/srv/get_latest_map.h
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.h: rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.h
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__struct.h: rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__struct.h
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__type_support.h: rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__type_support.h
+
 rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c: rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c: rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c
 
 CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c.o: CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/flags.make
 CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c.o: rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c
@@ -144,21 +160,37 @@ CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c -o CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c.s
 
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o: CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/flags.make
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o: rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o: CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o -MF CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o.d -o CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o -c /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c
+
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c > CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.i
+
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c -o CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.s
+
 # Object files for target turtlebot3_control_services__rosidl_generator_c
 turtlebot3_control_services__rosidl_generator_c_OBJECTS = \
-"CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c.o"
+"CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c.o" \
+"CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o"
 
 # External object files for target turtlebot3_control_services__rosidl_generator_c
 turtlebot3_control_services__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libturtlebot3_control_services__rosidl_generator_c.so: CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c.o
+libturtlebot3_control_services__rosidl_generator_c.so: CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c.o
 libturtlebot3_control_services__rosidl_generator_c.so: CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/build.make
 libturtlebot3_control_services__rosidl_generator_c.so: /opt/ros/humble/lib/libstd_msgs__rosidl_generator_c.so
 libturtlebot3_control_services__rosidl_generator_c.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_generator_c.so
 libturtlebot3_control_services__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libturtlebot3_control_services__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libturtlebot3_control_services__rosidl_generator_c.so: CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C shared library libturtlebot3_control_services__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libturtlebot3_control_services__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -169,10 +201,15 @@ CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/clean
 
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.c
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.h
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__struct.h
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__type_support.h
 CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.c
 CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.h
 CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__struct.h
 CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__type_support.h
+CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/get_latest_map.h
 CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend: rosidl_generator_c/turtlebot3_control_services/srv/robot_control.h
 	cd /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services /home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/turtlebot3_control_services__rosidl_generator_c.dir/depend

@@ -361,6 +361,9 @@ include("/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_service
 # install(FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services/srv/RobotControl.idl" "DESTINATION" "share/turtlebot3_control_services/srv")
 ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services" FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services/srv/RobotControl.idl" "DESTINATION" "share/turtlebot3_control_services/srv")
 
+# install(FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services/srv/GetLatestMap.idl" "DESTINATION" "share/turtlebot3_control_services/srv")
+ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services" FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services/srv/GetLatestMap.idl" "DESTINATION" "share/turtlebot3_control_services/srv")
+
 # install(FILES "/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services/srv/RobotControl.srv" "DESTINATION" "share/turtlebot3_control_services/srv")
 ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services" FILES "/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services/srv/RobotControl.srv" "DESTINATION" "share/turtlebot3_control_services/srv")
 
@@ -369,6 +372,15 @@ ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/tu
 
 # install(FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_cmake/srv/RobotControl_Response.msg" "DESTINATION" "share/turtlebot3_control_services/srv")
 ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services" FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_cmake/srv/RobotControl_Response.msg" "DESTINATION" "share/turtlebot3_control_services/srv")
+
+# install(FILES "/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services/srv/GetLatestMap.srv" "DESTINATION" "share/turtlebot3_control_services/srv")
+ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services" FILES "/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services/srv/GetLatestMap.srv" "DESTINATION" "share/turtlebot3_control_services/srv")
+
+# install(FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_cmake/srv/GetLatestMap_Request.msg" "DESTINATION" "share/turtlebot3_control_services/srv")
+ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services" FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_cmake/srv/GetLatestMap_Request.msg" "DESTINATION" "share/turtlebot3_control_services/srv")
+
+# install(FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_cmake/srv/GetLatestMap_Response.msg" "DESTINATION" "share/turtlebot3_control_services/srv")
+ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services" FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_cmake/srv/GetLatestMap_Response.msg" "DESTINATION" "share/turtlebot3_control_services/srv")
 
 # install(FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_control_services" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_control_services" FILES "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_control_services" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")

@@ -247,8 +247,13 @@ CMakeFiles/turtlebot3_control_services__rosidl_typesupport_fastrtps_c__pyext.dir
   rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__struct.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
-  rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.h
+  rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__functions.h \
+  rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__type_support.h \
+  rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__struct.h \
+  rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.h
 
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__struct.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h:
 
@@ -360,6 +365,8 @@ rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__type_su
 
 /usr/include/python3.10/unicodeobject.h:
 
+rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__functions.h:
+
 /usr/include/python3.10/pylifecycle.h:
 
 /usr/include/python3.10/bytesobject.h:
@@ -453,6 +460,8 @@ rosidl_generator_c/turtlebot3_control_services/srv/detail/robot_control__type_su
 /usr/include/python3.10/setobject.h:
 
 /usr/include/string.h:
+
+rosidl_generator_c/turtlebot3_control_services/srv/detail/get_latest_map__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 

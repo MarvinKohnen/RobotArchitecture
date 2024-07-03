@@ -3,7 +3,8 @@
   "output_dir": "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_typesupport_fastrtps_c/turtlebot3_control_services",
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource",
   "idl_tuples": [
-    "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services:srv/RobotControl.idl"
+    "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services:srv/RobotControl.idl",
+    "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services:srv/GetLatestMap.idl"
   ],
   "ros_interface_dependencies": [
     "std_msgs:/opt/ros/humble/share/std_msgs/msg/Bool.idl",
@@ -49,6 +50,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em",
     "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services/srv/RobotControl.idl",
+    "/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_control_services/rosidl_adapter/turtlebot3_control_services/srv/GetLatestMap.idl",
     "/opt/ros/humble/share/std_msgs/msg/Bool.idl",
     "/opt/ros/humble/share/std_msgs/msg/Byte.idl",
     "/opt/ros/humble/share/std_msgs/msg/ByteMultiArray.idl",
