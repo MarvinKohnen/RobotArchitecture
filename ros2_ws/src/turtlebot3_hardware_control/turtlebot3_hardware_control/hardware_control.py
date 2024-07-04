@@ -85,7 +85,7 @@ class HardwareControl(Node):
             time.sleep(0.1)  # Sleep briefly to keep sending the command at a reasonable rate
 
         # Stop the robot after turning
-        self.full_stop(priority) # Ensures the stop command is also prioritized
+        self.full_stop(priority) 
     
     def stop_robot(self):
         """Failsafe for real world testing"""

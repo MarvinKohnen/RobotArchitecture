@@ -1,0 +1,21 @@
+[1.512s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_example': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_example/build --no-deps symlink_data
+[2.073s] running develop
+[2.073s] /home/marvin/.local/lib/python3.10/site-packages/setuptools/command/easy_install.py:157: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.073s]   warnings.warn(
+[2.392s] running egg_info
+[2.392s] writing turtlebot3_example.egg-info/PKG-INFO
+[2.392s] writing dependency_links to turtlebot3_example.egg-info/dependency_links.txt
+[2.392s] writing entry points to turtlebot3_example.egg-info/entry_points.txt
+[2.393s] writing requirements to turtlebot3_example.egg-info/requires.txt
+[2.393s] writing top-level names to turtlebot3_example.egg-info/top_level.txt
+[2.395s] reading manifest file 'turtlebot3_example.egg-info/SOURCES.txt'
+[2.397s] running build_ext
+[2.398s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_example/lib/python3.10/site-packages/turtlebot3-example.egg-link (link to .)
+[2.398s] Installing turtlebot3_obstacle_detection script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_example/lib/turtlebot3_example
+[2.399s] Installing turtlebot3_patrol_client script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_example/lib/turtlebot3_example
+[2.399s] Installing turtlebot3_patrol_server script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_example/lib/turtlebot3_example
+[2.399s] Installing turtlebot3_position_control script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_example/lib/turtlebot3_example
+[2.399s] 
+[2.400s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_example
+[2.400s] running symlink_data
+[2.542s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_example' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_example/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_example/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_example/build --no-deps symlink_data

@@ -9,6 +9,8 @@ from nav_msgs.msg import Odometry
 from std_msgs.msg import Bool
 from turtlebot3_control_services.srv import RobotControl
 import math
+import time
+import csv
 
 class AutonomousNavigation(Node):
     def __init__(self):
@@ -25,14 +27,15 @@ class AutonomousNavigation(Node):
         self.coordinates = [
             {'start': {'x': -1.429, 'y': -0.59}, 'goal': {'x': 1.5, 'y': 1.45}},
             {'start': {'x': 1.7, 'y': 0.06}, 'goal': {'x': -1.851, 'y': 0.06}},
-            {'start': {'x': 1.1, 'y': -0.466}, 'goal': {'x': -0.42, 'y': 1.85}},
-            {'start': {'x': -1.70, 'y': -1.16}, 'goal': {'x': 0.63, 'y': 0.49}}
+            {'start': {'x': -1.70, 'y': -1.16}, 'goal': {'x': 1.2, 'y': 0.49}},
+            {'start': {'x': 1.65, 'y': -1.05}, 'goal': {'x': -0.42, 'y': 1.85}}
+
         ]
 
         self.current_pose = None
-        self.goal_tolerance = 0.1  # Tolerance to consider the robot has reached the goal
+        self.goal_tolerance = 0.3  # Tolerance to consider the robot has reached the goal
 
-        self.run_count = 25
+        self.run_count = 10
         self.current_run = 0
         self.current_coord_set = 0
         self.nav_state = 'init'
@@ -45,6 +48,19 @@ class AutonomousNavigation(Node):
         self.timer = self.create_timer(2.0, self.timer_callback)
 
         self.pose_update_count = 0  # Counter for pose updates
+        self.goal_in_progress = False  # Flag to indicate a goal is in progress
+
+        # Initialize variables for distance and time tracking
+        self.total_distance = 0.0
+        self.previous_pose = None
+        self.start_time = None
+
+        # CSV file setup
+        self.csv_file = 'navigation_log.csv'
+        self.csv_header = ['Coordinate Set', 'Distance Traveled', 'Time Used (s)']
+        with open(self.csv_file, mode='w', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow(self.csv_header)
 
     def timer_callback(self):
         self.get_logger().info(f'Timer callback with state: {self.nav_state}')
@@ -93,6 +109,11 @@ class AutonomousNavigation(Node):
         self.nav_state = 'wait_for_initial_pose'
         self.navigate_to_pose(coord['x'], coord['y'])
 
+        # Reset distance and start time for the new coordinate set
+        self.total_distance = 0.0
+        self.previous_pose = None
+        self.start_time = time.time()
+
     def check_initial_pose_reached(self):
         coord = self.coordinates[self.current_coord_set]['start']
         if self.current_pose is None:
@@ -102,6 +123,7 @@ class AutonomousNavigation(Node):
         distance = math.sqrt((coord['x'] - current_x) ** 2 + (coord['y'] - current_y) ** 2)
         if distance <= self.goal_tolerance:
             self.get_logger().info(f'Initial pose reached at ({coord["x"]}, {coord["y"]})')
+            self.goal_in_progress = False
             self.move_to_goal_position()
 
     def move_to_goal_position(self):
@@ -119,6 +141,12 @@ class AutonomousNavigation(Node):
         self.navigate_to_pose(coord['x'], coord['y'])
 
     def navigate_to_pose(self, x, y):
+        if self.goal_in_progress:
+            self.get_logger().info('A goal is already in progress. Ignoring new goal request.')
+            return
+        
+        self.goal_in_progress = True
+        self.get_logger().info(f'in function navigate to pose with nav status {self.nav_state} and goal in progress {self.goal_in_progress}')
         goal_msg = NavigateToPose.Goal()
         goal_pose = PoseStamped()
         goal_pose.header.frame_id = 'map'
@@ -127,6 +155,7 @@ class AutonomousNavigation(Node):
         goal_pose.pose.position.y = y
         goal_pose.pose.orientation.w = 1.0
         goal_msg.pose = goal_pose
+    
         self.client.wait_for_server()
         self._send_goal_future = self.client.send_goal_async(goal_msg)
         self._send_goal_future.add_done_callback(self.goal_response_callback)
@@ -135,12 +164,16 @@ class AutonomousNavigation(Node):
         goal_handle = future.result()
         if not goal_handle.accepted:
             self.get_logger().info('Goal rejected.')
+            self.goal_in_progress = False
             return
+        self.get_logger().info('Goal accepted.')
         self._get_result_future = goal_handle.get_result_async()
         self._get_result_future.add_done_callback(self.get_result_callback)
 
     def get_result_callback(self, future):
+        self.get_logger().info('Goal action callback invoked.')
         result = future.result().result
+        self.goal_in_progress = False
         if result:
             self.get_logger().info('Goal action completed')
             self.check_goal_reached()
@@ -150,13 +183,18 @@ class AutonomousNavigation(Node):
     def check_goal_reached(self):
         if self.current_pose is None:
             return
+        
+        self.get_logger().info(f"in check_goal_reached with nav state: {self.nav_state} and goal in progress {self.goal_in_progress}")
 
         goal = self.coordinates[self.current_coord_set]['goal'] if self.nav_state == 'moving_to_goal' else self.coordinates[self.current_coord_set]['start']
         current_x, current_y, _ = self.current_pose
 
         distance = math.sqrt((goal['x'] - current_x) ** 2 + (goal['y'] - current_y) ** 2)
+        self.get_logger().info(f"distance {distance} and goal_tolerance: {self.goal_tolerance}")
         if distance <= self.goal_tolerance:
             self.get_logger().info(f'Reached goal at ({goal["x"]}, {goal["y"]})')
+            self.goal_in_progress = False  # Ensure flag is reset here as well
+            self.log_navigation_data()  # Log data when a goal is reached
             if self.nav_state == 'moving_to_goal':
                 self.current_run += 1
                 self.get_logger().info(f'Current run: {self.current_run}')
@@ -176,20 +214,32 @@ class AutonomousNavigation(Node):
                         self.move_to_initial_position()
                     else:
                         self.get_logger().info('Completed all coordinate sets.')
-                        rclpy.shutdown()
+                        self.shutdown()
             elif self.nav_state == 'moving_to_start':
+                self.nav_state = 'moving_to_goal'
                 self.move_to_goal_position()
+
+    def log_navigation_data(self):
+        """Log distance traveled and time used for the current coordinate set."""
+        time_used = time.time() - self.start_time
+        self.get_logger().info(f'Logging data for coordinate set {self.current_coord_set}: distance={self.total_distance}, time={time_used}')
+        with open(self.csv_file, mode='a', newline='') as file:
+            writer = csv.writer(file)
+            writer.writerow([self.current_coord_set, self.total_distance, time_used])
 
     def odom_callback(self, msg):
         position = msg.pose.pose.position
         orientation = msg.pose.pose.orientation
         _, _, yaw = euler_from_quaternion([orientation.x, orientation.y, orientation.z, orientation.w])
         self.current_pose = (position.x, position.y, yaw)
-        """
-        self.pose_update_count += 1
-        if self.pose_update_count % 50 == 0:  # Log every 50th update
-            self.get_logger().info(f'Updated current pose: {self.current_pose}')
-            """
+
+        # Update the total distance traveled
+        if self.previous_pose is not None:
+            prev_x, prev_y, _ = self.previous_pose
+            distance_increment = math.sqrt((position.x - prev_x) ** 2 + (position.y - prev_y) ** 2)
+            self.total_distance += distance_increment
+        self.previous_pose = self.current_pose
+
     def start_heatmap_generator(self):
         self.get_logger().info(f'Starting new terminal for heatmap generation for coordinate set {self.current_coord_set}...')
         heatmap_command = [
@@ -197,6 +247,9 @@ class AutonomousNavigation(Node):
             f"ros2 run turtlebot3_analysis heatmap_generator --ros-args -p coordinate_set:={self.current_coord_set}; exec bash"
         ]
         self.heatmap_process = subprocess.Popen(heatmap_command)
+
+    def shutdown(self):
+        rclpy.shutdown()
 
 def main(args=None):
     rclpy.init(args=args)

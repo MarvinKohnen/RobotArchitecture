@@ -17,7 +17,7 @@ class MapChangeDetector(Node):
         self.map_directory = os.path.expanduser(self.get_parameter('map_directory').value)
         self.map_save_timer = self.create_timer(self.map_save_interval, self.map_save_callback)
         self.last_map_path = ""
-        self.declare_parameter('threshold', 10)  # Threshold for changes
+        self.declare_parameter('threshold', 30)  # Threshold for changes
         self.lock = threading.Lock()
         self.navigation_started = False  # Flag to track if navigation has been started
 
