@@ -1,0 +1,18 @@
+[1.720s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_teleop': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_teleop/build --no-deps symlink_data
+[2.631s] running develop
+[2.632s] /home/marvin/.local/lib/python3.10/site-packages/setuptools/command/easy_install.py:157: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[2.632s]   warnings.warn(
+[2.990s] running egg_info
+[2.991s] writing turtlebot3_teleop.egg-info/PKG-INFO
+[2.991s] writing dependency_links to turtlebot3_teleop.egg-info/dependency_links.txt
+[2.991s] writing entry points to turtlebot3_teleop.egg-info/entry_points.txt
+[2.991s] writing requirements to turtlebot3_teleop.egg-info/requires.txt
+[2.991s] writing top-level names to turtlebot3_teleop.egg-info/top_level.txt
+[2.994s] reading manifest file 'turtlebot3_teleop.egg-info/SOURCES.txt'
+[2.996s] running build_ext
+[2.996s] Creating /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_teleop/lib/python3.10/site-packages/turtlebot3-teleop.egg-link (link to .)
+[2.997s] Installing teleop_keyboard script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_teleop/lib/turtlebot3_teleop
+[2.997s] 
+[2.997s] Installed /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_teleop
+[2.997s] running symlink_data
+[3.065s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_teleop' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_teleop/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_teleop/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_teleop/build --no-deps symlink_data

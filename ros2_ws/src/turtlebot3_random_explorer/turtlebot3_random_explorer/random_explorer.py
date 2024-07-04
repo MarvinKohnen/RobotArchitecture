@@ -20,8 +20,7 @@ class RandomExplorer(Node):
         if self.should_shutdown:
             return
 
-        start_time = time.time()
-        self.get_logger().info('Callback started.')
+        
         if random.random() > 0.1:
             self.get_logger().info('Moving forward.')
             self.send_command_to_hardware("move_forward", 0.3, 1)
@@ -34,11 +33,11 @@ class RandomExplorer(Node):
             else:
                 turn_direction = "turn_right"
 
-            self.get_logger().info(f'Turning {turn_direction.replace("_", " ")}.')
+            self.get_logger().info(f'{turn_direction.replace("_", " ")}.')
             self.send_command_to_hardware(turn_direction, 0.2, 1)
         
-        end_time = time.time()
-        self.get_logger().info(f'Callback finished in {end_time - start_time} seconds.')
+    
+        
 
     def shutdown_callback(self, msg):
         if msg.data:

@@ -4,7 +4,6 @@ from sensor_msgs.msg import LaserScan
 from std_msgs.msg import Bool
 from turtlebot3_control_services.srv import RobotControl  
 import random
-import time
 
 class ObstacleAvoidance(Node):
     def __init__(self):
@@ -18,9 +17,9 @@ class ObstacleAvoidance(Node):
         self.scan_subscription = self.create_subscription(LaserScan, 'scan', self.scan_callback, qos_profile=qos_policy)
         self.obstacle_distance = 0.3
         self.is_turning = False
+        self.obstacle_publisher = self.create_publisher(Bool, 'obstacle_detected', 10)
 
     def scan_callback(self, msg):
-    
         is_obstacle_in_front = any(
             distance < self.obstacle_distance for distance in msg.ranges[:30] + msg.ranges[-30:])
         if is_obstacle_in_front and not self.is_turning:
@@ -35,11 +34,14 @@ class ObstacleAvoidance(Node):
                 turn_direction = "turn_left"
             else:
                 turn_direction = "turn_right"
-            self.send_command_to_hardware(turn_direction, 1.0, 10) 
+            self.send_command_to_hardware(turn_direction, 1.0, 10)
+            
+            self.publish_obstacle_detected(True)  # Publish obstacle detected flag
         elif not is_obstacle_in_front and self.is_turning:
             self.is_turning = False
             self.get_logger().info('Path clear, resetting priority.')
             self.send_command_to_hardware("reset_priority", 0.0, 11)
+            self.publish_obstacle_detected(False)  # Publish obstacle cleared flag
 
     def send_command_to_hardware(self, command, value, priority):
         request = RobotControl.Request()
@@ -49,7 +51,6 @@ class ObstacleAvoidance(Node):
         future = self.robot_control_client.call_async(request)
         future.add_done_callback(self.handle_service_response)
     
-    #needed to be placed in separate function in order to handly multiple asynchronous operations
     def handle_service_response(self, future):
         try:
             response = future.result()
@@ -59,6 +60,11 @@ class ObstacleAvoidance(Node):
                 self.get_logger().info(f'Command failed: {response.message}')
         except Exception as e:
             self.get_logger().error('Service call failed: %r' % e)
+
+    def publish_obstacle_detected(self, detected):
+        msg = Bool()
+        msg.data = detected
+        self.obstacle_publisher.publish(msg)
             
 def main(args=None):
     rclpy.init(args=args)
