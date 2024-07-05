@@ -7,6 +7,8 @@ import numpy as np
 import cv2
 import os
 from datetime import datetime
+import yaml
+
 
 class HeatmapGenerator(Node):
     def __init__(self):
@@ -46,8 +48,8 @@ class HeatmapGenerator(Node):
 
         self.robot_positions = []
         self.map_path = ""
-        self.map_origin = [-2.95, -2.57]  # Origin from map.yaml
-        self.map_resolution = 0.05        # Resolution from map.yaml
+        self.map_origin = [] 
+        self.map_resolution = 0      
 
         self.get_logger().info(f'Generating heatmap for coordinate set {self.current_coord_set}...')
         self.get_latest_map()
@@ -66,6 +68,13 @@ class HeatmapGenerator(Node):
             position = (msg.pose.pose.position.x, msg.pose.pose.position.y)
             self.robot_positions.append(position)
     
+    def read_map_info(self, yaml_file):
+        with open(yaml_file, 'r') as file:
+            map_data = yaml.safe_load(file)
+            self.map_origin = map_data['origin'][:2]
+            self.map_resolution = map_data['resolution']
+            self.get_logger().info(f'Read map origin: {self.map_origin} and resolution: {self.map_resolution}')
+
     def get_latest_map(self):
         request = GetLatestMap.Request()
         future = self.latest_map_service.call_async(request)
@@ -73,6 +82,9 @@ class HeatmapGenerator(Node):
         if future.result() is not None:
             self.map_path = future.result().map_path
             self.get_logger().info(f'Received map path: {self.map_path}')
+            # Read corresponding YAML file
+            yaml_file = self.map_path.replace('.pgm', '.yaml')
+            self.read_map_info(yaml_file)
         else:
             self.get_logger().error('Failed to call GetLatestMap service')
 

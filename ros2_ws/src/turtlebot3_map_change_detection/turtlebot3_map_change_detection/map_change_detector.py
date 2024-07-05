@@ -17,7 +17,7 @@ class MapChangeDetector(Node):
         self.map_directory = os.path.expanduser(self.get_parameter('map_directory').value)
         self.map_save_timer = self.create_timer(self.map_save_interval, self.map_save_callback)
         self.last_map_path = ""
-        self.declare_parameter('threshold', 50)  # Threshold for changes
+        self.declare_parameter('threshold', 30)  # Threshold for changes
         self.lock = threading.Lock()
         self.navigation_started = False  # Flag to track if navigation has been started
 
@@ -59,8 +59,8 @@ class MapChangeDetector(Node):
             try:
                 nav_command = [
                     "gnome-terminal", "--", "bash", "-c", 
-                    f"ros2 run turtlebot3_nav_management custom_navigation; exec bash"
-                    #f"ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=False map:={self.last_map_path}; exec bash"
+                    #f"ros2 run turtlebot3_nav_management custom_navigation; exec bash"
+                    f"ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=False map:={self.last_map_path}; exec bash"
                 ]
                 self.nav_process = subprocess.Popen(nav_command)
                 self.get_logger().info('Navigation system started.')

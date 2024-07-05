@@ -58,6 +58,10 @@ class HardwareControl(Node):
         self.get_logger().info(f'Executing full_stop, priority: {priority}')
         self.execute_command(msg, priority)
 
+        #reset priority
+        #self.current_priority = 0
+        #self.get_logger().info('Priority reset after full stop.')
+
     def turn_left(self, angular_speed: float, priority: int):
         """Turn the robot left with a given priority."""
         msg = Twist()
@@ -86,10 +90,9 @@ class HardwareControl(Node):
             self.execute_command(msg, priority)
             self.get_logger().info(f'Turning with speed {angular_speed} for duration {duration} seconds')
             rclpy.spin_once(self, timeout_sec=duration)
-            self.full_stop(10)
-            self.reset_priority()
+    
         
-        threading.Thread(target=turn).start()
+        #threading.Thread(target=turn).start()
 
     def stop_robot(self):
         """Failsafe for real world testing"""
@@ -106,6 +109,7 @@ def main(args=None):
     executor.add_node(hardware_control)
 
     try:
+        #rclpy.spin(hardware_control)
         executor.spin()
     except KeyboardInterrupt:
         print("Keyboard Interrupt Received. shutting down.")

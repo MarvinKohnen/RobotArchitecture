@@ -24,18 +24,25 @@ class AutonomousNavigation(Node):
         self.get_logger().info('Stopping Robot')
         self.send_command_to_hardware("full_stop", 0.0, 10)
 
-        self.coordinates = [
-            {'start': {'x': -1.429, 'y': -0.59}, 'goal': {'x': 1.5, 'y': 1.45}},
-            {'start': {'x': 1.7, 'y': 0.06}, 'goal': {'x': -1.851, 'y': 0.06}},
-            {'start': {'x': -1.70, 'y': -1.16}, 'goal': {'x': 1.2, 'y': 0.49}},
-            {'start': {'x': 1.65, 'y': -1.05}, 'goal': {'x': -0.42, 'y': 1.85}}
+        self.declare_parameter('start_x', 0.0)
+        self.declare_parameter('start_y', 0.0)
+        self.declare_parameter('goal_x', 0.0)
+        self.declare_parameter('goal_y', 0.0)
 
-        ]
+        start_x = self.get_parameter('start_x').get_parameter_value().double_value
+        start_y = self.get_parameter('start_y').get_parameter_value().double_value
+        goal_x = self.get_parameter('goal_x').get_parameter_value().double_value
+        goal_y = self.get_parameter('goal_y').get_parameter_value().double_value
+
+        self.coordinates = [{
+            'start': {'x': start_x, 'y': start_y},
+            'goal': {'x': goal_x, 'y': goal_y}
+        }]
 
         self.current_pose = None
         self.goal_tolerance = 0.3  # Tolerance to consider the robot has reached the goal
 
-        self.run_count = 10
+        self.run_count = 3
         self.current_run = 0
         self.current_coord_set = 0
         self.nav_state = 'init'

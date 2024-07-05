@@ -37,7 +37,6 @@ class RandomExplorer(Node):
             self.send_command_to_hardware(turn_direction, 0.2, 1)
         
     
-        
 
     def shutdown_callback(self, msg):
         if msg.data:
@@ -73,6 +72,7 @@ def main(args=None):
 
     try:
         executor.spin()
+        #rclpy.spin(random_explorer)
     finally:
         random_explorer.destroy_node()
         rclpy.shutdown()

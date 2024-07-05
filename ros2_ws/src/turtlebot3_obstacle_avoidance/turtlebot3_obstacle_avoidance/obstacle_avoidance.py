@@ -34,7 +34,7 @@ class ObstacleAvoidance(Node):
                 turn_direction = "turn_left"
             else:
                 turn_direction = "turn_right"
-            self.send_command_to_hardware(turn_direction, 1.0, 10)
+            self.send_command_to_hardware(turn_direction, 0.5, 10)
             
             self.publish_obstacle_detected(True)  # Publish obstacle detected flag
         elif not is_obstacle_in_front and self.is_turning:
@@ -75,6 +75,7 @@ def main(args=None):
 
     try:
         executor.spin()
+        #rclpy.spin(obstacle_avoidance)
     finally:
         obstacle_avoidance.destroy_node()
         rclpy.shutdown()
