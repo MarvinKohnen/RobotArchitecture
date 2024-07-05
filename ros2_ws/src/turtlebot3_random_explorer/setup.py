@@ -19,6 +19,10 @@ setup(
     license='TODO: License declaration',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': [ 'random_explorer = turtlebot3_random_explorer.random_explorer:main',],
+        'console_scripts': [ 
+            'random_explorer = turtlebot3_random_explorer.random_explorer:main',
+            'simple_mover = turtlebot3_random_explorer.simple_mover:main',
+                            ],
+
     },
 )

@@ -69,6 +69,17 @@ class AutonomousNavigation(Node):
             writer = csv.writer(file)
             writer.writerow(self.csv_header)
 
+        # Publish shutdown signal to the random explorer
+        self.shutdown_random_explorer()
+
+    def shutdown_random_explorer(self):
+        self.get_logger().info('Sending shutdown signal to random explorer...')
+        self.shutdown_publisher.publish(Bool(data=True))
+
+    def start_random_explorer(self):
+        self.get_logger().info('Sending start signal to random explorer...')
+        self.shutdown_publisher.publish(Bool(data=False))
+
     def timer_callback(self):
         self.get_logger().info(f'Timer callback with state: {self.nav_state}')
         if self.nav_state == 'init':
@@ -221,6 +232,7 @@ class AutonomousNavigation(Node):
                         self.move_to_initial_position()
                     else:
                         self.get_logger().info('Completed all coordinate sets.')
+                        self.start_random_explorer()  # Start random exploration again
                         self.shutdown()
             elif self.nav_state == 'moving_to_start':
                 self.nav_state = 'moving_to_goal'

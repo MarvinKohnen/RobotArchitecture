@@ -23,7 +23,7 @@ class RandomExplorer(Node):
         
         if random.random() > 0.1:
             self.get_logger().info('Moving forward.')
-            self.send_command_to_hardware("move_forward", 0.3, 1)
+            self.send_command_to_hardware("move_forward", 0.1, 1)
         else:
             direction = random.randint(0, 1)
 
