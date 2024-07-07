@@ -1,42 +1,81 @@
-\documentclass[]{article}
 
+\documentclass[%
+paper=A4,               % Papiergröße
+twoside=true,           % zweiseitiges Layout
+openright,              % Kapitel auf ungerader Seite beginnen
+11pt,                   % Schriftgröße
+bibliography=totoc,     % Literaturverzeichnis im Inhaltsverzeichnis
+%listof=totoc,           % Abb.-/Tab.-verzeichnis im Inhaltsverzeichnis
+titlepage=on,           % Titel auf eigener Seite
+DIV=12,                 % Satzspiegelberechnung
+BCOR=1.5cm,             % Bindungskorrektur
+parskip=half,            % Absatzabstand
+final
+]{scrreprt}
 \usepackage{csquotes}
 \usepackage[backend=biber, style=numeric, autocite=inline]{biblatex}
 \usepackage[colorlinks]{hyperref}
+
 \usepackage{enumitem}
-\usepackage[a4paper, top=2cm, left=4cm, bottom=2cm, right=2cm]{geometry}
 \usepackage{setspace}
 \usepackage{graphicx} 
+\usepackage{float}
 \usepackage{subcaption}
 
-\hypersetup{citecolor=black}
+
+\hypersetup{
+	citecolor=black,
+	linkcolor=black,
+	urlcolor=blue
+}
 \addbibresource{bachelorthesisSources.bib}
 
-%opening
-\title{Architectural Layering in Autonomous Robotics: Modular Design and Implementation on the Turtlebot3 Platform using ROS. }
-\author{Marvin Kohnen}
+%Informationen zur Arbeit
+\newcommand{\printname}{Marvin Kohnen}
+\newcommand{\printnumber}{462 674}
+
+\newcommand{\printtitle}{Architectural Layering in Autonomous Robotics: Modular Design and Implementation on the Turtlebot3 Platform using ROS2. }
+\newcommand{\printcity}{Münster}
+\newcommand{\printtype}{Bachelor's thesis}
+\newcommand{\printdegree}{Bachelor of Science}
+\newcommand{\printfirstassessor}{Prof. Dr. Malte Schilling}
+\newcommand{\printsecondassessor}{Prof. Dr. Paula Herber}
+\newcommand{\printinstitute}{Computer Science Department}
 
 
 \begin{document}
+	\pagenumbering{roman}
 	\onehalfspacing
-	\maketitle
+	% Titelblatt
+	\begin{titlepage}
+		\include{chapter/titlepage}
+	\end{titlepage}
 	
-	\newpage
-	
+
+
 	\tableofcontents
-	\newpage
-	
+	\cleardoublepage
+
 	\begin{abstract}
-		This is going to be my abstract.
+		\section*{Abstract}
+	The abstract is an overview and summary of your thesis. It should be kept short and should highlight the main contents as well as findings. 
+	
 	\end{abstract}
 	
+	\pagenumbering{arabic}
+	
+	\chapter{Introduction}
+	The field of autonomous robotics has seen significant advancements in recent years, driven by the need for robots that can operate independently in complex, dynamic environments. Autonomous robots are utilized in various applications, ranging from industrial automation and logistics to healthcare and service industries. Boston Dynamics develops agile, mobile robots to gather data and explore without boundaries, while OPEN AI's "Figure 01" races other companies in the creation of the first commercially viable autonomous humanoid robot. This rapid development poses the question of "How do you architect your robots?",
+	as the creation of robust and flexible robotic architectures is crucial to ensure that these systems can adapt to a wide range of tasks and conditions. \newline
+	
+	Numerous systems have already been developed under the concept of \textit{Layered Architecture}. This thesis will examine several of these systems and subsequently integrate their most advantageous features to design a layered architecture specifically for the Turtlebot3 platform. The Turtlebot3, a widely utilized educational robot, is often employed in the study of specific fields such as path planning and object detection. However, this work will adopt a more holistic approach, aiming to construct a system that is both easily adaptable and robust. Addtionally, this layered architecture will be based on ROS2, the successor of ROS - a transition that seemingly many roboticists are not willing to make yet. 
+	
+	The following thesis is structured as follows: First, a presentation of existing robotic architectures, the need for layered approaches, and a brief explanation of the ROS2 framework. Futhermore, a recent study is reviewed, that establishes guidelines formulated by a wide range of roboticists expressing their most crucial concerns when building a robotic architecture. Chapter 3 details the design and implementation of the proposed architecture, the experimental setup, and the evaluation methods. In Chapter 4, the findings from simulation and real-world employment are displayed and the architectures robustness is examined by an ablation study. Moreover,  the adherance to above mentioned guidelines is analysed. These results are then discussed in chapter 5, while the last chapter summarizes the key contributions of the thesis and outlines limitations.
 	
 	
-	\section{Introduction}
-	This is going to be my Introduction
-	\section{Related Work and Background}not
-	\subsection{Robotic Architecture}
-	\subsubsection{The need for Robotic Architecture}
+	\chapter{Related Work and Background}
+	\section{Robotic Architecture}
+	\subsection{The need for Robotic Architecture}
 	"Robot systems differ from other software applications in many ways. Foremost are the need to achieve high-level, complex goals, the need to interact with a complex, often dynamic environment, while ensuring the system’s own dynamics, the need to handle noise and uncertainty, and the need to be reactive to unexpected changes." \autocite{coste-maniereArchitectureBackboneRobotic2000} This quote by Coste-Mani\`{e}re and Simmons perfectly introduces the various challenges robotic systems and their developers face. These needs shape their design, as all robotic systems embody \textit{some} architectural structure and style. The architectural structure of a system outlines its division into various subsystems and the interactions between them, while the architectural style refers to the underlying computational principles of a system. \autocite{coste-maniereArchitectureBackboneRobotic2000} Different requirements and applications for robotic systems result in different architectures ("To date, the number of existing architectures has reached several hundred" \autocite{kotseruba40YearsCognitive2020}), some of which I will explore in the following section.
 	
 	HIER COGNITIVE ARCHITECTURE DISKUTIEREN
@@ -45,7 +84,7 @@
 	2.1.2 Development of Cognitive Architecture und PRA
 	2.1.3 Layered Architectures
 	
-	\subsubsection{Perceive - Reason - Act}
+	\subsection{Perceive - Reason - Act}
 	The "Perceive-Reason-Act" (\textbf{PRA}) model takes its inspirates from Neuroscience: \textbf{P}erception creates a model representing the current world state. The \textbf{R}eason component designs a plan using the model to find an appropriate action towards the goal. Finally, \textbf{A}ct refers to the translation of the action into actuator commands and therefore resulting in motor output. \autocite{schillingAutonomeSystemeUnd2023} The rather intuitive PRA approach contains some drawbacks in real world applications: First and foremost, not every aspect of the environment is senseable (such as the inner state of other agents). Furthermore, key elements of the world may be difficult or rather impossible to model. Lastly, sensor and actuator measurements in the real world might differ vastly from the expected values in a clean lab situation. \autocite{schillingAutonomeSystemeUnd2023}
 	
 	\begin{figure}[ht] 
@@ -55,7 +94,7 @@
 		\label{fig: fig1}
 	\end{figure}
 	
-	\subsubsection{Layered Architectures}
+	\subsection{Layered Architectures}
 	\textbf{Layered architectures} take a different approach to resolve the issues that the PRA model encountered. Horizontal layers of control systems are built to let the robot operate at increasing levels of competence and complexity and are assigned with different objectives. They consist of asynchronous modules which are allowed to communicate in a bidirectional manner. \autocite{brooksRobustLayeredControl1986} 
 	Even though the higher levels can subsume the roles of lower levels by suppressing their output, the lower levels maintain their functionality as higher levels are added - resulting in a robust and flexible robot control system. \autocite{brooksRobustLayeredControl1986} An example of a layered architecture can be seen in Figure \ref{fig: fig2}, created by Brooks in 1986. \autocite{brooksRobustLayeredControl1986}
 	
@@ -82,8 +121,9 @@
 		\label{fig: fig3}
 	\end{figure}
 	\newpage
-	\subsubsection{CLARATy}
-	While this three layered architecture is very popular and has been thoroghly investigated by developers, it doesnt come without its drawbacks. The developers of \textbf{CLARATy}, a two layered architecture that is used for NASA's space robots \autocite{sicilianoSpringerHandbookRobotics2016}, identified three problems when designing three layered architectures:
+	
+	\subsection{CLARATy}
+	While this typical three layered architecture is very popular and has been thoroghly investigated by developers, it doesnt come without its drawbacks. The developers of the "Coupled Layer Architecture for Robotic Autonomy" (\textbf{CLARATy}), a two layered architecture that is used for NASA's space robots \autocite{sicilianoSpringerHandbookRobotics2016}, identified three problems when designing three layered architectures:
 	Firstly, the developers "expand the capabilities and dominance of the layer within which they are working" \autocite{volpeCLARAtyArchitectureRobotic2001}. This results in models, in which certain layers are predominantly active. Furthermore, there is still research to be done over the hierarchical superiority of the planning and executive layer of one over the other. \autocite{volpeCLARAtyArchitectureRobotic2001} Another problem the authors state is the lack of access from the Planning level to the Behavioral control. This forces the system to carry own models on the Planning layer, which are not directly derived from the functional layer, to perform planning tasks. Eventually, this can lead to inconsistencies between the layers and endanger the integrity of the system. \autocite{volpeCLARAtyArchitectureRobotic2001} Lastly, the authors claim that there is a misconception in equating greater intelligence in a system with increased granularity, suggesting that each part of a system can possess its own distinct hierarchy of granularity. They move on to explain that the Functional Layer contains many nested subsystems, the Executive layer encompasses multiple logic trees to coordinate these subsystems, and the Planning layer includes various timelines and planning horizons with different resolutions. \autocite{volpeCLARAtyArchitectureRobotic2001}
 	In order to fight these challenges, Volpe et al. proposed a two layered architecture. This offers two main benefits: \newline
 	Firstly, an explicit Representation of Granularity: CLARATy introduces a third dimension for granularity, allowing for a clearer depiction of the system's complexity and hierarchy. This means that within the Functional layer there's a detailed organization showing how subsystems are nested or grouped together. Secondly, they blended the Planning and Executive layer, resulting in a \textit{decision} layer which is more efficient and allowed the levels to share a common database (depicted in figure \ref{fig: fig4}). \autocite{volpeCLARAtyArchitectureRobotic2001} 
@@ -98,26 +138,25 @@
 	
 	\newpage
 	
-	\subsubsection{Cognitive Architectures}
+	\subsection{Cognitive Architectures}
 	{\color{red} Ich weiß nicht, ob ich hier noch kurz Cognitive Architectures ansprechen sollte, als eine Art Outlook (ca halbe Seite?)}
 	
 	
-	\subsubsection{Übergang (TITEL?)}
+
 	Understanding the principles of layered architecture provides a solid foundation for appreciating the architectural choices and design patterns employed in robotic systems. As we have seen, there is no one definitive way to architect these systems. Rather, this framework provides some key characterics by its division of system functionalities into distinct layers, each with a specific role, offers clarity, modularity, and scalability. As we transition our focus to the Robot Operating System (ROS), it becomes evident how ROS embodies these principles through its comprehensive framework for robot software development.
 	
 	
 	
-	\subsection{Robot Operating System}
-	\subsubsection{ROS 1}
+	\section{Robot Operating System}
+	\subsection{ROS 1}
 	The Robot Operating System (ROS) is an open-source operating system for robots. It provides the services expected from an operating system, including hardware abstraction, low-level device control, implementation of commonly-used functionality, message-passing between processes, and package management. ROS is not an operating system in the traditional sense of process management and scheduling. Rather, it is a framework or middleware upon which robotics software is developed, offering a structured communications layer above the host operating systems of a heterogeneous compute cluster. \autocite{quigleyROSOpensourceRobot2009,ros.orgIntroductionROS2024}
 	ROS's architecture is designed around the notion of the intercommunication between numerous computing processes (often referred to as nodes) over a peer-to-peer network. This decentralized computing architecture enables the development and integration of complex robotic systems from modular and reusable components or packages. The system facilitates a distributed computing environment, allowing for the separation of tasks such as sensing, perception, decision-making, and actuation across multiple processors and machines. \autocite{quigleyROSOpensourceRobot2009}
 	Central to ROS is its communications infrastructure, which enables the exchange of messages in various forms. These fundamental concepts include messages, topics, services and above mentioned nodes. The latter communicate with one another through messages ("strictly typed data structures" \autocite{quigleyROSOpensourceRobot2009}). This communication is implemented as a \textit{publish-subscriber system:} On the one hand Nodes send messages to a topic by publishing the information, on the other hand nodes can receive the published information by subscribing to said topic. Multiple concurrent publishers and subscribers for the same topic may be active at any time. Also, a single node can publish and subscribe to many topics. \autocite{quigleyROSOpensourceRobot2009}
 	Additionally, ROS provides capabilities for package management and a vast ecosystem of community-contributed tools and libraries that address various robotics functions ranging from planning and perception to simulation and visualization.
 	\autocite{quigleyROSOpensourceRobot2009,ros.orgIntroductionROS2024}
-	\subsubsection{ROS2 and its improvements}
+	\subsection{ROS2 and its improvements}
 	Even though ROS layed the groundwork for the modern robotic industry, the growing interest of industrial applications showed the limitations of ROS, which was built as a research platform. The urge for security, reliability in non-traditional environments and support for large scale embedded systems became the driver for the creation of ROS2, the second generation of the Robotic Operation System. \autocite{macenskiRobotOperatingSystem2022} 
 	It introduces Node Lifecycle management, replaces the custom ROS1 middleware with industry standard middleware DDS (Data Distribution Service), better Real-Time support and adds Actions as a communicational tool. Actions in ROS2 are designed for long-duration tasks that require feedback to the caller during execution, which makes them distinct from the simpler service-call model.  \autocite{macenskiRobotOperatingSystem2022} A typical node interface for ROS2 can be seen in the figure \ref{fig: fig5} below. 
-	{\color{red} eventuell ROS1 nicht erklären und alles für ROS2 zusammenfassen? }
 	
 	\begin{figure}[ht]
 		\centering
@@ -126,14 +165,14 @@
 		\label{fig: fig5}
 	\end{figure}
 	
-	\subsection{How do you architect your robots?}
-	\subsubsection{State of the Practice and Guidelines for ROS-based systems}
-	Malavolta et al. (2020) conducted a study to answer three research questions: the architecture-relevant characteristics of ROS-based systems, the quality requirements considered in their design, and how to guide roboticists in architecting such systems. The authors used a two-part approach, mining ROS repositories and surveying developers who contributed to these repositories. The study found that ROS systems are becoming large and complex, and while there are many open source packages and examples on how to use ROS, engineering robots with specific properties is still mostly an art of trial and error.The findings show that the most mentioned quality requirements related to ROS architecture were maintainability, performance, and reliability. The study also identified 39 guidelines for architecting ROS-based systems. These guidelines are useful for both roboticists aiming to develop high-quality robots and architecture researchers looking for evidence-based indications on how real-world ROS systems should be architected. I will now present 7 out of those 39 guidelines, which were evaluated as the most impactful for architectural design of robotic systems.
+	\section{How do you architect your robots?}
+	\subsection{State of the Practice and Guidelines for ROS-based systems}
+	Malavolta et al. (2020) conducted a study to answer three research questions: the architecture-relevant characteristics of ROS-based systems, the quality requirements considered in their design, and how to guide roboticists in architecting such systems. The authors used a two-part approach, mining ROS repositories and surveying developers who contributed to these repositories. The study found that ROS systems are becoming large and complex. While there are many open source packages and examples on how to use ROS, engineering robots with specific properties is still mostly an art of trial and error.The findings show that the most mentioned quality requirements related to ROS architecture were maintainability, performance, and reliability. The study also identified 39 guidelines for architecting ROS-based systems. These guidelines are useful for both roboticists aiming to develop high-quality robots and architecture researchers looking for evidence-based indications on how real-world ROS systems should be architected. I will now present 7 out of those 39 guidelines, which were evaluated as the most impactful for architectural design of robotic systems.
 	\autocite{malavoltaHowYouArchitect2020}
-	\subsubsection{Guidelines}
+	\subsection{Guidelines}
 	\begin{enumerate}[leftmargin=9mm, align=left]
 		\item \textbf{Use standardized ROS message formats as much as possible, possibly supporting also their legacy versions.} 
-		\item[]This first guideline emphasizes the importance of using standardized ROS message formats, particularly those from the common\_msgs and std\_msgs packages. Adopting these standards facilitates easier reuse, upgrade, and replacement of ROS nodes by allowing for straightforward topic remapping. Standardized messages enhance development efficiency by making compatible tools, such as visualizers and SLAM algorithms, easier available. They also improve node testability through isolation testing with ROS bags and simplify the integration of new sensors and hardware, as many manufacturers support ROS out of the box. However, since the definitions of standardized message formats are subject to change, it's crucial to design systems to be as decoupled as possible from specific message formats to ensure future compatibility and ease of updates. \autocite{malavoltaHowYouArchitect2020}{\color{red} irgendwie eine komische aussage finde ich}
+		\item[]This first guideline emphasizes the importance of using standardized ROS message formats, particularly those from the common\_msgs and std\_msgs packages. Adopting these standards facilitates easier reuse, upgrade, and replacement of ROS nodes by allowing for straightforward topic remapping. Standardized messages enhance development efficiency by making compatible tools, such as visualizers and SLAM algorithms, easier available. They also improve node testability through isolation testing with ROS bags and simplify the integration of new sensors and hardware, as many manufacturers support ROS out of the box. However, since the definitions of standardized message formats are subject to change, it's crucial to design systems to be as decoupled as possible from specific message formats to ensure future compatibility and ease of updates. \autocite{malavoltaHowYouArchitect2020}
 		
 		\item \textbf{Group nodes and interfaces into cohesive sets, each with their own responsibilities and well-defined dependencies.} 
 		\item[]Growing complexity poses a serious challenge while designinng ROS-based software architectures, as it can result in hundreds of interdependent nodes leading to technical debt, limitations to certain ROS packages and reduce adaptability and extendability of the whole system. To mitigate these issues, the guideline suggests grouping nodes and interfaces into cohesive sets with defined responsibilities and dependencies. This structured approach aids in maintaining a clear understanding of the system's architecture, allowing for easier evolution and maintenance of the system. \autocite{malavoltaHowYouArchitect2020}
@@ -156,7 +195,7 @@
 	Our architecture will try to adhere to these guidelines as much as possible, in order to create a robust and performant robotic system.
 	
 	
-	\subsection{Niryo One Arm Architecture}
+	\section{Niryo One Arm Architecture}
 	The Niryo One is a collaborative and open-source 6-axis robot designed for research and higher education in the context of the industry 4.0.
 	Its architecture has been mentioned by Malavolta et al. as an example, that adheres very well to above stated guidelines. \autocite{malavoltaHowYouArchitect2020} Niryo One operates upon a layered architecture, which is composed of five layers. Each layer is further subcategorized into different packages, among them pre-built ROS packages, imported libraries or self-created packages. \newline
 	At the lowest level we can find the \textbf{Hardware layer}. This layer contains a package \textit{rpi} that handles all the external hardware (everything else than the motors) of Niryo One, and provides many utilities for the Raspberry Pi 3, such as Wi-FI, LEDs, Buttons etc. Furthermore, a \textit{driver} package is built, which provides an interface to ros\_control and handles the hardware control of motors. The other two packages found in figure \ref{fig: fig6} (\textit{dynamixel\_sdk} and \textit{mcp\_can\_rpi}) are imported libraries to stabilize functionality of the Raspberry pi and control the actuators. \autocite{roboticsNiryoOneROS2024} \newline
@@ -179,10 +218,10 @@
 	\end{figure}
 	
 	After this thorough examination of existing architectures, we will now introduce our own approach to a layered robotic system. 
-	\newpage
 	
-	\section{Methodology}
-	\subsection{Frameworks and Setup}
+	
+	\chapter{Methodology}
+	\section{Frameworks and Setup}
 
 	The architectural system is employed on the Turtlebot3 Burger Bot platform. This robot is frequently used in education and research because of its size, affordability and wide range of adaptability and expandability. A brief overview of the robots composition is shown in Figure \ref{fig: fig7}. 
 		
@@ -195,8 +234,8 @@
 		
 	 The Architecture is built on the Ubuntu 22.04 LTS Operating System and ROS2 Humble for both the remote PC and the raspberry pi4 on the Turtlebot3. Any simulation is done with Gazebo Fortress (as required for ROS2 Humble) and RVIZ, while the behavior of the robot is established in various Python and Bash scripts. SSH protocol is used to establish a connection between the remote Interface and the Turtlebot3 in order to remove some computational from the raspberry pi. 
 	 
-	 \newpage
-	\subsection{Architecture and Design}
+	 
+	\section{Architecture and Design}
 	
 	The architecture is structured into multiple distinct layers as shown in Figure \ref{fig: fig8}, which grow in complexity the higher the layer is placed in the diagram.
 	
@@ -215,9 +254,9 @@
 	Lastly, there are a couple more modules which provide analytical output for this thesis such as Maps, Heatmaps or position logging. These modules dont impact the robots behaviour in any case. Nonetheless, they are part of the architecture and are worth mentioning. Most importantly, a Heatmap Generator is placed in this \textit{Analysis layer}. As soon as any navigational functionality is invoked, it maps the robots position from the /odom frame to the /map frame and therefore creates a heatmap that matches the given dimensions by the SLAM Toolbox. Some examples of these heatmaps will be shown in Chapter (INPUT CHAPTER!).
 	
 			
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\begin{flushleft}
-		\includegraphics[width=1.1\textwidth]{Graphics/ArchitectureOverview}
+		\includegraphics[width=1.\textwidth]{Graphics/ArchitectureOverview}
 		\caption{Architecture Overview}
 		\label{fig: fig8}
 		\end{flushleft}
@@ -225,11 +264,12 @@
 	
 	
 	
-	\newpage
-
 	
+
+	\chapter{Results}
+	Since the specifics of the architecture have now been established, we can analyse its adherance to the earlier introduced guidelines by Malavolta et al. Subsequently, we move on to qualitative research in form of an ablation study.
+	Since performing quantitative research on a layered architecture for robotic systems is relatively limited by the quantifiability of certain layers, I then analyzed the performance of the two navigational systems {\color{red} Unbedingt noch anmerken, dass der Hauptfokus natürlich nicht auf der Navigation liegt, sondern eher darauf, dass die Architektur zwei performante module erlaubt, die man auch noch austauschen kann.}. This analysis is mainly conducted in Gazebo and RViz, the prevalent simulation environments for robotic systems and ROS based applications. Then I will move on to present the application of the architecture on the real Turtlebot3 platform. 
 	\section{Comparison to Malavolta et al}
-	Since our architecture has now been established, we can discuss its adherance to the earlier introduced guidelines by Malavolta et al. Then we will move on to qualitative and quantitative analysis of the system in the form of an ablation study and the comparison of the generated heatmaps.
 	\begin{enumerate}[leftmargin=9mm, align=left]
 		\item \textbf{Use standardized ROS message formats as much as possible, possibly supporting also their legacy versions.} 
 		\item[]The architecture uses mostly standardized ROS message formats, such as LaserScan and Odometry. The external tools used in the system, such as SLAM Toolbox and Nav2, also use standardized ROS message formats: LaserScan, Odometry and Twist. The only time the architecture deviates from this guideline is through the introduction of the custom PriorityTwist message. This design choice was made consciiously, since the other possible solution for the prioritization mechanism involved environmental variables or global variables which not only are not common practice in Python, but also are very hard to maintain and reduce portability of the system. Furthermore, the priority is rather straightforward to understand, since it basically contains a normal Twist message at its core with only an added integer field.
@@ -256,22 +296,20 @@
 		
 	\end{enumerate}
 	
-	Overall, the architecture adheres quite well to the guidelines wherever possible, apart from
-	Guideline 6 which fell a little bit out of scope. Obviously, given the short time span of this project, there is always room to improve. Nontheless, the architecture is robust, performant and easily adaptable for other roboticists, which was one of the primary concerns of the study by Malavolta et al.
 	
-	\newpage
 	
 	\section{Ablation Study}  
-	In order to further discuss the robustness of the architecture, an ablation study was conducted (see Figure \ref{fig: fig9}). The effect of an omitted layer on the other modules is categorized into three cases. Firstly, a layer can be completely unaffected, resulting in no changes to performance or robustness. Secondly, a layer can be indirectly affected by changes in other layers—meaning the layer itself does not directly access the contents or functionality provided by the omitted package but faces secondary consequences, such as an incomplete mapping of the environment. Thirdly, directly affected layers explicitly access the ommited layer and face severe repercussions in terms of unmet dependencies, unavailable services or other integral parts of the architecture. On the one hand, the omission of higher layers \footnote{\textit{Higher} and \textit{lower} layers are to be interpreted as shown in Figure \ref{fig: fig8}} has no effect on the levels below it, which accounts for the lower triangular matrix of \textit{unaffected layers}. On the other hand, the removal of lower layers has varying impact on the levels above it. \newline 
+	In order to further discuss the robustness of the architecture, an ablation study was conducted (see Figure \ref{fig: fig9}). The effect of an omitted layer on the other modules is categorized into three cases. Firstly, a layer can be completely unaffected, resulting in no changes to performance or robustness. Secondly, a layer can be indirectly affected by changes in other layers—meaning the layer itself does not directly access the contents or functionality provided by the omitted package but faces secondary consequences, such as an incomplete mapping of the environment. Thirdly, directly affected layers explicitly access the ommited layer and face severe repercussions in terms of unmet dependencies, unavailable services or other integral parts of the architecture. On the one hand, the omission of higher layers \footnote{\textit{Higher} and \textit{lower} layers are to be interpreted as shown in Figure \ref{fig: fig8}.} has no effect on the levels below it, which accounts for the lower triangular matrix of \textit{unaffected layers}. On the other hand, the removal of lower layers has varying impact on the levels above it. \newline 
 	As expected, the ablation of the Hardware Control layer has a direct negative impact on all layers that rely on it to invoke movement, namely Obstacle Avoidance, Random Explore and the Custom Navigation. It also indirectly affects layers that rely on the robot being moved around (SLAM layer) and therefore by extension also the Navigation using Nav2, even though it overwrites any other movement commands and controls the robot on its own. \newline
 	As a result of ommiting the Obstacle Avoidance module, the Random Explore layer cannot safely navigate the robot in an unknown environment, as the robot is very likely to crash into the first obstacle in its path. This culminates in an unfinished map, making any kind of navigation obsolete. The Custom Navigation also continuously accesses certain flags set in the Obstacle Avoidance package and is therefore directly affected. \newline
 	The ablation of the Random Explore layer inherits the same problems we just described, with the exception that the Custom Navigation is not directly accessing said layer. \newline
-	Clearly, the exclusion of the SLAM and Map Change Detector layer results in both navigational systems failing on multiple levels: Not only is no data being published to the /map topic, that both navigation systems rely on, but also are both packages never invoked in the first place.  
+	Clearly, the exclusion of the SLAM and Map Change Detector layer results in both navigational systems failing on multiple levels: Not only is no data being published to the /map topic, that both navigation systems heavily rely on, but both packages are also never invoked in the first place.  
 	Lastly, it is evident that the two navigational packages do not interfere with one another and can functionally coexist - provided a given priority between the two navigational system is established. This means they are practically interchangeable and therefore qualify as a unaffected layer. 
+	
 	
 	\newpage
 	
-	\begin{figure}[ht]
+	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.9\textwidth]{Graphics/AblationStudy}
 		\caption{Ablation Study on layer functionality}
@@ -279,14 +317,16 @@
 	\end{figure}
 	
 	It becomes evident that the lower levels are vital for the performance and robustness of the architecture, while higher layers are more likely to have less devastating effects on overall stability or simply enhance the system's functionality. This additive nature results in a more adaptive and flexible design, as higher-level modules can easily be replaced by others with similar purposes. In contrast while examining the upper triangular matrix of figure \ref{fig: fig9}, it is inevitable to mention the dependency of the higher levels on the lower layers. This interdependence limits the overall flexibility of the architecture by how resilient and adaptable the lower layers are designed. 
-	\newpage
 	
-	\section{Quantitative Analysis} 
-	Performing quantitative research on a layered architecture for robotic systems is relatively limited by the quantifiability of certain layers. I therefore analyzed the performance of the two navigational systems. This analysis is mainly conducted in Gazebo and RViz, the prevalent simulation environments for robotic systems and ROS based applications. Then I will move on to present the application of the architecture on the real Turtlebot3 platform. 
-	\subsection{Simulation}
-	The robot was provided with four distinct coordinate sets to navigate between. Each tuple of coordinates was targeted 20 times. While moving, two key metrics were collected: Distance traveled and the time used to get there. The full datasets for each iteration can be seen in the Appendix (\ref{tab:2}, \ref{tab:3}, \ref{tab:4}, and \ref{tab:5})
+	After this thorough analysis of the architectures resiliance and robustness, we now move on to assess the systems performance. This evaluation will be divided into a simulated environment and an application to a real surrounding. 
+	\section{Simulation} 
+	The robot was provided with four distinct coordinate sets to navigate between. Each tuple of coordinates was targeted 20 times. While moving, two key metrics were collected: Distance traveled and the time used to get there. The full datasets for each iteration can be seen in the Appendix. Note that all coordinates were chosen at random and do not contain any bias towards one another, but both navigation systems where given the same coordinates. 
+	To condense the findings, the mean and variance of the two metrics are calculated and shown in their respective tables. Furthermore, the movement of the robot was monitored via a heatmap, that was then projected onto the map provided by the SLAM Toolbox and Map Change Detection module.
 	
-	\begin{figure}[ht]
+	\subsection{Navigation using Nav2}
+	Deploying the architecture with the Navigation based on the Nav2 package shows very coherent data. The Robot has used the same route through every iteration of the simulation, with the exception of one run in Coordinate Set 1 (see Figure \ref{fig:heatmaps} (a)). Near the destinations, the paths show some slight variance, which is attributed to the robots orientation when aligining its position to the correct coordinates. 
+	
+		\begin{figure}[H]
 		\centering
 		\begin{subfigure}[b]{0.45\textwidth}
 			\centering
@@ -319,12 +359,18 @@
 		\label{fig:heatmaps}
 	\end{figure}
 	
+	Another contribution to this frayed path is the robots need to turn at the beginning of every iteration. The direction in which the robot turns is seemingly random and varies heavily in time used and turning radius. That is also why table \ref{tab:1} shows little variance in distance traveled, but quite a lot of variance in time used. \newline 
+	Nevertheless, the long established and [compared to the Custom Navigation] rather sophisticated Nav2 package provides great performance for navigation on the Turtlebot3 platform.  
 	
-	\begin{table}[h!]
+		
+
+	
+	
+	\begin{table}[H]
 		\centering
 		\begin{tabular}{|c|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
 			\hline
-			Coordinate Set & Mean Distance \newline Traveled & Variance Distance \newline Traveled & Mean Time \newline Used (s) & Variance Time \newline Used (s) \\
+			Coordinate Set & Mean Distance \newline Traveled (m) & Variance Distance \newline Traveled (m) & Mean Time \newline Used (s) & Variance Time \newline Used (s) \\
 			\hline
 			0 & 5.306683 & 0.148930 & 27.932736 & 2.545896 \\
 			1 & 4.065978 & 0.222748 & 21.998405 & 1.444408 \\
@@ -333,20 +379,49 @@
 			\hline
 		\end{tabular}
 		\caption{Summary Statistic for Navigation using Nav2 package (n=20)}
-		\label{tab: 1}
+		\label{tab:1}
 	\end{table}
 	
 	
-	\newpage
+	\subsection{Custom Navigation}
 	
-	\subsection{Simulation}
 	
-	\subsection{Real World Application}
-	\section{Discussion}
-	\section{References}
-	\printbibliography
+	\section{Real World Application} 
+	{\color{red} Subject to change, falls ich das Problem noch lösen kann :( }
+	Applying the layered architecture to a real environment is certainly the most difficult task during the creation of this thesis. While simulations provide a controlled and repeatable setting for initial development and testing, they cannot fully capture the complexities and unpredictability of a real environment. As seen in Figure \ref{fig:fig14}, the robot was placed in a square room with a couple of obstacles to avoid. The lower layers, namely Hardware Control, Obstacle Avoidance, Random Explore, SLAM Toolbox and Map Change Detector, worked as expected, resulting in the creation of the map as seen in Figure \ref{fig:fig15}. However, transitioning all layers from simulation to a real-world scenario presented significant difficulties. Although the SLAM Toolbox provides a .yaml file containing the essential details for mapping the robot's position (published by the /odom topic) to the frame of the /map topic, the navigational systems were either dysfunctional or imprecise, depending on the iteration. The efforts to debug these issues were severely constrained by the extensive time required for setting up the entire system, which includes charging, map creation, and actual navigation attempts.
 	
-	\section{Appendix}
+			
+	\begin{figure}[H]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Graphics/RealWorldSetup.jpeg}
+			\caption{Real World Setup (JPEG)}
+			\label{fig:fig14}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\rotatebox{180}{\includegraphics[width=\textwidth]{Graphics/RealWorldSetup.png}}
+			\caption{Map by Turtlebot3}
+			\label{fig:fig15}
+		\end{subfigure}
+		
+		\caption{Real Environment and corresponding Map created by Turtlebot3}
+		\label{fig:RealWorldSetup}
+	\end{figure}	
+	
+	
+	\chapter{Discussion}
+	Overall, the architecture adheres quite well to the guidelines wherever possible, apart from
+	Guideline 6 which fell a little bit out of scope. Obviously, given the short time span of this project, there is always room to improve. Nontheless, the architecture is robust, performant and easily adaptable for other roboticists, which was one of the primary concerns of the study by Malavolta et al.
+	
+	Vertical dependencies unvermeidbar 
+	during runtime ablation kein problem -> Robust
+	\chapter{Conclusion}
+	
+	
+		\chapter{Appendix}
 	\begin{table}[h!]
 		\centering
 		\begin{tabular}{|c|c|c|}
@@ -473,4 +548,10 @@
 	\end{table}
 	
 	
+	\printbibliography
+	
+
+	
+	% Eidesstattliche Erklärung
+	\include{chapter/declaration}
 \end{document}

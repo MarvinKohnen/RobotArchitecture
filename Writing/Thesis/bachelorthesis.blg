@@ -1,16 +1,16 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Bachelorthesis.blg'
-[23] biber-darwin:340> INFO - === Tue Jun 25, 2024, 23:52:42
+[23] biber-darwin:340> INFO - === Sun Jul  7, 2024, 23:17:06
 [28] Biber.pm:419> INFO - Reading 'Bachelorthesis.bcf'
-[57] Biber.pm:979> INFO - Found 20 citekeys in bib section 0
-[63] Biber.pm:4419> INFO - Processing section 0
-[66] Biber.pm:4610> INFO - Looking for bibtex file 'bachelorthesisSources.bib' for section 0
+[56] Biber.pm:979> INFO - Found 20 citekeys in bib section 0
+[61] Biber.pm:4419> INFO - Processing section 0
+[65] Biber.pm:4610> INFO - Looking for bibtex file 'bachelorthesisSources.bib' for section 0
 [67] bibtex.pm:1713> INFO - LaTeX decoding ...
 [78] bibtex.pm:1519> INFO - Found BibTeX data source 'bachelorthesisSources.bib'
 [141] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
 [141] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[141] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[141] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[142] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[142] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
 [149] bbl.pm:660> INFO - Writing 'Bachelorthesis.bbl' with encoding 'UTF-8'
 [153] bbl.pm:763> INFO - Output to Bachelorthesis.bbl
 [153] Biber.pm:131> WARN - ISBN '978-89-950038-9-3 978-89-93215-01-4' in entry 'jun-youngjungThreelayeredHybridArchitecture2008' is invalid - run biber with '--validate_datamodel' for details.
