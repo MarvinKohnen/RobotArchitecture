@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>bachelorthesis.bcf</file>
+      <file>Bachelorthesis.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>bachelorthesis.bbl</file>
+      <file>Bachelorthesis.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -64,19 +64,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>bachelorthesis</infile>
+      <infile>Bachelorthesis</infile>
     </cmdline>
     <input>
-      <file>bachelorthesis.bcf</file>
+      <file>Bachelorthesis.bcf</file>
     </input>
     <output>
-      <file>bachelorthesis.bbl</file>
+      <file>Bachelorthesis.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>bachelorthesis.bbl</file>
+      <file>Bachelorthesis.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>bachelorthesis.bcf</file>
+      <file>Bachelorthesis.bcf</file>
     </requires>
     <requires type="editable">
       <file>bachelorthesisSources.bib</file>

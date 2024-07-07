@@ -7,6 +7,7 @@
 \usepackage[a4paper, top=2cm, left=4cm, bottom=2cm, right=2cm]{geometry}
 \usepackage{setspace}
 \usepackage{graphicx} 
+\usepackage{subcaption}
 
 \hypersetup{citecolor=black}
 \addbibresource{bachelorthesisSources.bib}
@@ -22,13 +23,18 @@
 	
 	\newpage
 	
+	\tableofcontents
+	\newpage
+	
 	\begin{abstract}
 		This is going to be my abstract.
 	\end{abstract}
 	
+	
+	
 	\section{Introduction}
 	This is going to be my Introduction
-	\section{Related Work and Background}
+	\section{Related Work and Background}not
 	\subsection{Robotic Architecture}
 	\subsubsection{The need for Robotic Architecture}
 	"Robot systems differ from other software applications in many ways. Foremost are the need to achieve high-level, complex goals, the need to interact with a complex, often dynamic environment, while ensuring the system’s own dynamics, the need to handle noise and uncertainty, and the need to be reactive to unexpected changes." \autocite{coste-maniereArchitectureBackboneRobotic2000} This quote by Coste-Mani\`{e}re and Simmons perfectly introduces the various challenges robotic systems and their developers face. These needs shape their design, as all robotic systems embody \textit{some} architectural structure and style. The architectural structure of a system outlines its division into various subsystems and the interactions between them, while the architectural style refers to the underlying computational principles of a system. \autocite{coste-maniereArchitectureBackboneRobotic2000} Different requirements and applications for robotic systems result in different architectures ("To date, the number of existing architectures has reached several hundred" \autocite{kotseruba40YearsCognitive2020}), some of which I will explore in the following section.
@@ -38,7 +44,6 @@
 	2.1.1 so lassen
 	2.1.2 Development of Cognitive Architecture und PRA
 	2.1.3 Layered Architectures
-	
 	
 	\subsubsection{Perceive - Reason - Act}
 	The "Perceive-Reason-Act" (\textbf{PRA}) model takes its inspirates from Neuroscience: \textbf{P}erception creates a model representing the current world state. The \textbf{R}eason component designs a plan using the model to find an appropriate action towards the goal. Finally, \textbf{A}ct refers to the translation of the action into actuator commands and therefore resulting in motor output. \autocite{schillingAutonomeSystemeUnd2023} The rather intuitive PRA approach contains some drawbacks in real world applications: First and foremost, not every aspect of the environment is senseable (such as the inner state of other agents). Furthermore, key elements of the world may be difficult or rather impossible to model. Lastly, sensor and actuator measurements in the real world might differ vastly from the expected values in a clean lab situation. \autocite{schillingAutonomeSystemeUnd2023}
@@ -54,6 +59,7 @@
 	\textbf{Layered architectures} take a different approach to resolve the issues that the PRA model encountered. Horizontal layers of control systems are built to let the robot operate at increasing levels of competence and complexity and are assigned with different objectives. They consist of asynchronous modules which are allowed to communicate in a bidirectional manner. \autocite{brooksRobustLayeredControl1986} 
 	Even though the higher levels can subsume the roles of lower levels by suppressing their output, the lower levels maintain their functionality as higher levels are added - resulting in a robust and flexible robot control system. \autocite{brooksRobustLayeredControl1986} An example of a layered architecture can be seen in Figure \ref{fig: fig2}, created by Brooks in 1986. \autocite{brooksRobustLayeredControl1986}
 	
+
 	\begin{figure}[ht]
 		\centering
 		\includegraphics[width=0.7\textwidth]{Graphics/LayeredArchitecture}
@@ -173,6 +179,7 @@
 	\end{figure}
 	
 	After this thorough examination of existing architectures, we will now introduce our own approach to a layered robotic system. 
+	\newpage
 	
 	\section{Methodology}
 	\subsection{Frameworks and Setup}
@@ -188,7 +195,7 @@
 		
 	 The Architecture is built on the Ubuntu 22.04 LTS Operating System and ROS2 Humble for both the remote PC and the raspberry pi4 on the Turtlebot3. Any simulation is done with Gazebo Fortress (as required for ROS2 Humble) and RVIZ, while the behavior of the robot is established in various Python and Bash scripts. SSH protocol is used to establish a connection between the remote Interface and the Turtlebot3 in order to remove some computational from the raspberry pi. 
 	 
-	 
+	 \newpage
 	\subsection{Architecture and Design}
 	
 	The architecture is structured into multiple distinct layers as shown in Figure \ref{fig: fig8}, which grow in complexity the higher the layer is placed in the diagram.
@@ -205,27 +212,64 @@
 	
 	At the highest level, this \textit{Navigation Module} provides autonomous navigation capabilities by generating random goals within the environment and employing the A* algorithm for pathfinding. This module dynamically calculates the most efficient paths to the designated targets, considering the current environmental layout and obstacles as previously mapped by the system. It is important to note, that two concurrent packages are placed inside this layer: One is custom built while the other employs the nav2 system, a commonly used navigational framework which provides a wide range of algorithms and functionalities to facilitate Path planning and directed movement. \autocite{macenskiMarathonNavigationSystem2020}
 	
-	{\color{red} ACHTUNG bei Verwendung von Package/Module/Layer etc.! Unbedingt konsistent halten}
+	Lastly, there are a couple more modules which provide analytical output for this thesis such as Maps, Heatmaps or position logging. These modules dont impact the robots behaviour in any case. Nonetheless, they are part of the architecture and are worth mentioning. Most importantly, a Heatmap Generator is placed in this \textit{Analysis layer}. As soon as any navigational functionality is invoked, it maps the robots position from the /odom frame to the /map frame and therefore creates a heatmap that matches the given dimensions by the SLAM Toolbox. Some examples of these heatmaps will be shown in Chapter (INPUT CHAPTER!).
+	
 			
 	\begin{figure}[ht]
 		\begin{flushleft}
 		\includegraphics[width=1.1\textwidth]{Graphics/ArchitectureOverview}
-		\caption{Ablation Study on layer functionality}
+		\caption{Architecture Overview}
 		\label{fig: fig8}
 		\end{flushleft}
 	\end{figure}
 	
 	
 	
-	
+	\newpage
 
 	
-	\subsection{Comparison to Malavolta et al}
-	\begin{itemize}
-		\item compare architecutre to guidelines
-	\end{itemize}
+	\section{Comparison to Malavolta et al}
+	Since our architecture has now been established, we can discuss its adherance to the earlier introduced guidelines by Malavolta et al. Then we will move on to qualitative and quantitative analysis of the system in the form of an ablation study and the comparison of the generated heatmaps.
+	\begin{enumerate}[leftmargin=9mm, align=left]
+		\item \textbf{Use standardized ROS message formats as much as possible, possibly supporting also their legacy versions.} 
+		\item[]The architecture uses mostly standardized ROS message formats, such as LaserScan and Odometry. The external tools used in the system, such as SLAM Toolbox and Nav2, also use standardized ROS message formats: LaserScan, Odometry and Twist. The only time the architecture deviates from this guideline is through the introduction of the custom PriorityTwist message. This design choice was made consciiously, since the other possible solution for the prioritization mechanism involved environmental variables or global variables which not only are not common practice in Python, but also are very hard to maintain and reduce portability of the system. Furthermore, the priority is rather straightforward to understand, since it basically contains a normal Twist message at its core with only an added integer field.
+		
+		\item \textbf{Group nodes and interfaces into cohesive sets, each with their own responsibilities and well-defined dependencies.} 
+		\item[]Since each layer provides a specific functionality in the greater system, dependencies are kept to a minimum. Apart from the standard ROS message dependencies, most layers only depend on the Hardware Control package (or rather the Robot Control service). An exeption makes the Navigational layer, which is connected to the vast framework of Nav2. These dependencies are necessary and therefore not in our control when designing this architecture.
+		\item \textbf{The behavior of each node should follow a well-defined lifecyle, which should be queryable and updatable at runtime.} 
+		\item[]
+		Each package in the system invokes and manages its own nodes, which is a result of the ROS2 Humble middleware with its managed nodes in order to enable runtime configura- bility. Furthermore, any node that is not initialized by the user at the start of robot operation has a well-defined lifecycle. Since the architecture is autonomous, most nodes are not designed to be updatable at runtime once their lifecycle has been invoked.
+		
+		\item  \textbf{Assign meaningful names to components (e.g., nodes, topics, services) and group them by adopting standard prefixes/suffixes.} 
+		\item[] The architecture establishes a standardized name convention. Any package is named ”turtlebot3 packagename”, with the corresponding node being named after the package name. Moreover, the entry points in the respective setup.py files follow the same name convention, resulting in rather straightforward terminal commands (e.g. ros2 run turtle- bot3 hardware control hardware control) ist sowas interessant? ich weiß es nicht
+		The service ”Robot Control” can be rather vaguely interpreted and is subject to change.
+		
+		\item  \textbf{Nodes directly interacting with simulators and hardware devices should provide identical ROS messaging interfaces to the rest of the system} 
+		\item[] When moving from simulator to hardware devices, the user only has to change a single flag in the bringup. Namely, the SLAM Toolbox expect a a boolean parameter ”use sim time”, which is set to true in simulation. Other than that, the system is indifferent to the usage of simulation or hardware application.
+		
+		\item \textbf{ROS nodes should be resilient with respect to the amount and frequency of the data received by sensors.} 
+		\item[] As expected, the system encounters a rather small dataload from the lidar sensor. Fur- thermore, this dataload is comparably consistent. The absence of big sensor data has lead to little emphasis on this guideline. Therefore any addition to this system that increases sensor load needs to be tested thoroughly. Since the Obstacle Avoidance has its own managed node, faces a very small data load and operates on highest possible priority, the architectures robustness to system-level failure is supposedly quite high.
+		
+		\item \textbf{Avoid persisting raw data if only part of it will be used.}
+		\item[] Apart from the navgiational map created by the SLAM Toolbox and any data created for user visualization, no sensor data is persisted. Furthermore, any outdated map is deleted instantly from the system by the map change detection node.
+		
+		
+	\end{enumerate}
 	
-	\section{Qualitative Analysis}  Title WIP
+	Overall, the architecture adheres quite well to the guidelines wherever possible, apart from
+	Guideline 6 which fell a little bit out of scope. Obviously, given the short time span of this project, there is always room to improve. Nontheless, the architecture is robust, performant and easily adaptable for other roboticists, which was one of the primary concerns of the study by Malavolta et al.
+	
+	\newpage
+	
+	\section{Ablation Study}  
+	In order to further discuss the robustness of the architecture, an ablation study was conducted (see Figure \ref{fig: fig9}). The effect of an omitted layer on the other modules is categorized into three cases. Firstly, a layer can be completely unaffected, resulting in no changes to performance or robustness. Secondly, a layer can be indirectly affected by changes in other layers—meaning the layer itself does not directly access the contents or functionality provided by the omitted package but faces secondary consequences, such as an incomplete mapping of the environment. Thirdly, directly affected layers explicitly access the ommited layer and face severe repercussions in terms of unmet dependencies, unavailable services or other integral parts of the architecture. On the one hand, the omission of higher layers \footnote{\textit{Higher} and \textit{lower} layers are to be interpreted as shown in Figure \ref{fig: fig8}} has no effect on the levels below it, which accounts for the lower triangular matrix of \textit{unaffected layers}. On the other hand, the removal of lower layers has varying impact on the levels above it. \newline 
+	As expected, the ablation of the Hardware Control layer has a direct negative impact on all layers that rely on it to invoke movement, namely Obstacle Avoidance, Random Explore and the Custom Navigation. It also indirectly affects layers that rely on the robot being moved around (SLAM layer) and therefore by extension also the Navigation using Nav2, even though it overwrites any other movement commands and controls the robot on its own. \newline
+	As a result of ommiting the Obstacle Avoidance module, the Random Explore layer cannot safely navigate the robot in an unknown environment, as the robot is very likely to crash into the first obstacle in its path. This culminates in an unfinished map, making any kind of navigation obsolete. The Custom Navigation also continuously accesses certain flags set in the Obstacle Avoidance package and is therefore directly affected. \newline
+	The ablation of the Random Explore layer inherits the same problems we just described, with the exception that the Custom Navigation is not directly accessing said layer. \newline
+	Clearly, the exclusion of the SLAM and Map Change Detector layer results in both navigational systems failing on multiple levels: Not only is no data being published to the /map topic, that both navigation systems rely on, but also are both packages never invoked in the first place.  
+	Lastly, it is evident that the two navigational packages do not interfere with one another and can functionally coexist - provided a given priority between the two navigational system is established. This means they are practically interchangeable and therefore qualify as a unaffected layer. 
+	
+	\newpage
 	
 	\begin{figure}[ht]
 		\centering
@@ -234,13 +278,199 @@
 		\label{fig: fig9}
 	\end{figure}
 	
-	\section{Quantitative Analysis} Title WIP
+	It becomes evident that the lower levels are vital for the performance and robustness of the architecture, while higher layers are more likely to have less devastating effects on overall stability or simply enhance the system's functionality. This additive nature results in a more adaptive and flexible design, as higher-level modules can easily be replaced by others with similar purposes. In contrast while examining the upper triangular matrix of figure \ref{fig: fig9}, it is inevitable to mention the dependency of the higher levels on the lower layers. This interdependence limits the overall flexibility of the architecture by how resilient and adaptable the lower layers are designed. 
+	\newpage
+	
+	\section{Quantitative Analysis} 
+	Performing quantitative research on a layered architecture for robotic systems is relatively limited by the quantifiability of certain layers. I therefore analyzed the performance of the two navigational systems. This analysis is mainly conducted in Gazebo and RViz, the prevalent simulation environments for robotic systems and ROS based applications. Then I will move on to present the application of the architecture on the real Turtlebot3 platform. 
+	\subsection{Simulation}
+	The robot was provided with four distinct coordinate sets to navigate between. Each tuple of coordinates was targeted 20 times. While moving, two key metrics were collected: Distance traveled and the time used to get there. The full datasets for each iteration can be seen in the Appendix (\ref{tab:2}, \ref{tab:3}, \ref{tab:4}, and \ref{tab:5})
+	
+	\begin{figure}[ht]
+		\centering
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Graphics/heatmapsim1.png}
+			\caption{Coordinate Set 1}
+			\label{fig:fig10}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Graphics/heatmapsim2.png}
+			\caption{Coordinate Set 2}
+			\label{fig:fig11}
+		\end{subfigure}
+		\vfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Graphics/heatmapsim3.png}
+			\caption{Coordinate Set 3}
+			\label{fig:fig12}
+		\end{subfigure}
+		\hfill
+		\begin{subfigure}[b]{0.45\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{Graphics/heatmapsim4.png}
+			\caption{Coordinate Set 4}
+			\label{fig:fig13}
+		\end{subfigure}
+		\caption{Heatmaps using Nav2 package for all Coordinate Sets (n=20)}
+		\label{fig:heatmaps}
+	\end{figure}
 	
 	
-	\section{Simulation}
-	\section{Real World Application}
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|p{3cm}|p{3cm}|p{3cm}|p{3cm}|}
+			\hline
+			Coordinate Set & Mean Distance \newline Traveled & Variance Distance \newline Traveled & Mean Time \newline Used (s) & Variance Time \newline Used (s) \\
+			\hline
+			0 & 5.306683 & 0.148930 & 27.932736 & 2.545896 \\
+			1 & 4.065978 & 0.222748 & 21.998405 & 1.444408 \\
+			2 & 4.395432 & 0.149748 & 22.895346 & 1.698574 \\
+			3 & 4.173309 & 0.148584 & 22.000601 & 1.441569 \\
+			\hline
+		\end{tabular}
+		\caption{Summary Statistic for Navigation using Nav2 package (n=20)}
+		\label{tab: 1}
+	\end{table}
+	
+	
+	\newpage
+	
+	\subsection{Simulation}
+	
+	\subsection{Real World Application}
 	\section{Discussion}
 	\section{References}
 	\printbibliography
+	
+	\section{Appendix}
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Coordinate Set & Distance Traveled & Time Used (s) \\
+			\hline
+			1 & 5.130298 & 27.998535 \\
+			1 & 4.869894 & 26.000022 \\
+			1 & 5.453286 & 26.000290 \\
+			1 & 4.974142 & 26.000858 \\
+			1 & 5.387319 & 25.999217 \\
+			1 & 5.434525 & 27.999560 \\
+			1 & 5.122722 & 26.000072 \\
+			1 & 5.448368 & 28.000674 \\
+			1 & 5.180251 & 25.999200 \\
+			1 & 5.629328 & 29.999985 \\
+			1 & 5.352114 & 28.000899 \\
+			1 & 5.404368 & 28.000448 \\
+			1 & 5.164623 & 25.998860 \\
+			1 & 5.398202 & 27.974977 \\
+			1 & 5.169252 & 26.025875 \\
+			1 & 5.619464 & 29.999127 \\
+			1 & 5.327660 & 27.999871 \\
+			1 & 5.592663 & 29.760104 \\
+			1 & 5.213084 & 26.239961 \\
+			\hline
+		\end{tabular}
+		\caption{Nav2 Data - Coordinate Set 1}
+		\label{tab:2}
+	\end{table}
+	
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Coordinate Set & Distance Traveled & Time Used (s) \\
+			\hline
+			2 & 5.311640 & 27.996754 \\
+			2 & 4.080332 & 22.000514 \\
+			2 & 3.818398 & 19.998617 \\
+			2 & 3.761347 & 19.999943 \\
+			2 & 3.828356 & 19.999907 \\
+			2 & 3.963116 & 22.000073 \\
+			2 & 3.884740 & 19.999886 \\
+			2 & 4.296424 & 24.000082 \\
+			2 & 3.873013 & 20.002518 \\
+			2 & 3.839976 & 19.997566 \\
+			2 & 3.811117 & 20.000155 \\
+			2 & 3.832355 & 20.000026 \\
+			2 & 3.866210 & 19.999748 \\
+			2 & 3.848264 & 20.001474 \\
+			2 & 3.854485 & 19.998312 \\
+			2 & 3.844553 & 20.001375 \\
+			2 & 3.891537 & 19.998770 \\
+			2 & 3.788880 & 20.000184 \\
+			2 & 3.852515 & 19.999944 \\
+			\hline
+		\end{tabular}
+		\caption{Nav2 Data - Coordinate Set 2}
+		\label{tab:3}
+	\end{table}
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Coordinate Set & Distance Traveled & Time Used (s) \\
+			\hline
+			3 & 7.566510 & 39.683514 \\
+			3 & 4.266853 & 22.316174 \\
+			3 & 4.407925 & 22.550062 \\
+			3 & 4.395692 & 23.449422 \\
+			3 & 4.502186 & 23.999573 \\
+			3 & 4.534671 & 23.999918 \\
+			3 & 4.417903 & 24.000293 \\
+			3 & 4.435943 & 23.999711 \\
+			3 & 4.346739 & 24.000350 \\
+			3 & 4.278771 & 23.999819 \\
+			3 & 4.281278 & 22.000120 \\
+			3 & 4.267426 & 21.999995 \\
+			3 & 4.340623 & 21.999955 \\
+			3 & 4.260607 & 21.999936 \\
+			3 & 4.306719 & 22.000231 \\
+			3 & 4.243368 & 22.000067 \\
+			3 & 4.409689 & 21.999886 \\
+			3 & 4.227193 & 22.000825 \\
+			3 & 4.373677 & 21.998897 \\
+			\hline
+		\end{tabular}
+		\caption{Nav2 Data - Coordinate Set 3}
+		\label{tab:4}
+	\end{table}
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Coordinate Set & Distance Traveled & Time Used (s) \\
+			\hline
+			4 & 6.377680 & 31.996258 \\
+			4 & 4.325679 & 22.000514 \\
+			4 & 4.237888 & 19.998617 \\
+			4 & 3.761347 & 19.999943 \\
+			4 & 4.828356 & 19.999907 \\
+			4 & 4.963116 & 22.000073 \\
+			4 & 4.884740 & 19.999886 \\
+			4 & 4.296424 & 24.000082 \\
+			4 & 3.873013 & 20.002518 \\
+			4 & 3.839976 & 19.997566 \\
+			4 & 3.811117 & 20.000155 \\
+			4 & 3.832355 & 20.000026 \\
+			4 & 3.866210 & 19.999748 \\
+			4 & 3.848264 & 20.001474 \\
+			4 & 3.854485 & 19.998312 \\
+			4 & 3.844553 & 20.001375 \\
+			4 & 3.891537 & 19.998770 \\
+			4 & 3.788880 & 20.000184 \\
+			4 & 3.852515 & 19.999944 \\
+			\hline
+		\end{tabular}
+		\caption{Nav2 Data - Coordinate Set 4}
+		\label{tab:5}
+	\end{table}
+	
 	
 \end{document}
