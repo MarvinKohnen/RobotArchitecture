@@ -1,4 +1,5 @@
 [console_scripts]
 autonomous_navigation_using_nav2 = turtlebot3_nav_management.autonomous_navigation_using_nav2:main
 custom_navigation = turtlebot3_nav_management.custom_navigation:main
+teleop_navigation_logger = turtlebot3_nav_management.teleop_navigation:main
 

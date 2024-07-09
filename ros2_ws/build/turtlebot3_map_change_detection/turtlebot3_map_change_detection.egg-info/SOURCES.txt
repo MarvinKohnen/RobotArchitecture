@@ -1,6 +1,13 @@
 package.xml
 setup.cfg
 setup.py
+../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/PKG-INFO
+../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/SOURCES.txt
+../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/dependency_links.txt
+../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/entry_points.txt
+../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/requires.txt
+../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/top_level.txt
+../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/zip-safe
 resource/turtlebot3_map_change_detection
 turtlebot3_map_change_detection/__init__.py
 turtlebot3_map_change_detection/map_change_detector.py

@@ -1,6 +1,13 @@
 package.xml
 setup.cfg
 setup.py
+../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/PKG-INFO
+../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/SOURCES.txt
+../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/dependency_links.txt
+../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/entry_points.txt
+../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/requires.txt
+../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/top_level.txt
+../../build/turtlebot3_launch_configurations/turtlebot3_launch_configurations.egg-info/zip-safe
 launch/full_system_launch.py
 resource/turtlebot3_launch_configurations
 turtlebot3_launch_configurations/__init__.py

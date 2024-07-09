@@ -1,0 +1,23 @@
+[1.378s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build
+[1.972s] running develop
+[1.972s] /home/marvin/.local/lib/python3.10/site-packages/setuptools/command/easy_install.py:157: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.972s]   warnings.warn(
+[2.259s] Removing /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages/turtlebot3-map-change-detection.egg-link (link to .)
+[2.631s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py develop --uninstall --editable --build-directory /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build
+[2.632s] Invoking command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_map_change_detection': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_map_change_detection build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/install.log --single-version-externally-managed install_data --force
+[3.364s] running egg_info
+[3.364s] writing ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/PKG-INFO
+[3.364s] writing dependency_links to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/dependency_links.txt
+[3.365s] writing entry points to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/entry_points.txt
+[3.365s] writing requirements to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/requires.txt
+[3.365s] writing top-level names to ../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/top_level.txt
+[3.369s] reading manifest file '../../build/turtlebot3_map_change_detection/turtlebot3_map_change_detection.egg-info/SOURCES.txt'
+[3.369s] running build
+[3.369s] running build_py
+[3.370s] running install
+[3.380s] running install_lib
+[3.386s] running install_data
+[3.388s] running install_egg_info
+[3.393s] running install_scripts
+[3.437s] Installing map_change_detector script to /home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/turtlebot3_map_change_detection
+[3.525s] Invoked command in '/home/marvin/RobotArchitecture/ros2_ws/src/turtlebot3_map_change_detection' returned '0': PYTHONPATH=/home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/marvin/RobotArchitecture/ros2_ws/install/turtlebot3_map_change_detection/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/turtlebot3_map_change_detection build --build-base /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/build install --record /home/marvin/RobotArchitecture/ros2_ws/build/turtlebot3_map_change_detection/install.log --single-version-externally-managed install_data --force

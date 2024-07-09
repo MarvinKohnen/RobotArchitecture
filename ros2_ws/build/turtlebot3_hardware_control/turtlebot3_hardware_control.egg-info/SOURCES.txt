@@ -1,6 +1,13 @@
 package.xml
 setup.cfg
 setup.py
+../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/PKG-INFO
+../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/SOURCES.txt
+../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/dependency_links.txt
+../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/entry_points.txt
+../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/requires.txt
+../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/top_level.txt
+../../build/turtlebot3_hardware_control/turtlebot3_hardware_control.egg-info/zip-safe
 resource/turtlebot3_hardware_control
 turtlebot3_hardware_control/__init__.py
 turtlebot3_hardware_control/hardware_control.py

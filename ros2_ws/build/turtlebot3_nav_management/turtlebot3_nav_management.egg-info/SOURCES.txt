@@ -1,6 +1,13 @@
 package.xml
 setup.cfg
 setup.py
+../../build/turtlebot3_nav_management/turtlebot3_nav_management.egg-info/PKG-INFO
+../../build/turtlebot3_nav_management/turtlebot3_nav_management.egg-info/SOURCES.txt
+../../build/turtlebot3_nav_management/turtlebot3_nav_management.egg-info/dependency_links.txt
+../../build/turtlebot3_nav_management/turtlebot3_nav_management.egg-info/entry_points.txt
+../../build/turtlebot3_nav_management/turtlebot3_nav_management.egg-info/requires.txt
+../../build/turtlebot3_nav_management/turtlebot3_nav_management.egg-info/top_level.txt
+../../build/turtlebot3_nav_management/turtlebot3_nav_management.egg-info/zip-safe
 config/navigation_params.yaml
 launch/navigation_launch.py
 launch/navigation_launch_with_nav2.py
@@ -8,6 +15,7 @@ resource/turtlebot3_nav_management
 turtlebot3_nav_management/__init__.py
 turtlebot3_nav_management/autonomous_navigation_using_nav2.py
 turtlebot3_nav_management/custom_navigation.py
+turtlebot3_nav_management/teleop_navigation.py
 turtlebot3_nav_management.egg-info/PKG-INFO
 turtlebot3_nav_management.egg-info/SOURCES.txt
 turtlebot3_nav_management.egg-info/dependency_links.txt
