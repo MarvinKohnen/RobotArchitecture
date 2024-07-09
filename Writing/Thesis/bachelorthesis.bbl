@@ -223,6 +223,61 @@
       \verb http://link.springer.com/10.1007/s10462-018-9646-y
       \endverb
     \endentry
+    \entry{langleyCognitiveArchitecturesResearch2009}{article}{}
+      \name{author}{3}{}{%
+        {{hash=cb234967d439eca7bd966830f708c7a2}{%
+           family={Langley},
+           familyi={L\bibinitperiod},
+           given={Pat},
+           giveni={P\bibinitperiod}}}%
+        {{hash=4f1e88fb07b19164f95d63d764b16a3c}{%
+           family={Laird},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=c952b2599a67bc252cd55ca458894a43}{%
+           family={Rogers},
+           familyi={R\bibinitperiod},
+           given={Seth},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{ad57ee5f08eb1035f9c4c397601ac425}
+      \strng{fullhash}{ad57ee5f08eb1035f9c4c397601ac425}
+      \strng{bibnamehash}{ad57ee5f08eb1035f9c4c397601ac425}
+      \strng{authorbibnamehash}{ad57ee5f08eb1035f9c4c397601ac425}
+      \strng{authornamehash}{ad57ee5f08eb1035f9c4c397601ac425}
+      \strng{authorfullhash}{ad57ee5f08eb1035f9c4c397601ac425}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{issn}{13890417}
+      \field{journaltitle}{Cognitive Systems Research}
+      \field{langid}{english}
+      \field{month}{6}
+      \field{number}{2}
+      \field{shortjournal}{Cognitive Systems Research}
+      \field{shorttitle}{Cognitive Architectures}
+      \field{title}{Cognitive Architectures: {{Research}} Issues and Challenges}
+      \field{urlday}{8}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{10}
+      \field{year}{2009}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{141\bibrangedash 160}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.1016/j.cogsys.2006.07.004
+      \endverb
+      \verb{urlraw}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1389041708000557
+      \endverb
+      \verb{url}
+      \verb https://linkinghub.elsevier.com/retrieve/pii/S1389041708000557
+      \endverb
+    \endentry
     \entry{macenskiMarathonNavigationSystem2020}{article}{}
       \name{author}{4}{}{%
         {{hash=32de857faf63cd1f724ac8acd558e91b}{%
@@ -423,6 +478,51 @@
       \endverb
       \verb{url}
       \verb https://dl.acm.org/doi/10.1145/3377813.3381358
+      \endverb
+    \endentry
+    \entry{newellPrecisUnifiedTheories1992}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4a7af29c9e8a77eb1b778ebc597eb5ff}{%
+           family={Newell},
+           familyi={N\bibinitperiod},
+           given={Allen},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a7af29c9e8a77eb1b778ebc597eb5ff}
+      \strng{fullhash}{4a7af29c9e8a77eb1b778ebc597eb5ff}
+      \strng{bibnamehash}{4a7af29c9e8a77eb1b778ebc597eb5ff}
+      \strng{authorbibnamehash}{4a7af29c9e8a77eb1b778ebc597eb5ff}
+      \strng{authornamehash}{4a7af29c9e8a77eb1b778ebc597eb5ff}
+      \strng{authorfullhash}{4a7af29c9e8a77eb1b778ebc597eb5ff}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Abstract The book presents the case that cognitive science should turn its attention to developing theories of human cognition that cover the full range of human perceptual, cognitive, and action phenomena. Cognitive science has now produced a massive number of high-quality regularities with many microtheories that reveal important mechanisms. The need for integration is pressing and will continue to increase. Equally important, cognitive science now has the theoretical concepts and tools to support serious attempts at unified theories. The argument is made entirely by presenting an exemplar unified theory of cognition both to show what a real unified theory would be like and to provide convincing evidence that such theories are feasible. The exemplar is SOAR, a cognitive architecture, which is realized as a software system. After a detailed discussion of the architecture and its properties, with its relation to the constraints on cognition in the real world and to existing ideas in cognitive science, SOAR is used as theory for a wide range of cognitive phenomena: immediate responses (stimulus-response compatibility and the Sternberg phenomena); discrete motor skills (transcription typing); memory and learning (episodic memory and the acquisition of skill through practice); problem solving (cryptarithmetic puzzles and syllogistic reasoning); language (sentence verification and taking instructions); and development (transitions in the balance beam task). The treatments vary in depth and adequacy, but they clearly reveal a single, highly specific, operational theory that works over the entire range of human cognition, SOAR is presented as an exemplar unified theory, not as the sole candidate. Cognitive science is not ready yet for a single theory – there must be multiple attempts. But cognitive science must begin to work toward such unified theories.}
+      \field{issn}{0140-525X, 1469-1825}
+      \field{journaltitle}{Behavioral and Brain Sciences}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{Behav Brain Sci}
+      \field{title}{Précis of {{Unified}} Theories of Cognition}
+      \field{urlday}{8}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{15}
+      \field{year}{1992}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{425\bibrangedash 437}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1017/S0140525X00069478
+      \endverb
+      \verb{urlraw}
+      \verb https://www.cambridge.org/core/product/identifier/S0140525X00069478/type/journal_article
+      \endverb
+      \verb{url}
+      \verb https://www.cambridge.org/core/product/identifier/S0140525X00069478/type/journal_article
       \endverb
     \endentry
     \entry{peterbonassoExperiencesArchitectureIntelligent1997}{article}{}
@@ -627,6 +727,34 @@
       \verb https://github.com/NiryoRobotics/niryo_one_ros
       \endverb
     \endentry
+    \entry{robotisEmanualROBOTIS2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=03bcb621822189e57cd9448bfe5c8744}{%
+           family={Robotis},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{03bcb621822189e57cd9448bfe5c8744}
+      \strng{fullhash}{03bcb621822189e57cd9448bfe5c8744}
+      \strng{bibnamehash}{03bcb621822189e57cd9448bfe5c8744}
+      \strng{authorbibnamehash}{03bcb621822189e57cd9448bfe5c8744}
+      \strng{authornamehash}{03bcb621822189e57cd9448bfe5c8744}
+      \strng{authorfullhash}{03bcb621822189e57cd9448bfe5c8744}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{7}
+      \field{month}{8}
+      \field{title}{E-Manual {{ROBOTIS}}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/#opencr-setup
+      \endverb
+      \verb{url}
+      \verb https://emanual.robotis.com/docs/en/platform/turtlebot3/opencr_setup/#opencr-setup
+      \endverb
+    \endentry
     \entry{ros.orgJointTrajectoryController2024}{online}{}
       \name{author}{1}{}{%
         {{hash=87380b1c7d915b6df49c1b18bd31a8a0}{%
@@ -741,6 +869,35 @@
       \endverb
       \verb{url}
       \verb http://wiki.ros.org/ros_control
+      \endverb
+    \endentry
+    \entry{ros.orgIntroductionROS2024}{online}{}
+      \name{author}{1}{}{%
+        {{hash=87380b1c7d915b6df49c1b18bd31a8a0}{%
+           family={ROS.org},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{fullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{bibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorbibnamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authornamehash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \strng{authorfullhash}{87380b1c7d915b6df49c1b18bd31a8a0}
+      \field{extraname}{5}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{5}
+      \field{month}{3}
+      \field{title}{{{ROS Introduction}}}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://wiki.ros.org/ROS/Introduction
+      \endverb
+      \verb{url}
+      \verb https://wiki.ros.org/ROS/Introduction
       \endverb
     \endentry
     \entry{schillingAutonomeSystemeUnd2023}{unpublished}{}
@@ -924,6 +1081,50 @@
       \verb http://link.springer.com/10.1007/978-94-017-2376-3_11
       \endverb
     \endentry
+    \entry{sunDesiderataCognitiveArchitectures2004}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a17947338ed0ddfddb5f8d28ee15c24e}{%
+           family={Sun},
+           familyi={S\bibinitperiod},
+           given={Ron},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a17947338ed0ddfddb5f8d28ee15c24e}
+      \strng{fullhash}{a17947338ed0ddfddb5f8d28ee15c24e}
+      \strng{bibnamehash}{a17947338ed0ddfddb5f8d28ee15c24e}
+      \strng{authorbibnamehash}{a17947338ed0ddfddb5f8d28ee15c24e}
+      \strng{authornamehash}{a17947338ed0ddfddb5f8d28ee15c24e}
+      \strng{authorfullhash}{a17947338ed0ddfddb5f8d28ee15c24e}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0951-5089, 1465-394X}
+      \field{journaltitle}{Philosophical Psychology}
+      \field{langid}{english}
+      \field{month}{9}
+      \field{number}{3}
+      \field{shortjournal}{Philosophical Psychology}
+      \field{title}{Desiderata for Cognitive Architectures}
+      \field{urlday}{8}
+      \field{urlmonth}{7}
+      \field{urlyear}{2024}
+      \field{volume}{17}
+      \field{year}{2004}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \field{pages}{341\bibrangedash 373}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1080/0951508042000286721
+      \endverb
+      \verb{urlraw}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/0951508042000286721
+      \endverb
+      \verb{url}
+      \verb http://www.tandfonline.com/doi/abs/10.1080/0951508042000286721
+      \endverb
+    \endentry
     \entry{volpeCLARAtyArchitectureRobotic2001}{inproceedings}{}
       \name{author}{6}{}{%
         {{hash=e6073b7d3929e90cf0904606bba493ca}{%
@@ -997,7 +1198,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{ros.orgIntroductionROS2024}
 \endrefsection
 \endinput
 
