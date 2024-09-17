@@ -1,19 +1,19 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'Bachelorthesis.blg'
-[23] biber-darwin:340> INFO - === Mon Jul  8, 2024, 21:51:59
+[23] biber-darwin:340> INFO - === Wed Jul 10, 2024, 04:41:32
 [28] Biber.pm:419> INFO - Reading 'Bachelorthesis.bcf'
-[57] Biber.pm:979> INFO - Found 24 citekeys in bib section 0
-[62] Biber.pm:4419> INFO - Processing section 0
-[65] Biber.pm:4610> INFO - Looking for bibtex file 'bachelorthesisSources.bib' for section 0
-[66] bibtex.pm:1713> INFO - LaTeX decoding ...
-[79] bibtex.pm:1519> INFO - Found BibTeX data source 'bachelorthesisSources.bib'
-[150] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[150] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[150] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[150] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[159] bbl.pm:660> INFO - Writing 'Bachelorthesis.bbl' with encoding 'UTF-8'
-[164] bbl.pm:763> INFO - Output to Bachelorthesis.bbl
-[164] Biber.pm:131> WARN - ISBN '978-89-950038-9-3 978-89-93215-01-4' in entry 'jun-youngjungThreelayeredHybridArchitecture2008' is invalid - run biber with '--validate_datamodel' for details.
-[164] Biber.pm:131> WARN - ISBN '978-90-481-6046-4 978-94-017-2376-3' in entry 'simmonsLayeredArchitectureCoordination2002' is invalid - run biber with '--validate_datamodel' for details.
-[164] Biber.pm:131> WARN - ISBN '978-3-319-32550-7 978-3-319-32552-1' in entry 'sicilianoSpringerHandbookRobotics2016' is invalid - run biber with '--validate_datamodel' for details.
-[164] Biber.pm:133> INFO - WARNINGS: 3
+[60] Biber.pm:979> INFO - Found 24 citekeys in bib section 0
+[66] Biber.pm:4419> INFO - Processing section 0
+[69] Biber.pm:4610> INFO - Looking for bibtex file 'bachelorthesisSources.bib' for section 0
+[71] bibtex.pm:1713> INFO - LaTeX decoding ...
+[84] bibtex.pm:1519> INFO - Found BibTeX data source 'bachelorthesisSources.bib'
+[160] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[160] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[160] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[160] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[170] bbl.pm:660> INFO - Writing 'Bachelorthesis.bbl' with encoding 'UTF-8'
+[175] bbl.pm:763> INFO - Output to Bachelorthesis.bbl
+[175] Biber.pm:131> WARN - ISBN '978-89-950038-9-3 978-89-93215-01-4' in entry 'jun-youngjungThreelayeredHybridArchitecture2008' is invalid - run biber with '--validate_datamodel' for details.
+[175] Biber.pm:131> WARN - ISBN '978-90-481-6046-4 978-94-017-2376-3' in entry 'simmonsLayeredArchitectureCoordination2002' is invalid - run biber with '--validate_datamodel' for details.
+[175] Biber.pm:131> WARN - ISBN '978-3-319-32550-7 978-3-319-32552-1' in entry 'sicilianoSpringerHandbookRobotics2016' is invalid - run biber with '--validate_datamodel' for details.
+[175] Biber.pm:133> INFO - WARNINGS: 3
