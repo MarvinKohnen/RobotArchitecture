@@ -98,6 +98,12 @@ see https://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/#bringup
 
 `ros2 launch turtlebot3_launch_configurations full_system_launch.py`
 
+#### For positional Log Output and Heatmap generation
+
+`ros2 run turtlebot3_analysis heatmap_generator`
+
+`ros2 run turtlebot3_analysis position_logger`
+
 
 
 # Miscellaneous
@@ -115,6 +121,12 @@ see https://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/#bringup
 # Architecture Overview
 
 ![Architecture](/Writing/Thesis/Graphics/ArchitectureOverview.jpeg "Architecture Overview")
+
+
+# Get in Touch
+
+Reach me preferably via Discord: yeezyxo / former Marv#3433
+
 
 
 
