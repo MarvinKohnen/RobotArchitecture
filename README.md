@@ -42,12 +42,17 @@ Required Python packages:
 
 ### In Root of Workspace 
 
-`git clone -b humble-devel https://github.com/ROBOTIS-GIT/turtlebot3`
+`git clone -b humble-devel https://github.com/ROBOTIS-GIT/turtlebot3` (not sure if this is necessary, since i cant find it in my current directory)
 
-`git clone -b humble-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations`
+(**careful**: Turtlebot3 simulations already initialised as a git submodule. For usage please read https://git-scm.com/book/en/v2/Git-Tools-Submodules and check .gitmodules file in root workspace.)
+
+`git clone -b humble-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations` 
+
+**For simple use invoke**
+`git submodule init` and `git submodule update` **in src** 
 
 
-**build via**
+### build Workspace via
 
 `colcon build --symlink-install`
 
@@ -107,10 +112,9 @@ see https://emanual.robotis.com/docs/en/platform/turtlebot3/bringup/#bringup
     - Mapping of Real World presented by Slam Toolbox and /map topic does not match Robots estimated pose in /odom which results in navigational systems failing in real world application
 
 
+# Architecture Overview
 
-
-
-
+![Architecture](/Writing/Thesis/Graphics/ArchitectureOverview.jpeg "Architecture Overview")
 
 
 
